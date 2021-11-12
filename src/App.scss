@@ -1,0 +1,26 @@
+/**
+  Note - Implement styles that are affect to the whole application.
+  If you implement stylings that belongs to individual component, use the "styles" directory to implement it
+*/
+
+// Import Styles
+@import "./styles/colors.scss";
+@import "./styles/navbar.scss";
+@import "./styles/footer.scss";
+@import "./styles/card.scss";
+@import "./styles/home.scss";
+
+ul {
+  padding: 0px;
+}
+
+.hero-section-bg {
+  position: absolute;
+  overflow: auto;
+  width: 100vw;
+  height: 720px;
+  left: 0px;
+  top: 0px;
+  background: var(--light-home-background-color);
+  clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 100%);
+}

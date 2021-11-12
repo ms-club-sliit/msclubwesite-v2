@@ -1,0 +1,105 @@
+@import "./colors.scss";
+
+.footer-container {
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+.footer-section {
+  background: $footer-section-background;
+  width: 100%;
+  bottom: 0;
+}
+
+.footer-text p {
+  margin-bottom: 14px;
+  font-size: 14px;
+  color: $color-white;
+  line-height: 28px;
+}
+
+.social-media-icons {
+  font-size: large;
+}
+
+.footer-widget-heading h3 {
+  color: $color-white;
+  font-size: 20px;
+  margin-bottom: 40px;
+  position: relative;
+}
+
+.footer-widget-heading h3::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -15px;
+  height: 2px;
+  width: 60px;
+  background: $primary-color-light;
+}
+
+.footer-widget ul li {
+  display: inline-block;
+  width: 50%;
+  margin-bottom: 12px;
+  padding: 0px;
+}
+
+.footer-widget ul li a:hover {
+  color: $primary-color-light;
+}
+
+.footer-widget ul li a {
+  color: $color-white;
+  text-transform: capitalize;
+}
+
+.subscribe-email-section {
+  position: relative;
+  overflow: hidden;
+}
+
+.subscribe-email-section input {
+  width: 100%;
+  padding: 14px 28px;
+  background: $subscribe-input-background;
+  border: 1px solid $subscribe-input-background;
+  color: $color-white;
+}
+
+.subscribe-email-section button {
+  position: absolute;
+  right: 0;
+  background: $primary-color-light;
+  padding: 13px 20px;
+  border: 1px solid $primary-color-light;
+  top: 0;
+}
+
+.subscribe-email-section button i {
+  color: $color-black;
+  font-size: 22px;
+  transform: rotate(-6deg);
+}
+
+.social-media-row {
+  justify-content: left;
+}
+
+.social-media-col {
+  width: fit-content;
+}
+
+.copyright-area {
+  background: $footer-copywrite-area-background;
+  padding: 25px 0;
+}
+.copyright-text p {
+  margin: 0;
+  font-size: 14px;
+  color: $color-white;
+}
+.copyright-text p a {
+  color: $primary-color-light;
+}

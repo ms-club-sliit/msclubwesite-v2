@@ -1,0 +1,18 @@
+@import "./colors.scss";
+
+.navbar-background {
+  background: $light-navbar-background;
+}
+
+.navbar-margin {
+  margin-bottom: 7rem;
+}
+
+.navbar-logo {
+  width: 70px;
+}
+
+.navbar-items {
+  font-size: 20px;
+  font-weight: 500;
+}

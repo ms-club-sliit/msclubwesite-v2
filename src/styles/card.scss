@@ -1,0 +1,68 @@
+@import "./colors.scss";
+
+.shadow-color {
+  color: $color-black;
+  opacity: 0.2;
+}
+
+.card {
+  width: 20rem;
+  border-radius: 10px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  transition: box-shadow 0.2s ease-in-out, transform 0.35s ease-in-out;
+  &:hover {
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22)
+  }
+}
+
+.card-img-top {
+  border-radius: 10px 10px 0px 0px;
+  height: 200px;
+  width: 100%;
+  object-fit: cover;
+  object-position: center center;
+}
+
+.card-description {
+  font-family: "Roboto Regular";
+  font-size: 15px;
+}
+
+.card-tag {
+  background: $tag-background-light;
+  width: fit-content;
+  margin-right: 0.3rem;
+  margin-bottom: 0.5rem;
+}
+
+.row a {
+  text-decoration: none;
+}
+
+.card-datetime {
+  margin-left: 5px;
+  font-weight: 600;
+}
+
+.card-btn {
+  background: $card-btn-background-active;
+  color: $color-white;
+  font-family: "Roboto Medium";
+  border-radius: 10px;
+}
+
+.card-btn:hover {
+  background: $card-btn-background-hover;
+  color: $color-white;
+  font-family: "Roboto Medium";
+  border-radius: 10px;
+}
+
+.card-btn:focus, .card-btn:active {
+  outline: none !important;
+  box-shadow: none;
+}
+
+.card-btn::after {
+  background: $card-btn-background-active;
+}

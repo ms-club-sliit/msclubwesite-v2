@@ -1,0 +1,34 @@
+{
+  "data": [
+    {
+      "id": 1,
+      "image": "https://blog.bizzabo.com/hs-fs/hubfs/Microsoft%20Event%20Marketing/microsoft-event-marketing-blue-min.png?width=500&name=microsoft-event-marketing-blue-min.png",
+      "time": "6.00 PM",
+      "datetime": "2021-07-12T18:00:00",
+      "title": "ITP GUIDE 2.0 - KICKSTART YOUR MERN APPLICATION WITH GitHub",
+      "description": "Practical experience on how to implement your IT project with insight on different tools and technologies",
+      "tags": ["mern", "github", "itp", "msclubofsliit", "supportsessions", "growtogether"],
+      "link": "https://www.facebook.com/msclubsliit/photos/2678921442232089"
+    },
+    {
+      "id": 2,
+      "image": "https://blog.bizzabo.com/hs-fs/hubfs/Microsoft%20Event%20Marketing/microsoft-event-marketing-blue-min.png?width=500&name=microsoft-event-marketing-blue-min.png",
+      "time": "6.00 PM",
+      "datetime": "2021-06-28T18:00:00",
+      "title": "ITP GUIDE 2.0 WANNA TAKE YOUR IT PROJECT TO THE NEXT LEVEL?",
+      "description": "Lead your IT project to greater success with your ultimate commitment and our experienced guidance.",
+      "tags": ["itp", "msclubofsliit", "supportsessions", "growtogether"],
+      "link": "https://www.facebook.com/msclubsliit/photos/2648861178571449"
+    },
+    {
+      "id": 3,
+      "image": "https://blog.bizzabo.com/hs-fs/hubfs/Microsoft%20Event%20Marketing/microsoft-event-marketing-blue-min.png?width=500&name=microsoft-event-marketing-blue-min.png",
+      "time": "7.30 PM",
+      "datetime": "2021-04-23T19:30:00",
+      "title": "HACKATHON 4.0",
+      "description": "Are you struggling to comprehend the WHATs, WHYs, and HOWs of Mini Hackathon 4.0?",
+      "tags": ["msclubofsliit", "fcsc", "growtogether", "minihackathon"],
+      "link": "https://ms-club-sliit.github.io/minihackathon/"
+    }
+  ]
+}
