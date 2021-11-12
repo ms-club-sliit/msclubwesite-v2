@@ -1,8 +1,8 @@
 > Please read this documentation before you start implementation
 
-## Project Structure
+## Project Structure :spiral_notepad:
 
-:open_file_folder: `public` \
+### :open_file_folder: `public` \
 This folder contain the static files. 
 * `index.html` :page_facing_up:
 * `favicon.ico` :page_facing_up:
@@ -12,21 +12,21 @@ This folder contain the static files.
 E.g.: Import MS Club logo to the image tag. \
 `<img src="/assets/ms-club-logo.png" alt="logo" />`
 
-:open_file_folder: `src` \
+### :open_file_folder: `src` \
 This folder contain all the React components and pages that are renderd to the browser. The `src` :open_file_folder: include,
-* `api` :file_folder: - Implement all the API calling in this folder
-* `assets` :file_folder: - This folder contains fonts and images (Static)
-* `components` :file_folder: - Implement UI components in this folder.
-* `constants` :file_folder: - Declare all the constants in this folder's `index.ts` file.
-* `data` :file_folder: - Add all the data files (`.json`) files to this folder.
-* `interfaces` :file_folder: - Declare all the component interfaces in this folder.
-* `pages` :file_folder: - Contains main pages in the application.
-* `routes` :file_folder: - Declare page routes in this folder.
-* `styles` :file_folder: - Implement style files in this folder and then import that files into the `App.scss` file.
-* `App.tsx` :page_facing_up:
-* `index.tsx` :page_facing_up:
-* `reportWebVitals.ts` :page_facing_up:
-* `setupTests.ts` :page_facing_up:
+* :file_folder: `api` - Implement all the API calling in this folder
+* :file_folder: `assets` - This folder contains fonts and images (Static)
+* :file_folder: `components` - Implement UI components in this folder.
+* :file_folder: `constants` - Declare all the constants in this folder's `index.ts` file.
+* :file_folder: `data` - Add all the data files (`.json`) files to this folder.
+* :file_folder: `interfaces` - Declare all the component interfaces in this folder.
+* :file_folder: `pages` - Contains main pages in the application.
+* :file_folder: `routes` - Declare page routes in this folder.
+* :file_folder: `styles` - Implement style files in this folder and then import that files into the `App.scss` file.
+* :page_facing_up: `App.tsx` 
+* :page_facing_up: `index.tsx`
+* :page_facing_up: `reportWebVitals.ts` 
+* :page_facing_up: `setupTests.ts` 
 
 ## IMPORTANT NOTES :pencil2:
 ### Install Dependencies
@@ -41,8 +41,8 @@ Use following command to start the application. \
 `$ yarn start`
 
 ### Implement UI Components
-When you start implement a UI component, create a folder by using the name of the component. Then create an `index.tsx` :page_facing_up: to implement the UI logic. Please go through the following example. \
-> Implement a `card` component. (This example already there in the codebase. Please take a look). The same steps are applied to the `pages` implementation.
+When you start implement a UI component, create a folder by using the name of the component. Then create an `index.tsx` :page_facing_up: to implement the UI logic. Please go through the following example. 
+> Implement a `card` component. (This example already there in the codebase. Please take a :eyes:). The same steps are applied to the `pages` implementation.
 1. Create a folder called `card` inside the `components` :open_file_folder:
 2. Create an `index.tsx` file inside the `card` folder.
 3. Implement your UI.
