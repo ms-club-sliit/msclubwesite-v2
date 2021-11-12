@@ -1,6 +1,6 @@
 [![Firebase CD](https://github.com/ms-club-sliit/msclubwebsite/actions/workflows/firebase-deploy.yml/badge.svg)](https://github.com/ms-club-sliit/msclubwebsite/actions/workflows/firebase-deploy.yml)
-![Pull Requests](https://badgen.net/github/open-issues/ms-club-sliit/msclubwebsite)
-![Contributors](https://badgen.net/github/contributors/ms-club-sliit/msclubwebsite)
+![Pull Requests](https://badgen.net/github/open-issues/ms-club-sliit/msclubwesite-v2)
+![Contributors](https://badgen.net/github/contributors/ms-club-sliit/msclubwesite-v2)
 
 #  MS Club of SLIIT - Website V2
 Your one-stop portal to all things regarding MS Club of SLIIT🌀  
