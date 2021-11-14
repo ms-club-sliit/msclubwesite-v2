@@ -1,0 +1,194 @@
+[
+  {
+    "id": 1,
+    "year": "2020",
+    "board": [
+      {
+        "id": 1,
+        "name": "Sajeth Jonathan",
+        "position": "President",
+        "image": "/assets/boards/2020/sajeth.jpg",
+        "socialmedia": {
+          "facebook": "https://www.facebook.com/sajeth.jonathan",
+          "linkedin": "https://www.linkedin.com/in/sajethjonathan/",
+          "instagram": "https://ms-club-website.web.app/",
+          "twitter": "https://ms-club-website.web.app/"
+        }
+      },
+      {
+        "id": 2,
+        "name": "Dinuwan Kalubowila",
+        "position": "Vice President",
+        "image": "/assets/boards/2020/dinuwan.jpg",
+        "socialmedia": {
+          "facebook": "https://www.facebook.com/dinuwan.kalubowila",
+          "linkedin": "https://www.linkedin.com/in/dinuwan-kalubowila/",
+          "instagram": "https://ms-club-website.web.app/",
+          "twitter": "https://ms-club-website.web.app/"
+        }
+      },
+      {
+        "id": 3,
+        "name": "Akaam Zain",
+        "position": "Secretary",
+        "image": "/assets/boards/2020/akaam.jpg",
+        "socialmedia": {
+          "facebook": "https://www.facebook.com/AkaamZain",
+          "linkedin": "https://www.linkedin.com/in/akaam-zain-513391193/",
+          "instagram": "https://ms-club-website.web.app/",
+          "twitter": "https://ms-club-website.web.app/"
+        }
+      },
+      {
+        "id": 4,
+        "name": "Renu Harshatha",
+        "position": "Assistant Secretary",
+        "image": "/assets/boards/2020/renu.jpg",
+        "socialmedia": {
+          "facebook": "https://www.facebook.com/renu.harshatha",
+          "linkedin": "https://www.linkedin.com/in/renu-harshatha/",
+          "instagram": "https://ms-club-website.web.app/",
+          "twitter": "https://ms-club-website.web.app/"
+        }
+      },
+      {
+        "id": 5,
+        "name": "Bawantha Thilan",
+        "position": "Treasurer",
+        "image": "/assets/boards/2020/bawantha.jpg",
+        "socialmedia": {
+          "facebook": "https://www.facebook.com/bawanthathilan",
+          "linkedin": "https://www.linkedin.com/in/bawanthathilan/",
+          "instagram": "https://ms-club-website.web.app/",
+          "twitter": "https://ms-club-website.web.app/"
+        }
+      },
+      {
+        "id": 6,
+        "name": "Dureksha Wasala",
+        "position": "Assistant Treasurer",
+        "image": "/assets/boards/2020/dureksha.jpg",
+        "socialmedia": {
+          "facebook": "https://www.facebook.com/dureksha.wasala.1",
+          "linkedin": "https://www.linkedin.com/in/dureksha-wasala-88a15015a/",
+          "instagram": "https://ms-club-website.web.app/",
+          "twitter": "https://ms-club-website.web.app/"
+        }
+      },
+      {
+        "id": 7,
+        "name": "Chamod Shehanka",
+        "position": "Dev Relations",
+        "image": "/assets/boards/2020/chamod.jpg",
+        "socialmedia": {
+          "facebook": "https://www.facebook.com/chamodshehanka",
+          "linkedin": "https://www.linkedin.com/in/chamodshehanka/",
+          "instagram": "https://ms-club-website.web.app/",
+          "twitter": "https://ms-club-website.web.app/"
+        }
+      },
+      {
+        "id": 8,
+        "name": "Nisal Palliyaguru",
+        "position": "Editor",
+        "image": "/assets/boards/2020/nisal.jpg",
+        "socialmedia": {
+          "facebook": "https://www.facebook.com/nisal.renuja.56",
+          "linkedin": "https://www.linkedin.com/in/nisal-palliyaguru-899a73163/",
+          "instagram": "https://ms-club-website.web.app/",
+          "twitter": "https://ms-club-website.web.app/"
+        }
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "year": "2019",
+    "board": [
+      {
+        "id": 1,
+        "name": "Gihan Siriwardhana",
+        "position": "President",
+        "image": "/assets/boards/2019/gihan.jpg",
+        "socialmedia": {
+          "facebook": "https://www.facebook.com/gihan.s.siriwardhana",
+          "linkedin": "https://www.linkedin.com/in/gihan-saranga-siriwardhana/",
+          "instagram": "https://ms-club-website.web.app/",
+          "twitter": "https://ms-club-website.web.app/"
+        }
+      },
+      {
+        "id": 2,
+        "name": "Vino Manohar",
+        "position": "Vice President",
+        "image": "/assets/boards/2019/vino.jpg",
+        "socialmedia": {
+          "facebook": "https://www.facebook.com/vino.m6",
+          "linkedin": "https://www.linkedin.com/in/vino-manohar-701984153/",
+          "instagram": "https://ms-club-website.web.app/",
+          "twitter": "https://ms-club-website.web.app/"
+        }
+      },
+      {
+        "id": 3,
+        "name": "Hesha Jayarathna",
+        "position": "Secretary",
+        "image": "/assets/boards/2019/hesha.jpg",
+        "socialmedia": {
+          "facebook": "https://www.facebook.com/Heshajay",
+          "linkedin": "https://www.linkedin.com/in/hesha-nirmani-jayarathne-b13881176/",
+          "instagram": "https://ms-club-website.web.app/",
+          "twitter": "https://ms-club-website.web.app/"
+        }
+      },
+      {
+        "id": 4,
+        "name": "Lakna Rajarathna",
+        "position": "Assistant Secretary",
+        "image": "/assets/boards/femaleAvatar.jpg",
+        "socialmedia": {
+          "facebook": "https://www.facebook.com/lakna.rajaratne",
+          "linkedin": "https://ms-club-website.web.app/",
+          "instagram": "https://ms-club-website.web.app/",
+          "twitter": "https://ms-club-website.web.app/"
+        }
+      },
+      {
+        "id": 5,
+        "name": "Tharindu Ranaweera",
+        "position": "Treasurer",
+        "image": "/assets/boards/2019/tharindu.jpg",
+        "socialmedia": {
+          "facebook": "https://ms-club-website.web.app/",
+          "linkedin": "https://www.linkedin.com/in/tharindu-shehan/",
+          "instagram": "https://ms-club-website.web.app/",
+          "twitter": "https://ms-club-website.web.app/"
+        }
+      },
+      {
+        "id": 6,
+        "name": "Pasan Nethsara",
+        "position": "Assistant Treasurer",
+        "image": "/assets/boards/2019/pasan.jpg",
+        "socialmedia": {
+          "facebook": "https://www.facebook.com/pasan.nethsara",
+          "linkedin": "https://www.linkedin.com/in/pasan-nethsara-4b5b17159/",
+          "instagram": "https://ms-club-website.web.app/",
+          "twitter": "https://ms-club-website.web.app/"
+        }
+      },
+      {
+        "id": 7,
+        "name": "Kalana Elapatha",
+        "position": "Editor",
+        "image": "/assets/boards/2019/kalana.jpg",
+        "socialmedia": {
+          "facebook": "https://www.facebook.com/kalanaelapatha1",
+          "linkedin": "https://www.linkedin.com/in/kalanaelapatha/",
+          "instagram": "https://ms-club-website.web.app/",
+          "twitter": "https://ms-club-website.web.app/"
+        }
+      }
+    ]
+  }
+]
