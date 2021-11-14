@@ -2,33 +2,31 @@
   "data": [
     {
       "id": 1,
-      "image": "https://blog.bizzabo.com/hs-fs/hubfs/Microsoft%20Event%20Marketing/microsoft-event-marketing-blue-min.png?width=500&name=microsoft-event-marketing-blue-min.png",
-      "time": "6.00 PM",
-      "datetime": "2021-07-12T18:00:00",
-      "title": "ITP GUIDE 2.0 - KICKSTART YOUR MERN APPLICATION WITH GitHub",
-      "description": "Practical experience on how to implement your IT project with insight on different tools and technologies",
-      "tags": ["mern", "github", "itp", "msclubofsliit", "supportsessions", "growtogether"],
-      "link": "https://www.facebook.com/msclubsliit/photos/2678921442232089"
-    },
-    {
-      "id": 2,
-      "image": "https://blog.bizzabo.com/hs-fs/hubfs/Microsoft%20Event%20Marketing/microsoft-event-marketing-blue-min.png?width=500&name=microsoft-event-marketing-blue-min.png",
-      "time": "6.00 PM",
-      "datetime": "2021-06-28T18:00:00",
-      "title": "ITP GUIDE 2.0 WANNA TAKE YOUR IT PROJECT TO THE NEXT LEVEL?",
-      "description": "Lead your IT project to greater success with your ultimate commitment and our experienced guidance.",
-      "tags": ["itp", "msclubofsliit", "supportsessions", "growtogether"],
-      "link": "https://www.facebook.com/msclubsliit/photos/2648861178571449"
-    },
-    {
-      "id": 3,
-      "image": "https://blog.bizzabo.com/hs-fs/hubfs/Microsoft%20Event%20Marketing/microsoft-event-marketing-blue-min.png?width=500&name=microsoft-event-marketing-blue-min.png",
+      "imageUrl": "/assets/events/pastevents/MinHackathon.svg",
       "time": "7.30 PM",
-      "datetime": "2021-04-23T19:30:00",
-      "title": "HACKATHON 4.0",
+      "dateTime": "2021-04-23T19:30:00",
+      "title": "MINI-HACKATHON 4.0",
       "description": "Are you struggling to comprehend the WHATs, WHYs, and HOWs of Mini Hackathon 4.0?",
       "tags": ["msclubofsliit", "fcsc", "growtogether", "minihackathon"],
       "link": "https://ms-club-sliit.github.io/minihackathon/"
+    },
+    {
+      "id": 2,
+      "imageUrl": "/assets/events/pastevents/cloudSkills.svg",
+      "dateTime": "2021-01-10T18:00:00",
+      "title": "Cloud Skills Challenge",
+      "description": "A self-paced competition to complete modules through the Microsoft Learn Platform",
+      "tags": ["csc21", "azure", "microsoftLearn"],
+      "link": "https://www.facebook.com/msclubsliit/photos/2225046060952965"
+    },
+    {
+      "id": 3,
+      "imageUrl": "/assets/events/pastevents/appinaday.svg",
+      "dateTime": "2020-03-06T09:00:00",
+      "title": "App in A Day",
+      "description": "Learn how to create and deploy your own web application within a day",
+      "tags": ["azure", "nodejs", "vscode", "growtogether"],
+      "link": "https://www.facebook.com/events/232511521122355/?acontext=%7B%22event_action_history%22%3A[%7B%22surface%22%3A%22page%22%7D]%7D"
     }
   ]
 }
