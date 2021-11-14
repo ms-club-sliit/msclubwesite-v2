@@ -103,6 +103,7 @@ const CardCarousel: React.FC<ICardCarousel> = ({ carouselTitle, items }) => (
             dateTime={item.dateTime}
             tags={item.tags}
             link={item.link}
+            socialMediaURLs={item.socialMediaURLs}
           />
         ))}
       </OwlCarousel>

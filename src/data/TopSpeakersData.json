@@ -1,0 +1,82 @@
+{
+  "data": [
+    {
+      "id": 1,
+      "imageUrl": "/assets/speakers/Fiqri-Ismail.jpg",
+      "title": "Fiqri Ismail",
+      "description": "Architect . Author . Teacher . MVP - Azure",
+      "socialMediaURLs": {
+        "fb": "https://www.facebook.com/fiqri.ismail",
+        "instagram": "https://www.instagram.com/fiqriismail/",
+        "twitter": "https://twitter.com/fiqriismail",
+        "linkedIn": "https://www.linkedin.com/pub/fiqri-ismail/29/b75/122",
+        "web": "https://askfiqri.com/"
+      }
+    },
+    {
+      "id": 2,
+      "imageUrl": "/assets/speakers/Hansamali-Gamage.jpg",
+      "title": "Hansamali Gamage",
+      "description": "Blogger . Speaker . Author . MVP - Azure . MCT",
+      "socialMediaURLs": {
+        "fb": "https://www.facebook.com/hansamali.gamage",
+        "instagram": "",
+        "twitter": "https://twitter.com/HansamaliGamage",
+        "linkedIn": "https://www.linkedin.com/in/hansamali-gamage-37777a50/",
+        "web": "https://hansamaligamage.blogspot.com/"
+      }
+    },
+    {
+      "id": 3,
+      "imageUrl": "/assets/speakers/Shameera-Prajapriya.jpg",
+      "title": "Shameera Prajapriya",
+      "description": "Director . Principal Architect . MVP - Azure . Technical Speaker",
+      "socialMediaURLs": {
+        "fb": "https://www.facebook.com/prajapriya",
+        "instagram": "",
+        "twitter": "https://twitter.com/prajapriya?lang=en",
+        "linkedIn": "https://www.linkedin.com/in/prajapriya/",
+        "web": ""
+      }
+    },
+    {
+      "id": 4,
+      "imageUrl": "/assets/speakers/Sammani-Palansuriya.jpg",
+      "title": "Sammani Palansuriya",
+      "description": "Technical Architect . MVP - Azure",
+      "socialMediaURLs": {
+        "fb": "https://www.facebook.com/SammaniPalansuriya",
+        "instagram": "",
+        "twitter": "",
+        "linkedIn": "https://lk.linkedin.com/in/sammanipalansuriya",
+        "web": "https://sammanipalansuriya.blogspot.com/"
+      }
+    },
+    {
+      "id": 5,
+      "imageUrl": "/assets/speakers/Dinesh-Priyankara.jpg",
+      "title": "Dinesh Priyankara",
+      "description": "CEO at dinesQL & InnoventSys . MVP - Azure",
+      "socialMediaURLs": {
+        "fb": "https://www.facebook.com/dinesh.priyankara.35",
+        "instagram": "",
+        "twitter": "https://twitter.com/Dinesh_Priya",
+        "linkedIn": "https://lk.linkedin.com/pub/dinesh-priyankara/32/6a0/570",
+        "web": "http://dinesql.blogspot.com/"
+      }
+    },
+    {
+      "id": 6,
+      "imageUrl": "/assets/speakers/malith.jpg",
+      "title": "Malith Wimanna",
+      "description": "Head of Learning at N Tech Learning & Solutions . Microsoft Certified Trainers",
+      "socialMediaURLs": {
+        "fb": "https://www.facebook.com/malithofficial",
+        "instagram": "",
+        "twitter": "",
+        "linkedIn": "",
+        "web": ""
+      }
+    }
+  ]
+}
