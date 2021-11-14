@@ -1,16 +1,17 @@
 import React from 'react';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import { NavBar, Footer } from '../components';
+import { Home } from '../pages';
 
 const AppRoutes: React.FC = () => (
   <div>
     <Router>
       <NavBar />
-      {/* Route Declaration - Start */}
-      
-      {/* Route Declaration - End */}
+        <Routes>
+          <Route path="/" element={<Home/>} />
+        </Routes>
+      <Footer />
     </Router>
-    <Footer />
   </div>
 );
 

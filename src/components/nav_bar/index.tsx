@@ -42,7 +42,7 @@ const NavBar: React.FC = () => {
             <ul className="navbar-nav me-auto mb-lg-0" />
             <ul className="navbar-nav d-flex me-2 navbar-items">
               <li className="nav-item">
-                <a className="nav-link" href="#">Home</a>
+                <a className="nav-link" href="/">Home</a>
               </li>
               <li className="nav-item">
                 <a className="nav-link" href="#">Events</a>

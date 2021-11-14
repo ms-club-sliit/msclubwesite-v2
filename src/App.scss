@@ -4,6 +4,7 @@
 */
 
 // Import Styles
+@import "./styles/breakpoints.scss";
 @import "./styles/colors.scss";
 @import "./styles/navbar.scss";
 @import "./styles/footer.scss";
@@ -15,12 +16,13 @@ ul {
 }
 
 .hero-section-bg {
-  position: absolute;
-  overflow: auto;
+  height: 600px;
   width: 100vw;
-  height: 720px;
   left: 0px;
   top: 0px;
-  background: var(--light-home-background-color);
-  clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 100%);
+  position: absolute;
+  content: '';
+  z-index: -1;
+  background: $hero-section-background-light;
+  clip-path: polygon(0 0, 100% 0%, 100% 75%, 0 95%);
 }

@@ -1,3 +1,61 @@
+@import "./breakpoints.scss";
+
+// Home button styling - Start
 .home-primary-btn {
   background: $primary-color-active;
+  color: $color-white;
+  border-radius: 7px;
+  font-family: "Product Sans Bold";
+  font-size: 24px;
+  width: 150px;
+}
+
+.home-primary-btn:hover {
+  background: $primary-color-hover;
+  color: $color-white;
+}
+
+.home-primary-btn:focus, .home-primary-btn:active {
+  background: $primary-color-active;
+  color: $color-white;
+  outline: none !important;
+  box-shadow: none;
+}
+// Home button styling - End
+
+.home-header-title {
+  @include media("<=phone") {
+    font-family: "Product Sans Regular";
+    font-size: 20px;
+  }
+
+  @include media("<=desktop") {
+    font-family: "Product Sans Bold";
+    font-size: 100px;
+  }
+
+  @include media("<=largedesktop") {
+    font-family: "Product Sans Bold";
+    font-size: 100px;
+  }
+}
+
+.home-header-description {
+  font-size: 22px;
+}
+
+.home-header-img {
+  @include media("<=phone") {
+    width: 200px;
+    margin-left: auto;
+    display: block;
+    visibility: visible;
+  }
+
+  @include media("<=tablet") {
+    width: 400px;
+    margin-left: auto;
+    display: block;
+    visibility: visible;
+  }
 }

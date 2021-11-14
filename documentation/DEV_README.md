@@ -2,7 +2,7 @@
 
 ## Project Structure :spiral_notepad:
 
-### :open_file_folder: `public` \
+### :open_file_folder: `public` 
 This folder contain the static files. 
 * `index.html` :page_facing_up:
 * `favicon.ico` :page_facing_up:
@@ -12,7 +12,7 @@ This folder contain the static files.
 E.g.: Import MS Club logo to the image tag. \
 `<img src="/assets/ms-club-logo.png" alt="logo" />`
 
-### :open_file_folder: `src` \
+### :open_file_folder: `src` 
 This folder contain all the React components and pages that are renderd to the browser. The `src` :open_file_folder: include,
 * :file_folder: `api` - Implement all the API calling in this folder
 * :file_folder: `assets` - This folder contains fonts and images (Static)
