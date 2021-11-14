@@ -7,6 +7,7 @@ interface ICard {
   link?: string;
   description?: string;
   socialMediaURLs?: socialMediaURLs;
+  icon?:string;
 }
 
 interface socialMediaURLs {

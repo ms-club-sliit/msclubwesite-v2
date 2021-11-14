@@ -1,0 +1,30 @@
+{
+    "data": [
+      {
+        "id": 1,
+        "image": "/assets/pioneers/nissanka.jpg",
+        "name":"Anju Nissanka"
+      },
+      {
+        "id": 2,
+        "image": "/assets/pioneers/manuja.jpg",
+        "name":"Manuja Liyanage"
+      },
+      {
+        "id": 3,
+        "image": "/assets/pioneers/akhila.jpg",
+        "name":"Akhila Shalinda"
+      },
+      {
+        "id": 4,
+        "image": "/assets/pioneers/anushka.jpg",
+        "name":"Anushka Hapukotuwa"
+      },
+      {
+        "id": 5,
+        "image": "/assets/pioneers/gihan.jpg",
+        "name":"Gihan Siriwardhana"
+      }
+    ]
+  }
+  

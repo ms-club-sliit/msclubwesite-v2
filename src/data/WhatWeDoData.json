@@ -1,0 +1,22 @@
+[
+  {
+    "id": 1,
+    "icon": "fas fa-users fa-5x",
+    "title": "Tech Talks"
+  },
+  {
+    "id": 2,
+    "icon": "fas fa-calendar fa-5x",
+    "title": "Hackathons"
+  },
+  {
+    "id": 3,
+    "icon": "fas fa-fist-raised fa-5x",
+    "title": "Technical Workshops"
+  },
+  {
+    "id": 4,
+    "icon": "fas fa-users fa-5x",
+    "title": "Mentor Programs"
+  }
+]

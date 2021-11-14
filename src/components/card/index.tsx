@@ -10,10 +10,16 @@ const Card: React.FC<ICard> = ({
   link,
   description,
   socialMediaURLs,
+  icon,
 }) => (
   <div className="card mb-3">
-    <img src={imageUrl} className="card-img-top" alt="image" />
+    {imageUrl && <img src={imageUrl} className="card-img-top" alt="image" />}
 
+    {icon && (
+      <div className="d-flex justify-content-center mt-4">
+        <i className={icon} />
+      </div>
+    )}
     <div className="card-body">
       {tags &&
         tags.length > 0 &&
@@ -28,14 +34,16 @@ const Card: React.FC<ICard> = ({
         {description && <p className="card-description">{description}</p>}
       </div>
 
-      {/* <div className="row">
-        <div className="d-flex justify-content-center">
-          <i className="fas fa-calendar-alt fa-lg mt-1" />
-          <span className="card-datetime">
-            {moment(dateTime).format("lll")}
-          </span>
+      {dateTime && (
+        <div className="row">
+          <div className="d-flex justify-content-center">
+            <i className="fas fa-calendar-alt fa-lg mt-1" />
+            <span className="card-datetime">
+              {moment(dateTime).format("lll")}
+            </span>
+          </div>
         </div>
-      </div> */}
+      )}
 
       {/* Social Media Section */}
       {socialMediaURLs && (
@@ -82,15 +90,17 @@ const Card: React.FC<ICard> = ({
         </div>
       )}
 
-      <div className="row mt-3">
-        <a
-          href={link}
-          target="_blank"
-          className="d-flex justify-content-center"
-        >
-          <button className="btn card-btn">MORE INFO</button>
-        </a>
-      </div>
+      {link && (
+        <div className="row mt-3">
+          <a
+            href={link}
+            target="_blank"
+            className="d-flex justify-content-center"
+          >
+            <button className="btn card-btn">MORE INFO</button>
+          </a>
+        </div>
+      )}
     </div>
   </div>
 );
