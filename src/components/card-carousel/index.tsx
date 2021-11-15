@@ -59,7 +59,11 @@ const slideNextKeyBoard = (e: any) => {
   }
 };
 
-const CardCarousel: React.FC<ICardCarousel> = ({ carouselTitle, items }) => (
+const CardCarousel: React.FC<ICardCarousel> = ({
+  carouselTitle,
+  items,
+  blogItems,
+}) => (
   <div className="past-event-container">
     <h1 className="event-header">{carouselTitle}</h1>
     <div className="nav-button-wrapper">
@@ -94,7 +98,7 @@ const CardCarousel: React.FC<ICardCarousel> = ({ carouselTitle, items }) => (
           slider = slide;
         }}
       >
-        {items.map((item) => (
+        {items && items.map((item) => (
           <Card
             id={item.id}
             imageUrl={item.imageUrl}
@@ -104,6 +108,17 @@ const CardCarousel: React.FC<ICardCarousel> = ({ carouselTitle, items }) => (
             tags={item.tags}
             link={item.link}
             socialMediaURLs={item.socialMediaURLs}
+          />
+        ))}
+
+        {blogItems && blogItems.map((item, index) => (
+          <Card
+            id={index}
+            imageUrl={item.thumbnail}
+            title={item.title}
+            dateTime={item.pubDate}
+            tags={item.categories}
+            link={item.link}
           />
         ))}
       </OwlCarousel>

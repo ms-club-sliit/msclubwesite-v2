@@ -1,24 +1,26 @@
-import React, { useState, useEffect} from "react";
-import CardCarousel from '../../components/card-carousel';
-import { IBlog } from '../../interfaces/BlogInterface';
-import  {getBlogs} from "../../api/BlogAction";
+import React, { useState, useEffect } from "react";
+import CardCarousel from "../../components/card-carousel";
+import { IBlog } from "../../interfaces/BlogInterface";
+import blogApi from "../../api/BlogAction";
 
-interface Props {
-}
+const BlogSection: React.FC = () => {
+  const [blogList, setblogList] = useState<IBlog>();
 
-const BlogSection: React.FC<Props> = ({}) => {
+  useEffect(() => {
+    blogApi
+      .blog()
+      .getAllblogs()
+      .then(({ data }) => {
+        setblogList(data);
+      })
+      .catch(() => {});
+  }, []);
 
-    // const [blogList, setblogList] = useState<IBlog[]>([]);
-
-    // useEffect(() => {
-    //   setblogList(getBlogs);
-    // }, []);
-
-    return (
-      <div>
-        <p>Blog</p>
-      </div>
-    )
+  return (
+    <div>
+      {blogList && <CardCarousel carouselTitle="Blog" blogItems={blogList?.items} /> }
+    </div> 
+  );
 };
 
 export default BlogSection;
