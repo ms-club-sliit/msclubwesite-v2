@@ -18,7 +18,7 @@ const BlogSection: React.FC = () => {
 
   return (
     <div>
-      {blogList && <CardCarousel carouselTitle="Blog" blogItems={blogList?.items} /> }
+      {blogList && <CardCarousel carouselTitle="Blogs" blogItems={blogList?.items} /> }
     </div> 
   );
 };
