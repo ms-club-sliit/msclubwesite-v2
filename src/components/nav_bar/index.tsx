@@ -45,16 +45,19 @@ const NavBar: React.FC = () => {
                 <a className="nav-link" href="/">Home</a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#">Events</a>
+                <a className="nav-link" href="/about">About</a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#">Blogs</a>
+                <a className="nav-link" href="/events">Events</a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#">About</a>
+                <a className="nav-link" href="/board">Board</a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#">Contact Us</a>
+                <a className="nav-link" href="/blogs">Blogs</a>
+              </li>
+              <li className="nav-item">
+                <a className="nav-link" href="/contact">Contact Us</a>
               </li>
             </ul>
           </div>

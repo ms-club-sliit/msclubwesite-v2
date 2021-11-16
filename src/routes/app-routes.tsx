@@ -1,17 +1,22 @@
-import React from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import { NavBar, Footer } from '../components';
-import { Home } from '../pages';
+import React from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { NavBar, Footer } from "../components";
+import { Home, Event, About, Contact, Boards, Blogs } from "../pages";
 
 const AppRoutes: React.FC = () => (
   <div>
-    <Router>
+    <BrowserRouter>
       <NavBar />
         <Routes>
-          <Route path="/" element={<Home/>} />
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/events" element={<Event />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/board" element={<Boards />} />
+          <Route path="/blogs" element={<Blogs />} />
         </Routes>
       <Footer />
-    </Router>
+    </BrowserRouter>
   </div>
 );
 
