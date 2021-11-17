@@ -1,7 +1,7 @@
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { NavBar, Footer } from "../components";
-import { Home, Event, About, Contact, Boards, Blogs } from "../pages";
+import { Home, About, Contact, Boards, Blogs } from "../pages";
 
 const AppRoutes: React.FC = () => (
   <div>
@@ -10,7 +10,6 @@ const AppRoutes: React.FC = () => (
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
-          <Route path="/events" element={<Event />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/board" element={<Boards />} />
           <Route path="/blogs" element={<Blogs />} />

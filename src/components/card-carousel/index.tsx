@@ -98,20 +98,20 @@ const CardCarousel: React.FC<ICardCarousel> = ({
           slider = slide;
         }}
       >
-        {items && items.map((item) => (
-          <Card
-            id={item.id}
-            imageUrl={item.imageUrl}
-            title={item.title}
-            description={item.description}
-            dateTime={item.dateTime}
-            tags={item.tags}
-            link={item.link}
-            socialMediaURLs={item.socialMediaURLs}
-          />
-        ))}
+        {/* {items && items.map((item) => (
+          // <Card
+          //   id={item.id}
+          //   imageUrl={item.imageUrl}
+          //   title={item.title}
+          //   description={item.description}
+          //   dateTime={item.dateTime}
+          //   tags={item.tags}
+          //   link={item.link}
+          //   socialMediaURLs={item.socialMediaURLs}
+          // />
+        ))} */}
 
-        {blogItems && blogItems.map((item, index) => (
+        {/* {blogItems && blogItems.map((item, index) => (
           <Card
             id={index}
             imageUrl={item.thumbnail}
@@ -120,7 +120,7 @@ const CardCarousel: React.FC<ICardCarousel> = ({
             tags={item.categories}
             link={item.link}
           />
-        ))}
+        ))} */}
       </OwlCarousel>
     </div>
   </div>

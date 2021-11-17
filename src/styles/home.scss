@@ -5,9 +5,9 @@
   background: $primary-color-active;
   color: $color-white;
   border-radius: 7px;
-  font-family: "Product Sans Bold";
-  font-size: 24px;
-  width: 150px;
+  font-family: "Product Sans Regular";
+  font-size: 18px;
+  width: 100px;
 }
 
 .home-primary-btn:hover {
@@ -24,38 +24,99 @@
 // Home button styling - End
 
 .home-header-title {
+  font-family: "Product Sans Bold";
+
   @include media("<=phone") {
-    font-family: "Product Sans Regular";
-    font-size: 20px;
+    font-size: 50px;
   }
 
-  @include media("<=desktop") {
-    font-family: "Product Sans Bold";
-    font-size: 100px;
+  @include media(">=phone", '<tablet') {
+    font-size: 55px;
   }
 
-  @include media("<=largedesktop") {
-    font-family: "Product Sans Bold";
-    font-size: 100px;
+  @include media('>=tablet', '<smalldesktop') {
+    font-size: 55px;
+  }
+
+  @include media('>=smalldesktop', '<desktop') {
+    font-size: 70px;
+  }
+
+  @include media(">=desktop", '<largedesktop') {
+    font-size: 70px;
+  }
+
+  @include media('>=largedesktop') {
+    font-size: 80px;
   }
 }
 
 .home-header-description {
-  font-size: 22px;
+  @include media("<=phone") {
+    font-size: 18px;
+  }
+
+  @include media(">=phone", '<tablet') {
+    font-size: 18px;
+  }
+
+  @include media('>=tablet', '<smalldesktop') {
+    font-size: 18px;
+  }
+
+  @include media('>=smalldesktop', '<desktop') {
+    font-size: 18px;
+  }
+
+  @include media(">=desktop", '<largedesktop') {
+    font-size: 20px;
+  }
+
+  @include media('>=largedesktop') {
+    font-size: 24px;
+  }
 }
 
 .home-header-img {
+  margin-left: 20px;
+  margin-top: 10px;
+  display: block;
+  visibility: visible;
+
   @include media("<=phone") {
-    width: 200px;
-    margin-left: auto;
-    display: block;
-    visibility: visible;
+    width: 80%
   }
 
-  @include media("<=tablet") {
+  @include media(">=phone", '<tablet') {
     width: 400px;
-    margin-left: auto;
-    display: block;
-    visibility: visible;
+  }
+
+  @include media('>=tablet', '<smalldesktop') {
+    width: 350px;
+  }
+
+  @include media('>=smalldesktop', '<desktop') {
+    width: 400px;
+  }
+
+  @include media(">=desktop", '<largedesktop') {
+    width: 450px;
+  }
+
+  @include media('>=largedesktop') {
+    width: 520px;
   }
 }
+
+// Home blog section
+// .blog-header {
+
+// }
+
+// .blog-navigation {
+
+// }
+
+// .view-more-text {
+  
+// }

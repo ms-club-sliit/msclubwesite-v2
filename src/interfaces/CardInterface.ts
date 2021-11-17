@@ -1,6 +1,8 @@
 interface ICard {
   id:number;
-  title?: string;
+  type: string;
+  title: string;
+  author?: string,
   imageUrl?: string;
   tags?: string[];
   dateTime?: string;

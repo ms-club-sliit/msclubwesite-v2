@@ -1,26 +1,27 @@
 import React, { useState, useEffect } from "react";
 import { Card } from "../../components";
 import { IBlog } from "../../interfaces/BlogInterface";
-import blogApi from "../../api/BlogAction";
+import { getBlogs } from "../../api/BlogAction";
 
 const BlogList: React.FC = () => {
-  const [blogList, setblogList] = useState<IBlog>();
+  const [blogList, setBlogList] = useState<IBlog>();
 
+  // Fetch all the blog items 
   useEffect(() => {
-    blogApi
-      .blog()
-      .getAllblogs()
-      .then(({ data }) => {
-        setblogList(data);
+    getBlogs()
+      .then((data) => {
+        setBlogList(data.data);
       })
-      .catch(() => {});
+      .catch((error) => {
+        console.log(error.message);
+      });
   }, []);
 
   return (
     <div className="container">
       <h1>Blogs</h1>
       <div className="row">
-        {blogList &&
+        {/* {blogList &&
           blogList.items?.map((item, index) => (
             <div className="col">
               <Card
@@ -32,7 +33,7 @@ const BlogList: React.FC = () => {
                 link={item.link}
               />
             </div>
-          ))}
+          ))} */}
       </div>
     </div>
   );

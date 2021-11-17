@@ -3,6 +3,27 @@
   If you implement stylings that belongs to individual component, use the "styles" directory to implement it
 */
 
+/**
+  MS Club of SLIIT Website - Media Query Template
+
+  @include media("<=phone") {}
+
+  @include media(">=phone", '<tablet') {}
+
+  @include media('>=tablet', '<smalldesktop') {}
+
+  @include media('>=smalldesktop', '<desktop') {}
+
+  @include media(">=desktop", '<largedesktop') {}
+
+  @include media('>=largedesktop') {}
+
+*/
+
+// Style Libraries
+@import "owl.carousel/dist/assets/owl.carousel.css";
+@import "owl.carousel/dist/assets/owl.theme.default.css";
+
 // Import Styles
 @import "./styles/breakpoints.scss";
 @import "./styles/colors.scss";
@@ -16,7 +37,6 @@ ul {
 }
 
 .hero-section-bg {
-  height: 600px;
   width: 100vw;
   left: 0px;
   top: 0px;
@@ -24,5 +44,38 @@ ul {
   content: '';
   z-index: -1;
   background: $hero-section-background-light;
-  clip-path: polygon(0 0, 100% 0%, 100% 75%, 0 95%);
+
+  @include media("<=phone") {
+    height: 600px;
+    clip-path: polygon(0 0, 100% 0%, 100% 90%, 0 100%);
+  }
+
+  @include media(">=phone", '<tablet') {
+    height: 560px;
+    clip-path: polygon(0 0, 100% 0%, 100% 85%, 0 100%);
+  }
+
+  @include media('>=tablet', '<smalldesktop') {
+    height: 500px;
+    clip-path: polygon(0 0, 100% 0%, 100% 85%, 0 100%);
+  }
+
+  @include media('>=smalldesktop', '<desktop') {
+    height: 480px;
+    clip-path: polygon(0 0, 100% 0%, 100% 85%, 0 100%);
+  }
+
+  @include media(">=desktop", '<largedesktop') {
+    height: 480px;
+    clip-path: polygon(0 0, 100% 0%, 100% 85%, 0 100%);
+  }
+
+  @include media('>=largedesktop') {
+    height: 550px;
+    clip-path: polygon(0 0, 100% 0%, 100% 70%, 0 100%);
+  }
+}
+
+.fas {
+  color: $primary-color-active;
 }
