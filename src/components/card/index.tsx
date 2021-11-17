@@ -13,7 +13,7 @@ const Card: React.FC<ICard> = ({
   icon,
 }) => (
   <div className="card mb-3">
-    {imageUrl && <img src={imageUrl} className="card-img-top" alt="image" />}
+    {imageUrl && <img src={imageUrl} className="card-img-top" alt={title}/>}
 
     {icon && (
       <div className="d-flex justify-content-center mt-4">
@@ -95,6 +95,7 @@ const Card: React.FC<ICard> = ({
           <a
             href={link}
             target="_blank"
+            rel="noreferrer"
             className="d-flex justify-content-center"
           >
             <button className="btn card-btn">MORE INFO</button>

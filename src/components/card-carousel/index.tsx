@@ -1,5 +1,4 @@
 import React from "react";
-import moment from "moment";
 import { ICardCarousel } from "../../interfaces/CardCarouselInterface";
 import OwlCarousel from "react-owl-carousel";
 import "owl.carousel/dist/assets/owl.carousel.css";
