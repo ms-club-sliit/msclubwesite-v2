@@ -1,0 +1,123 @@
+@import "./colors.scss";
+
+.about-us-title {
+  font-size: 35px;
+}
+
+.about-us-description {
+  font-size: 26px;
+}
+
+.pioneers {
+  margin-top: 8rem;
+}
+
+.pioneer-name {
+  font-size: 20px;
+  margin-top: 10px;
+}
+
+.pioneer-img {
+  border-radius: 50%;
+  margin-left: 10px;
+}
+
+.pioneer-section {
+  margin-right: 20px;
+}
+
+.about-us-pioneer-header {
+  font-size: 40px;
+  margin-bottom: 25px;
+}
+
+.about-us-card-img {
+  border-radius: 5px;
+  filter: drop-shadow(5px 5px 10px #666);
+}
+
+.about-us-header-title {
+  font-family: "Product Sans Bold";
+
+  @include media("<=phone") {
+    font-size: 50px;
+  }
+
+  @include media(">=phone", '<tablet') {
+    font-size: 55px;
+  }
+
+  @include media('>=tablet', '<smalldesktop') {
+    font-size: 55px;
+  }
+
+  @include media('>=smalldesktop', '<desktop') {
+    font-size: 70px;
+  }
+
+  @include media(">=desktop", '<largedesktop') {
+    font-size: 70px;
+  }
+
+  @include media('>=largedesktop') {
+    font-size: 80px;
+  }
+}
+
+.about-us-header-description {
+  @include media("<=phone") {
+    font-size: 18px;
+  }
+
+  @include media(">=phone", '<tablet') {
+    font-size: 18px;
+  }
+
+  @include media('>=tablet', '<smalldesktop') {
+    font-size: 18px;
+  }
+
+  @include media('>=smalldesktop', '<desktop') {
+    font-size: 18px;
+  }
+
+  @include media(">=desktop", '<largedesktop') {
+    font-size: 20px;
+  }
+
+  @include media('>=largedesktop') {
+    font-size: 24px;
+  }
+}
+
+.about-us-header-img {
+  margin-left: 20px;
+  margin-top: 10px;
+  display: block;
+  visibility: visible;
+  border-radius: 5px;
+
+  @include media("<=phone") {
+    width: 80%
+  }
+
+  @include media(">=phone", '<tablet') {
+    width: 400px;
+  }
+
+  @include media('>=tablet', '<smalldesktop') {
+    width: 350px;
+  }
+
+  @include media('>=smalldesktop', '<desktop') {
+    width: 400px;
+  }
+
+  @include media(">=desktop", '<largedesktop') {
+    width: 450px;
+  }
+
+  @include media('>=largedesktop') {
+    width: 520px;
+  }
+}

@@ -15,24 +15,26 @@ const CardScreen: React.FC<ICardScreen> = ({
             rightSide ? "d-xl-none " : ""
           }`}
         >
-          <img
-            alt="imageFlatVector"
-            className="img-fluid"
-            src={imageUrl}
-          />
+          <div className="d-flex justify-content-center">
+            <img
+              alt="about-us-image"
+              className="img-fluid about-us-card-img"
+              src={imageUrl}
+            />
+          </div>
         </div>
         <div className="col-lg-7 col-md-12 col-sm-12 p-5">
-          <h2>
+          <h2 className="about-us-title">
             <strong>{title}</strong>
           </h2>
-          <p className="lead mt-3">{description}</p>
+          <p className="about-us-description mt-3">{description}</p>
         </div>
 
         {rightSide ? (
           <div className="col-lg-5 col-md-12 col-sm-12 d-none d-xl-block">
             <img
-              alt="imageFlatVector"
-              className="img-fluid"
+              alt="about-us-image"
+              className="img-fluid about-us-card-img"
               src={imageUrl}
             />
           </div>

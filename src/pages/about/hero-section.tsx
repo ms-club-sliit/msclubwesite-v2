@@ -1,22 +1,22 @@
 import React from "react";
-import AboutHeaderImage from "../../assets/flat-illustrations/aboutus-header-img.jpg";
-import content from '../../data/AboutSectionData.json';
 
 const HeroSection: React.FC = () => (
   <div>
-    <div className="container-fluid overlay header">
+    <div className=" header">
       <div className="hero-section-bg" />
       <div className="row">
         <div className="col-md-6">
-          <p className="header-title">About Us</p>
-          <p className="header-content">{content.description}</p>
+          <p className="about-us-header-title">About Us</p>
+          <p className="about-us-header-description">
+            A volunteer-driven student community aiming to bridge the skill gap between an Undergraduate and an Industry Professional.
+          </p>
         </div>
         <div className="col-md-6 header-img">
-          <div className="d-flex justify-content-right">
+          <div className="d-flex justify-content-center">
             <img
-              src={AboutHeaderImage}
+              src="/assets/aboutus/aboutus-header-img.jpg"
               alt="About Us header"
-              className="img-fluid imgrounded-xl shadow d-sm-block header-img"
+              className="about-us-header-img"
             />
           </div>
         </div>
