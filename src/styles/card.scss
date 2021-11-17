@@ -18,6 +18,14 @@
     height: 25rem;
   }
 
+  .card-event {
+    height: 27rem;
+  }
+
+  .card-webina {
+    height: 30rem;
+  }
+
   .author-name {
     font-family: "Roboto Medium";
   }
@@ -77,15 +85,14 @@
   .card-btn {
     background: $card-btn-background-active;
     color: $color-white;
-    font-family: "Roboto Bold";
+    font-family: "Roboto Regular";
     border-radius: 5px;
   }
   
   .card-btn:hover {
     background: $card-btn-background-hover;
     color: $color-white;
-    font-family: "Roboto Medium";
-    border-radius: 10px;
+    font-family: "Roboto Bold";
   }
   
   .card-btn:focus, .card-btn:active {

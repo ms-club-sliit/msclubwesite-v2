@@ -43,7 +43,6 @@ const Card: React.FC<ICard> = ({
                   <span className="mx-1 author-name">{author}</span>
                 </span>  
               </p>}
-              {description && <p className="card-description">{description}</p>}
             </div>
 
             {dateTime && (
@@ -72,7 +71,101 @@ const Card: React.FC<ICard> = ({
         </div>
       :
         null
-      }
+    }
+
+    {type === 'EVENT'
+      ?
+        <div className="card-event">
+          {imageUrl && <img src={imageUrl} className="card-img-top" alt="image" />}
+
+          <div className="card-body">
+            {tags &&
+              tags.length > 0 &&
+              tags.slice(0, 3).map((tag, index) => (
+                <span key={index} className="badge rounded-pill text-dark card-tag">
+                  {tag.toUpperCase()}
+                </span>
+              ))}
+
+            <div className="row">
+              <h5 className="card-title">{title}</h5>
+              {description && <p className="card-description">{description}</p>}
+            </div>
+
+            {dateTime && (
+              <div className="row">
+                <div className="d-flex justify-content-center datetime">
+                  <i className="fas fa-calendar-check fa-sm mt-1" />
+                  <span className="card-datetime">
+                    {moment(dateTime).format("lll")}
+                  </span>
+                </div>
+              </div>
+            )}
+
+            {link && (
+              <div className="row mt-3">
+                <a
+                  href={link}
+                  target="_blank"
+                  className="d-flex justify-content-center"
+                >
+                  <button className="btn card-btn button">MORE INFO</button>
+                </a>
+              </div>
+            )}
+          </div>
+        </div>
+      : 
+        null
+    }
+
+    {type === 'WEBINA' 
+      ?
+        <div className="card-webina">
+          {imageUrl && <img src={imageUrl} className="card-img-top" alt="image" />}
+
+          <div className="card-body">
+            {tags &&
+              tags.length > 0 &&
+              tags.slice(0, 3).map((tag, index) => (
+                <span key={index} className="badge rounded-pill text-dark card-tag">
+                  {tag.toUpperCase()}
+                </span>
+              ))}
+
+            <div className="row">
+              <h5 className="card-title">{title}</h5>
+              {description && <p className="card-description">{description}</p>}
+            </div>
+
+            {dateTime && (
+              <div className="row">
+                <div className="d-flex justify-content-center datetime">
+                  <i className="fas fa-calendar-check fa-sm mt-1" />
+                  <span className="card-datetime">
+                    {moment(dateTime).format("lll")}
+                  </span>
+                </div>
+              </div>
+            )}
+
+            {link && (
+              <div className="row mt-3">
+                <a
+                  href={link}
+                  target="_blank"
+                  className="d-flex justify-content-center"
+                >
+                  <button className="btn card-btn button">MORE INFO</button>
+                </a>
+              </div>
+            )}
+          </div>
+        </div>
+      :
+        null 
+    }
   </div>
     </div>
   </div>

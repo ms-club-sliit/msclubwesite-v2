@@ -13,7 +13,9 @@ const HeroSection: React.FC = () => (
       </div>
 
       <div className="col-sm-12 col-md-6 col-lg-6">
-        <img src="/assets/home_header.png" alt="home header" className="home-header-img" />
+        <div className="d-felx justify-content-center">
+          <img src="/assets/home_header.png" alt="home header" className="home-header-img" />
+        </div>
       </div>
     </div>
   </div>

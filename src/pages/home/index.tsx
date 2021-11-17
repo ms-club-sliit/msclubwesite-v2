@@ -6,7 +6,7 @@ import PastWebinarSection from "./past-webinars-section";
 import WhatWeDoSection from "./who-we-are-section";
 
 const Home: React.FC = () => (
-  <div className="container">
+  <div>
     <HeroSection />
     <WhatWeDoSection />
     <BlogsSection />

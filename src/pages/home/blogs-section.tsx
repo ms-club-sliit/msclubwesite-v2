@@ -3,7 +3,7 @@ import { IBlog } from "../../interfaces/BlogInterface";
 import { getBlogs } from "../../api/BlogAction";
 import Slider from "react-owl-carousel";
 import { Card } from "../../components";
-import { CARD_TYPE_BLOG } from '../../constants';
+import { CARD_TYPE_BLOG, SLIDER_RESPONSIVE_BREAKPOINTS } from '../../constants';
 
 const BlogSection: React.FC = () => {
   let slider: any;
@@ -48,9 +48,9 @@ const BlogSection: React.FC = () => {
   }
 
   return (
-    <div className="container">
-      <h2 className="blog-header">Blogs</h2>
-      <div className="blog-navigation">
+    <div className="container section-padding">
+      <h2 className="item-header">Blogs</h2>
+      <div className="item-navigation">
         <div className="view-more-text">View More</div>
         <div
           onClick={slidePrev}
@@ -61,7 +61,7 @@ const BlogSection: React.FC = () => {
         >
           <i className="far fa-arrow-alt-circle-left fa-lg nav-icon" />
         </div>
-
+        &nbsp;
         <div
           onClick={slideNext}
           onKeyDown={slideNextKeyBoard}
@@ -77,13 +77,14 @@ const BlogSection: React.FC = () => {
         <Slider
           className="owl-theme"
           dots={false}
-          loop={false}
+          loop={true}
           margin={70}
+          responsive={SLIDER_RESPONSIVE_BREAKPOINTS}
           ref={(slide) => {
             slider = slide;
           }}
         >
-          {blogList.items.slice(0, 1).map((blog, index) => (
+          {blogList.items.map((blog, index) => (
             <Card 
               key={index}
               id={index}
