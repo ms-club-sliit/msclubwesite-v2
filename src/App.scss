@@ -32,6 +32,7 @@
 @import "./styles/card.scss";
 @import "./styles/home.scss";
 @import "./styles/about_us.scss";
+@import "./styles/blogs.scss";
 
 ul {
   padding: 0px;
@@ -75,8 +76,4 @@ ul {
     height: 550px;
     clip-path: polygon(0 0, 100% 0%, 100% 70%, 0 100%);
   }
-}
-
-.fas {
-  color: $primary-color-active;
 }
