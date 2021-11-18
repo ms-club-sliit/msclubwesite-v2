@@ -5,9 +5,13 @@ const HeroSection: React.FC = () => (
     <div className="hero-section-bg" />
     <div className="row">
       <div className="col-sm-12 col-md-6 col-lg-6">
-        <h1 className="blog-header-title">Explore Our Blogs</h1>
+        <h1 className="blog-header-title">Explore Blogs 
+          <span>
+            <img src="/assets/emoji/hand_write.png" className="blog-emoji" />
+          </span> 
+        </h1>
         <p className="blog-header-description">
-          Read all the blog post which written by our students here.
+          Read all the blog post which written by our students.
         </p>
         <button className="btn blog-primary-btn">
           Follow Medium Page

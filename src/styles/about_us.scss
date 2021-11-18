@@ -1,5 +1,26 @@
 @import "./colors.scss";
 
+.our-mission-emoji {
+  content: url('../assets/emoji/hand_shake.png');
+  width: 50px;
+  margin-left: 10px;
+  position: absolute;
+}
+
+.our-vision-emoji {
+  content: url('../assets/emoji/chart.png');
+  width: 40px;
+  margin-left: 10px;
+  position: absolute;
+}
+
+.our-strategy-emoji {
+  content: url('../assets/emoji/strategy.png');
+  width: 40px;
+  margin-left: 10px;
+  position: absolute;
+}
+
 .about-us-title {
   font-size: 35px;
 }

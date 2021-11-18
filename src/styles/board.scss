@@ -1,0 +1,90 @@
+.board-year {
+  .title {
+    font-family: "Product Sans Bold";
+    font-size: 75px;
+    margin-bottom: 20px;
+    padding-left: 0px;
+  }
+
+  .calendar-emoji {
+    content: url('../assets/emoji/calendar.png');
+    width: 18px;
+    margin-right: 15px;
+  }
+
+  .wave-hand-emoji {
+    content: url('../assets/emoji/wave.png');
+    width: 65px;
+    margin-left: 10px;
+    position: absolute;
+    margin-top: 18px;
+  }
+
+  .button {
+    background: $primary-color-active;
+    color: $color-white;
+    border-radius: 7px;
+    margin-bottom: 10px;
+    font-family: "Product Sans Regular";
+    font-size: 18px;
+    width: 230px;
+  }
+  
+  .button:hover {
+    background: $primary-color-hover;
+    color: $color-white;
+  }
+  
+  .button:focus, .button:active {
+    background: $primary-color-active;
+    color: $color-white;
+    outline: none !important;
+    box-shadow: none;
+  }
+}
+
+.board-member {
+  width: 20rem;
+  border-radius: 5px;
+  margin-bottom: 30px;
+  .link {
+    content: url('../assets/emoji/link.png');
+    width: 25px;
+    position: absolute;
+    margin-top: 5px;
+    margin-left: 5px;
+  }
+
+  .profile-picture {
+    border-radius: 5px;
+    width: 20rem;
+    height: 20rem;
+    object-fit: cover;
+    object-position: center top;
+  }
+
+  .name {
+    font-family: "Product Sans Bold";
+    font-size: 28px;
+    margin-bottom: 0px;
+    padding-left: 10px;
+    cursor: pointer;
+  }
+
+  .name:hover {
+    text-decoration: underline;
+    color: $primary-color-active;
+  }
+
+  .position {
+    font-size: 22px;
+    padding-left: 10px;
+    margin-bottom: 0px;
+  }
+
+  .social-icon {
+    padding-left: 0px;
+    margin-left: 5px;
+    margin-top: 10px;
+  }
+}

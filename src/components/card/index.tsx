@@ -39,22 +39,20 @@ const Card: React.FC<ICard> = ({
               <h5 className="card-title">{title}</h5>
               {author && <p className="card-description">
                 <span>
-                  <i className="fas fa-user"></i>
+                  <span className="card-blog-emoji" />
                   <span className="mx-1 author-name">{author}</span>
                 </span>  
+
+                {dateTime && (
+                  <div className="datetime">
+                    <span className="card-calendar-emoji" />
+                    <span className="card-datetime">
+                      Published On {moment(dateTime).format("LL")}
+                    </span>
+                  </div>
+                )}
               </p>}
             </div>
-
-            {dateTime && (
-              <div className="row">
-                <div className="d-flex justify-content-center datetime">
-                  <i className="fas fa-calendar-check fa-sm mt-1" />
-                  <span className="card-datetime">
-                    Published On {moment(dateTime).format("lll")}
-                  </span>
-                </div>
-              </div>
-            )}
 
             {link && (
               <div className="row mt-3">
@@ -94,10 +92,10 @@ const Card: React.FC<ICard> = ({
 
             {dateTime && (
               <div className="row">
-                <div className="d-flex justify-content-center datetime">
-                  <i className="fas fa-calendar-check fa-sm mt-1" />
+                <div className="event-datetime d-flex justify-content-center">
+                  <span className="card-event-calendar-emoji" />
                   <span className="card-datetime">
-                    {moment(dateTime).format("lll")}
+                    {moment(dateTime).format("LLL")}
                   </span>
                 </div>
               </div>
@@ -141,10 +139,10 @@ const Card: React.FC<ICard> = ({
 
             {dateTime && (
               <div className="row">
-                <div className="d-flex justify-content-center datetime">
-                  <i className="fas fa-calendar-check fa-sm mt-1" />
+                <div className="webina-datetime d-flex justify-content-center">
+                  <span className="card-webina-calendar-emoji" />
                   <span className="card-datetime">
-                    {moment(dateTime).format("lll")}
+                    {moment(dateTime).format("LLL")}
                   </span>
                 </div>
               </div>

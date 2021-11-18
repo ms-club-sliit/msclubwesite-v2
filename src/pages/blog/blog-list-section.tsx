@@ -24,7 +24,7 @@ const BlogList: React.FC = () => {
       <div className="row">
         {blogList &&
           blogList.items?.map((item, index) => (
-            <div className="col-md-3 d-flex justify-content-center blog-card-section">
+            <div className="col d-flex justify-content-center blog-card-section">
               <Card
                 id={index}
                 type={CARD_TYPE_BLOG}

@@ -31,6 +31,15 @@
   }
 
   .datetime {
+    margin-top: 5px;
+  }
+
+  .event-datetime {
+    position: absolute;
+    bottom: 60px;
+  }
+
+  .webina-datetime {
     position: absolute;
     bottom: 60px;
   }
@@ -78,8 +87,7 @@
   
   .card-datetime {
     margin-left: 5px;
-    font-family: "Roboto Regular";
-    font-size: 15px;
+    font-family: "Roboto Medium";
   }
   
   .card-btn {
@@ -102,6 +110,29 @@
   
   .card-btn::after {
     background: $card-btn-background-active;
+  }
+
+  .card-blog-emoji {
+    content: url('../assets/emoji/hand_write.png');
+    width: 20px;
+  }
+
+  .card-calendar-emoji {
+    content: url('../assets/emoji/calendar.png');
+    width: 18px;
+    height: 18px;
+  }
+
+  .card-event-calendar-emoji {
+    content: url('../assets/emoji/calendar.png');
+    width: 18px;
+    height: 18px;
+  }
+
+  .card-webina-calendar-emoji {
+    content: url('../assets/emoji/calendar.png');
+    width: 18px;
+    height: 18px;
   }
 
   // Breakpoints

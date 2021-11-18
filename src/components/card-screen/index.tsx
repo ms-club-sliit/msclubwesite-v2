@@ -5,7 +5,8 @@ const CardScreen: React.FC<ICardScreen> = ({
   title,
   description,
   imageUrl,
-  rightSide
+  rightSide,
+  emoji
 }) => (
   <div>
     <div className="mt-5 mb-5">
@@ -26,6 +27,7 @@ const CardScreen: React.FC<ICardScreen> = ({
         <div className="col-lg-7 col-md-12 col-sm-12 p-5">
           <h2 className="about-us-title">
             <strong>{title}</strong>
+            <span className={emoji} />
           </h2>
           <p className="about-us-description mt-3">{description}</p>
         </div>
