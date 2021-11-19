@@ -13,7 +13,7 @@ interface ICard {
 }
 
 interface socialMediaURLs {
-  fb: string;
+  facebook: string;
   instagram: string;
   twitter: string;
   linkedIn: string;

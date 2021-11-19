@@ -164,6 +164,80 @@ const Card: React.FC<ICard> = ({
       :
         null 
     }
+
+    {type === 'SPEAKER' 
+      ? 
+        <div className="card-speaker">
+          {imageUrl && <img src={imageUrl} className="card-speaker-img" alt="image" />}
+
+          <div className="card-body">
+            <div className="row">
+              <h5 className="card-title">{title}</h5>
+              {description && <p className="card-description">{description}</p>}
+            </div>
+
+            <div className="d-flex justify-content-end">
+              {socialMediaURLs && 
+                (
+                  <div className="social-media-section">
+                    {socialMediaURLs.facebook && (
+                      <a
+                        href={socialMediaURLs.facebook}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <i className="fab fa-facebook speaker-social-icon" />
+                      </a>
+                    )}
+
+                    {socialMediaURLs.instagram && (
+                      <a
+                        href={socialMediaURLs.instagram}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <i className="fab fa-instagram speaker-social-icon" />
+                      </a>
+                    )}
+
+                    {socialMediaURLs.linkedIn && (
+                      <a
+                        href={socialMediaURLs.linkedIn}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <i className="fab fa-linkedin speaker-social-icon" />
+                      </a>
+                    )}
+
+                    {socialMediaURLs.twitter && (
+                      <a
+                        href={socialMediaURLs.twitter}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <i className="fab fa-twitter speaker-social-icon" />
+                      </a>
+                    )}
+
+                    {socialMediaURLs.web && (
+                      <a
+                        href={socialMediaURLs.web}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <i className="fas fa-globe-americas speaker-social-icon"></i>
+                      </a>
+                    )}
+                  </div>
+                )
+              }
+            </div>
+          </div>
+        </div>
+      :
+        null
+    }
   </div>
     </div>
   </div>

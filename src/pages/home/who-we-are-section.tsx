@@ -2,9 +2,7 @@ import React from "react";
 
 const WhatWeDoSection: React.FC = () => (
   <div className="who-we-are-section">
-    <h2 className="text-center header">
-      <strong>Who Are We?</strong>
-    </h2>
+    <h2 className="text-center header">Who Are We?</h2>
     <div className="container">
       <div className="row mt-5 mb-5">
         <div className="col-md-6 col-sm-12">

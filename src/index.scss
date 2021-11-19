@@ -10,6 +10,11 @@
 }
 
 @font-face {
+  font-family: "Product Sans Medium";
+  src: local("Product Sans Medium"), url("./assets/fonts/product_sans/product_sans_medium.ttf");
+}
+
+@font-face {
   font-family: "Product Sans Bold";
   src: local("Product Sans Bold"), url("./assets/fonts/product_sans/product_sans_bold.ttf");
 }

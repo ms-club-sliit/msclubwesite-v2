@@ -1,5 +1,9 @@
 @import "./colors.scss";
 
+.nav-link {
+	font-family: "Product Sans Medium";
+}
+
 .navbar-background {
   background: $light-navbar-background;
 }
@@ -9,8 +13,23 @@
 }
 
 .navbar-logo {
-  width: 70px;
-  border-radius: 50%;
+  width: 150px;
+	margin: 0;
+  -webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	-ms-transition: all 0.3s;
+	-o-transition: all 0.3s;
+	transition: all 0.3s;
+}
+
+.smaller .navbar-logo {
+  width: 80px;
+	margin: 0;
+  -webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	-ms-transition: all 0.3s;
+	-o-transition: all 0.3s;
+	transition: all 0.3s;
 }
 
 .navbar-items {

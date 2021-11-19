@@ -1,10 +1,4 @@
-.blog-title {
-  font-family: "Product Sans Bold";
-  font-size: 40px;
-  margin-bottom: 20px;
-}
-
-.blog-primary-btn {
+.event-primary-btn {
   background: $primary-color-active;
   color: $color-white;
   border-radius: 7px;
@@ -13,23 +7,41 @@
   width: 230px;
 }
 
-.blog-primary-btn:hover {
+.event-primary-btn:hover {
   background: $primary-color-hover;
   color: $color-white;
 }
 
-.blog-primary-btn:focus, .blog-primary-btn:active {
+.event-primary-btn:focus, .event-primary-btn:active {
   background: $primary-color-active;
   color: $color-white;
   outline: none !important;
   box-shadow: none;
 }
 
-.blog-card-section {
-  margin-bottom: 10px;
+.event-youtube-btn {
+  background: $primary-color-active;
+  color: $color-white;
+  border-radius: 7px;
+  font-family: "Product Sans Regular";
+  font-size: 18px;
+  width: 175px;
+  margin-left: 10px;
 }
 
-.blog-header-title {
+.event-youtube-btn:hover {
+  background: $primary-color-hover;
+  color: $color-white;
+}
+
+.event-youtube-btn:focus, .event-youtube-btn:active {
+  background: $primary-color-active;
+  color: $color-white;
+  outline: none !important;
+  box-shadow: none;
+}
+
+.event-header-title {
   font-family: "Product Sans Bold";
 
   @include media("<=phone") {
@@ -57,7 +69,7 @@
   }
 }
 
-.blog-header-description {
+.event-header-description {
   @include media("<=phone") {
     font-size: 18px;
   }
@@ -83,7 +95,7 @@
   }
 }
 
-.blog-header-img {
+.event-header-img {
   margin-left: 20px;
   margin-top: 10px;
   display: block;

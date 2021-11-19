@@ -26,6 +26,10 @@
     height: 30rem;
   }
 
+  .card-speaker {
+    height: 28rem;
+  }
+
   .author-name {
     font-family: "Roboto Medium";
   }
@@ -63,6 +67,14 @@
   .card-img-top {
     border-radius: 5px 5px 0px 0px;
     height: 180px;
+    width: 100%;
+    object-fit: cover;
+    object-position: center center;
+  }
+
+  .card-speaker-img {
+    border-radius: 5px 5px 0px 0px;
+    height: 300px;
     width: 100%;
     object-fit: cover;
     object-position: center center;
@@ -135,8 +147,14 @@
     height: 18px;
   }
 
-  // Breakpoints
-  @include media('<=phone') {
-    
+  .speaker-social-icon {
+    margin-left: 5px;
+    margin-top: auto;
+    font-size: 26px;
+  } 
+
+  .social-media-section {
+    position: absolute;
+    bottom: 8px;
   }
 }

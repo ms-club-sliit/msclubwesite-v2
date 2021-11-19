@@ -1,87 +1,118 @@
-import React from "react";
-import "react-notifications/lib/notifications.css";
+import React, { useState } from "react";
 import emailjs from "emailjs-com";
-import ContactUsImg from "../../assets/contactus/contactus.svg";
+import { VALIDATE_EMAIL_REGEX } from '../../constants';
 
-const sendEmail = (e: any) => {
-  e.preventDefault();
-  emailjs
-    .sendForm(
-      "service_504yqmn",
-      "template_9ine6vh",
-      e.target,
-      "user_OkeRUw8xijd6xXRflprac"
-    )
-    .then(
-      () => {
-        //document.getElementById('myForm').reset();
-        alert("Success");
-      },
-      () => {
-        alert("Something went wrong");
-      }
-    );
+const initialState = {
+  email: '',
+  name: '',
+  message: '',
 };
+class ContactFormSection extends React.Component {
+  state = initialState;
 
-const ContactFormSection: React.FC = () => (
-  <div className="contactform-container">
-    <div className="container">
-      <div className="row mt-3 mb-5">
-        <h1 className="text-center display-6 contactform-title mt-3">
-          Contact Us
-        </h1>
-        <div className="col-md-6">
-          <img src={ContactUsImg} className="img-fluid" alt="contactImg" />
-        </div>
-        <div className="col-md-6">
-          <div className="mt-5">
-            <form id="myForm" onSubmit={sendEmail}>
-              <div className="form-group mt-3">
-                <label htmlFor="name" className="text-secondary">
-                  Your Name
-                </label>
-                <input
-                  id="name"
-                  name="name"
-                  type="text"
-                  className="form-control"
-                  placeholder="Enter Your Name"
-                />
+  onChange = (e: any) => {
+    this.setState({ [e.target.name]: e.target.value });
+  }
+
+  validateForm = (values: { name: string, email: string, message: string }) => {
+    let stateValue = this.state;
+    let isFormNotValid: boolean = false;
+
+    if (!stateValue.name) {
+      this.setState({ name: null });
+      isFormNotValid = true;
+    }
+
+    if (!stateValue.email) {
+      this.setState({ email: null });
+      isFormNotValid = true;
+    } else {
+      if (!VALIDATE_EMAIL_REGEX.test(stateValue.email)) {
+        this.setState({ email: null });
+        isFormNotValid = true;
+      }
+    }
+
+    if (!stateValue.message) {
+      this.setState({ message: null });
+      isFormNotValid = true;
+    }
+
+    return isFormNotValid;
+  }
+
+  handleSubmit = (event: any) => {
+    event.preventDefault();
+    const isFormValid = this.validateForm(this.state);
+    console.log(isFormValid)
+
+    if (isFormValid) {
+      console.log('Valid');
+    } else {
+      console.log('Not valid');
+    }
+  }
+
+  render() {
+    return (
+      <div>
+        <div className="hero-section-bg" />
+        <div className="container contact-us-form">
+          <div className="row mt-3 mb-5">
+            <div className="col-md-12">
+              <div className="mt-5">
+                <form id="myForm" onSubmit={e => this.handleSubmit(e)}>
+                  <h1 className="contact-title">Send Your Message</h1>
+                  <div className="form-group mt-3">
+                    <label htmlFor="name" className="contact-us-label-text">
+                      Your Name
+                    </label>
+                    <input
+                      id="name"
+                      name="name"
+                      type="text"
+                      className="form-control"
+                      onChange={this.onChange}
+                    />
+                  </div>
+                  <div className="form-group mt-3">
+                    <label htmlFor="email" className="contact-us-label-text">
+                      Email address
+                    </label>
+                    <input
+                      id="email"
+                      name="email"
+                      type="text"
+                      className="form-control"
+                      onChange={this.onChange}
+                    />
+                  </div>
+                  <div className="form-group mt-3">
+                    <label htmlFor="message" className="contact-us-label-text">
+                      Message
+                    </label>
+                    <textarea
+                      id="message"
+                      name="message"
+                      className="form-control"
+                      rows={6}
+                      onChange={this.onChange}
+                    />
+                  </div>
+                  <div className="form-group mt-3 d-flex justify-content-end">
+                    <button type="submit" className="contact-btn btn">
+                      Send
+                      <span><i className="fas fa-paper-plane icon"></i></span>
+                    </button>
+                  </div>
+                </form>
               </div>
-              <div className="form-group mt-3">
-                <label htmlFor="email" className="text-secondary">
-                  Email address
-                </label>
-                <input
-                  id="email"
-                  name="email"
-                  type="email"
-                  className="form-control"
-                  placeholder="Enter Your Email"
-                />
-              </div>
-              <div className="form-group mt-3">
-                <label htmlFor="message" className="text-secondary">
-                  Message
-                </label>
-                <textarea
-                  id="message"
-                  name="message"
-                  className="form-control"
-                  placeholder="Enter Your Message"
-                />
-              </div>
-              <div className="form-group mt-3">
-                <button type="submit" className="contact-btn">
-                  Send
-                </button>
-              </div>
-            </form>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  </div>
-);
+    );
+  }
+}
 
 export default ContactFormSection;

@@ -23,7 +23,7 @@ const BoardMemberCard: React.FC<IBoardMemberDetails> = ({
           <h5 className="name" onClick={e => navigateToLinkedIn(e)}>{name} <span className="link"/></h5>
           {position && 
             (
-              <span className="" style={{ paddingLeft: '0px'}}>
+              <span style={{ paddingLeft: '0px'}}>
                 <p className="position">{position}</p>
                 <div className="d-flex justify-content-end">
                   <span>

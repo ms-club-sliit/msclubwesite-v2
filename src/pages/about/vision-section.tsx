@@ -1,5 +1,5 @@
 import React from "react";
-import CardScreen from "../../components/card-screen";
+import { CardScreen } from "../../components";
 import content from "../../data/MissionVisionData.json";
 
 const VisionSection: React.FC = () => (
