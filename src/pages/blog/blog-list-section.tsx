@@ -1,30 +1,34 @@
 import React, { useState, useEffect } from "react";
 import { Card } from "../../components";
 import { IBlog } from "../../interfaces/BlogInterface";
-import blogApi from "../../api/BlogAction";
+import { getBlogs } from "../../api/BlogAction";
+import { CARD_TYPE_BLOG } from '../../constants';
 
 const BlogList: React.FC = () => {
-  const [blogList, setblogList] = useState<IBlog>();
+  const [blogList, setBlogList] = useState<IBlog>();
 
+  // Fetch all the blog items 
   useEffect(() => {
-    blogApi
-      .blog()
-      .getAllblogs()
-      .then(({ data }) => {
-        setblogList(data);
+    getBlogs()
+      .then((data) => {
+        setBlogList(data.data);
       })
-      .catch(() => {});
+      .catch((error) => {
+        console.log(error.message);
+      });
   }, []);
 
   return (
     <div className="container">
-      <h1>Blogs</h1>
+      <h1 className="blog-title">Blog Posts</h1>
       <div className="row">
         {blogList &&
           blogList.items?.map((item, index) => (
-            <div className="col">
+            <div className="col d-flex justify-content-center blog-card-section">
               <Card
                 id={index}
+                type={CARD_TYPE_BLOG}
+                author={item.author}
                 imageUrl={item.thumbnail}
                 title={item.title}
                 dateTime={item.pubDate}

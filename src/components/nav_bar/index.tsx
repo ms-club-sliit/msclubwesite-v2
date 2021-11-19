@@ -11,10 +11,23 @@ const NavBar: React.FC = () => {
     }
   };
 
+  const resizeLogoOnScroll = () => {
+    const distanceY = window.pageYOffset || document.documentElement.scrollTop,
+                        shrinkOn: number = 200,
+                        headerEl: any = document.getElementById('header');
+    
+    if (distanceY > shrinkOn) {
+      headerEl.classList.add("smaller");
+    } else {
+      headerEl.classList.remove("smaller");
+    }
+  }
+
+  window.addEventListener('scroll', resizeLogoOnScroll);
   window.addEventListener('scroll', changeNavBackgroundColor);
 
   return (
-    <div className="navbar-container navbar-margin">
+    <div className="navbar-container navbar-margin" id="header">
       <nav className={
         isNavBarScroll
           ? "navbar fixed-top active navbar-expand-lg navbar-light navbar-background"
@@ -39,7 +52,7 @@ const NavBar: React.FC = () => {
           </button>
 
           <div className="collapse navbar-collapse" id="navbar-content">
-            <ul className="navbar-nav me-auto mb-lg-0" />
+            <ul className="navbar-nav m-auto mb-lg-0" />
             <ul className="navbar-nav d-flex me-2 navbar-items">
               <li className="nav-item">
                 <a className="nav-link" href="/">Home</a>

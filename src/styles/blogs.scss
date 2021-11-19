@@ -1,0 +1,115 @@
+.blog-title {
+  font-family: "Product Sans Bold";
+  font-size: 40px;
+  margin-bottom: 20px;
+}
+
+.blog-primary-btn {
+  background: $primary-color-active;
+  color: $color-white;
+  border-radius: 7px;
+  font-family: "Product Sans Regular";
+  font-size: 18px;
+  width: 230px;
+}
+
+.blog-primary-btn:hover {
+  background: $primary-color-hover;
+  color: $color-white;
+}
+
+.blog-primary-btn:focus, .blog-primary-btn:active {
+  background: $primary-color-active;
+  color: $color-white;
+  outline: none !important;
+  box-shadow: none;
+}
+
+.blog-card-section {
+  margin-bottom: 10px;
+}
+
+.blog-header-title {
+  font-family: "Product Sans Bold";
+
+  @include media("<=phone") {
+    font-size: 50px;
+  }
+
+  @include media(">=phone", '<tablet') {
+    font-size: 55px;
+  }
+
+  @include media('>=tablet', '<smalldesktop') {
+    font-size: 55px;
+  }
+
+  @include media('>=smalldesktop', '<desktop') {
+    font-size: 70px;
+  }
+
+  @include media(">=desktop", '<largedesktop') {
+    font-size: 70px;
+  }
+
+  @include media('>=largedesktop') {
+    font-size: 80px;
+  }
+}
+
+.blog-header-description {
+  @include media("<=phone") {
+    font-size: 18px;
+  }
+
+  @include media(">=phone", '<tablet') {
+    font-size: 18px;
+  }
+
+  @include media('>=tablet', '<smalldesktop') {
+    font-size: 18px;
+  }
+
+  @include media('>=smalldesktop', '<desktop') {
+    font-size: 18px;
+  }
+
+  @include media(">=desktop", '<largedesktop') {
+    font-size: 20px;
+  }
+
+  @include media('>=largedesktop') {
+    font-size: 24px;
+  }
+}
+
+.blog-header-img {
+  margin-left: 20px;
+  margin-top: 10px;
+  display: block;
+  visibility: visible;
+
+  @include media("<=phone") {
+    width: 80%
+  }
+
+  @include media(">=phone", '<tablet') {
+    width: 400px;
+  }
+
+  @include media('>=tablet', '<smalldesktop') {
+    width: 350px;
+  }
+
+  @include media('>=smalldesktop', '<desktop') {
+    width: 400px;
+  }
+
+  @include media(">=desktop", '<largedesktop') {
+    width: 450px;
+  }
+
+  @include media('>=largedesktop') {
+    width: 520px;
+  }
+}

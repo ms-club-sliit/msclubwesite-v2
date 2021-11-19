@@ -1,0 +1,270 @@
+.board-year {
+  .title {
+    font-family: "Product Sans Bold";
+    margin-bottom: 20px;
+
+    @include media("<=phone") {
+      font-size: 35px;
+      padding-left: 10px;
+    }
+
+    @include media(">=phone", '<tablet') {
+      font-size: 40px;
+      padding-left: 10px;
+    }
+
+    @include media('>=tablet', '<smalldesktop') {
+      font-size: 50px;
+      padding-left: 10px;
+    }
+
+    @include media('>=smalldesktop', '<desktop') {
+      font-size: 60px;
+      padding-left: 10px;
+    }
+
+    @include media(">=desktop", '<largedesktop') {
+      font-size: 70px;
+      padding-left: 10px;
+    }
+
+    @include media('>=largedesktop') {
+      font-size: 75px;
+      padding-left: 0px;
+    }
+  }
+
+  .calendar-emoji {
+    content: url('../assets/emoji/calendar.png');
+    width: 18px;
+    margin-right: 8px;
+    margin-top: 5px;
+  }
+
+  .wave-hand-emoji {
+    content: url('../assets/emoji/wave.png');
+    margin-left: 10px;
+    position: absolute;
+
+    @include media("<=phone") {
+      width: 35px;
+      margin-top: 8px;
+    }
+
+    @include media(">=phone", '<tablet') {
+      width: 40px;
+      margin-top: 10px;
+    }
+
+    @include media('>=tablet', '<smalldesktop') {
+      width: 50px;
+      margin-top: 10px;
+    }
+
+    @include media('>=smalldesktop', '<desktop') {
+      width: 60px;
+      margin-top: 12px;
+    }
+
+    @include media(">=desktop", '<largedesktop') {
+      width: 70px;
+      margin-top: 15px;
+    }
+
+    @include media('>=largedesktop') {
+      width: 75px;
+      margin-top: 15px;
+    }
+  }
+
+  .button {
+    background: $primary-color-active;
+    color: $color-white;
+    border-radius: 7px;
+    margin-bottom: 10px;
+    font-family: "Product Sans Regular";
+    font-size: 18px;
+    width: 180px;
+  }
+  
+  .button:hover {
+    background: $primary-color-hover;
+    color: $color-white;
+  }
+  
+  .button:focus, .button:active {
+    background: $primary-color-active;
+    color: $color-white;
+    outline: none !important;
+    box-shadow: none;
+  }
+}
+
+.board-member {
+  border-radius: 5px;
+  margin-bottom: 30px;
+
+  .link {
+    content: url('../assets/emoji/link.png');
+    position: absolute;
+    margin-top: 5px;
+    margin-left: 5px;
+  }
+
+  .profile-picture {
+    border-radius: 5px;
+    object-fit: cover;
+    object-position: center top;
+  }
+
+  .name {
+    font-family: "Product Sans Bold";
+    margin-bottom: 0px;
+    padding-left: 10px;
+    cursor: pointer;
+  }
+
+  .name:hover {
+    text-decoration: underline;
+    color: $primary-color-active;
+  }
+
+  .position {
+    padding-left: 10px;
+    margin-bottom: 0px;
+  }
+
+  .social-icon {
+    bottom: 8px;
+    padding-left: 0px;
+    margin-left: 5px;
+    margin-top: 10px;
+    font-size: 26px;
+  }
+
+  @include media("<=phone") {
+    width: 11rem;
+
+    .link {
+      width: 16px;
+    }
+
+    .name {
+      font-size: 18px;
+    }
+
+    .profile-picture {
+      width: 11rem;
+      height: 11rem;
+    }
+
+    .position {
+      font-size: 18px;
+    }
+  }
+
+  @include media(">=phone", '<tablet') {
+    width: 18rem;
+
+    .link {
+      width: 20px;
+    }
+
+    .name {
+      font-size: 24px;
+    }
+
+    .profile-picture {
+      width: 18rem;
+      height: 18rem;
+    }
+
+    .position {
+      font-size: 20px;
+    }
+  }
+
+  @include media('>=tablet', '<smalldesktop') {
+    width: 20rem;
+
+    .link {
+      width: 20px;
+    }
+
+    .name {
+      font-size: 24px;
+    }
+
+    .profile-picture {
+      width: 20rem;
+      height: 20rem;
+    }
+
+    .position {
+      font-size: 20px;
+    }
+  }
+
+  @include media('>=smalldesktop', '<desktop') {
+    width: 18rem;
+
+    .link {
+      width: 20px;
+    }
+
+    .name {
+      font-size: 24px;
+    }
+
+    .profile-picture {
+      width: 18rem;
+      height: 18rem;
+    }
+
+    .position {
+      font-size: 20px;
+    }
+  }
+
+  @include media(">=desktop", '<largedesktop') {
+    width: 20rem;
+
+    .link {
+      width: 20px;
+    }
+
+    .name {
+      font-size: 24px;
+    }
+
+    .profile-picture {
+      width: 20rem;
+      height: 20rem;
+    }
+
+    .position {
+      font-size: 20px;
+    }
+  }
+
+  @include media('>=largedesktop') {
+    width: 20rem;
+
+    .link {
+      width: 20px;
+    }
+
+    .name {
+      font-size: 24px;
+    }
+
+    .profile-picture {
+      width: 20rem;
+      height: 20rem;
+    }
+
+    .position {
+      font-size: 20px;
+    }
+  }
+}

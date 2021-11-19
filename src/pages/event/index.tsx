@@ -1,20 +1,12 @@
-import React from "react";
-import PastEventSection from "./past-events-section";
-import PastWebinarSection from "./past-webinars-section";
-import HeroSection from "./hero-section";
-import UpcomingWebinarSection from "./upcoming-webinar-section";
-import UpcomingEventSection from "./upcoming-event-section";
-import TopSpeakersSection from "./top-speakers-section";
+import React from 'react';
+import EventList from './event-list-section';
+import HeroSection from './hero-section';
 
-const Event: React.FC = () => (
-  <div className="container">
+const Events: React.FC = () => (
+  <div>
     <HeroSection />
-    <UpcomingWebinarSection />
-    <PastWebinarSection />
-    <UpcomingEventSection />
-    <PastEventSection />
-    <TopSpeakersSection />
+    <EventList />
   </div>
 );
 
-export default Event;
+export default Events;

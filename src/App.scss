@@ -3,24 +3,142 @@
   If you implement stylings that belongs to individual component, use the "styles" directory to implement it
 */
 
+/**
+  MS Club of SLIIT Website - Media Query Template
+
+  @include media("<=phone") {}
+
+  @include media(">=phone", '<tablet') {}
+
+  @include media('>=tablet', '<smalldesktop') {}
+
+  @include media('>=smalldesktop', '<desktop') {}
+
+  @include media(">=desktop", '<largedesktop') {}
+
+  @include media('>=largedesktop') {}
+
+*/
+
+// Style Libraries
+@import "owl.carousel/dist/assets/owl.carousel.css";
+@import "owl.carousel/dist/assets/owl.theme.default.css";
+@import "react-notifications/lib/notifications.css";
+
 // Import Styles
+@import "./styles/breakpoints.scss";
 @import "./styles/colors.scss";
 @import "./styles/navbar.scss";
 @import "./styles/footer.scss";
 @import "./styles/card.scss";
 @import "./styles/home.scss";
+@import "./styles/about_us.scss";
+@import "./styles/blogs.scss";
+@import "./styles/board.scss";
+@import "./styles/events.scss";
+@import "./styles/contactus.scss";
 
 ul {
   padding: 0px;
 }
 
+.container {
+  @include media("<=phone") {
+    max-width: 100vw;
+  }
+
+  @include media(">=phone", '<tablet') {
+    max-width: 98vw;
+  }
+
+  @include media('>=tablet', '<smalldesktop') {
+    max-width: 98vw;
+  }
+
+  @include media('>=smalldesktop', '<desktop') {
+    max-width: 98vw;
+  }
+
+  @include media(">=desktop", '<largedesktop') {
+    max-width: 98vw;
+  }
+
+  @include media('>=largedesktop') {
+    max-width: 75vw;
+  }
+}
+
 .hero-section-bg {
-  position: absolute;
-  overflow: auto;
   width: 100vw;
-  height: 720px;
   left: 0px;
   top: 0px;
-  background: var(--light-home-background-color);
-  clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 100%);
+  position: absolute;
+  content: '';
+  z-index: -1;
+  background: $hero-section-background-light;
+
+  @include media("<=phone") {
+    height: 600px;
+    clip-path: polygon(0 0, 100% 0%, 100% 90%, 0 100%);
+  }
+
+  @include media(">=phone", '<tablet') {
+    height: 560px;
+    clip-path: polygon(0 0, 100% 0%, 100% 85%, 0 100%);
+  }
+
+  @include media('>=tablet', '<smalldesktop') {
+    height: 500px;
+    clip-path: polygon(0 0, 100% 0%, 100% 85%, 0 100%);
+  }
+
+  @include media('>=smalldesktop', '<desktop') {
+    height: 480px;
+    clip-path: polygon(0 0, 100% 0%, 100% 85%, 0 100%);
+  }
+
+  @include media(">=desktop", '<largedesktop') {
+    height: 480px;
+    clip-path: polygon(0 0, 100% 0%, 100% 85%, 0 100%);
+  }
+
+  @include media('>=largedesktop') {
+    height: 550px;
+    clip-path: polygon(0 0, 100% 0%, 100% 70%, 0 100%);
+  }
+}
+
+.fa-facebook {
+  background-image: #1877f2;
+  color: #1877f2;
+}
+
+.fa-instagram {
+  background-image: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 
+  background-size: 100%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; 
+  -moz-background-clip: text;
+  -moz-text-fill-color: transparent;
+}
+
+.fa-linkedin {
+  background-image: #295c77;
+  color: #0e76a8;
+}
+
+.fa-twitter {
+  background-image: #00acee;
+  color: #00acee;
+}
+
+.form-control {
+  font-family: "Product Sans Regular";
+  font-size: 18px;
+}
+
+.form-control:focus {
+  border-color: $card-btn-background-active;
+  outline: 0;
+  box-shadow: 0 0 0 0rem rgba(0, 123, 255, 0.25);
 }

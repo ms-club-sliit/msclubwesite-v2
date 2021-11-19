@@ -7,62 +7,154 @@
 
 .card {
   width: 20rem;
-  border-radius: 10px;
+  border-radius: 5px;
   box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
   transition: box-shadow 0.2s ease-in-out, transform 0.35s ease-in-out;
   &:hover {
     box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22)
   }
-}
 
-.card-img-top {
-  border-radius: 10px 10px 0px 0px;
-  height: 200px;
-  width: 100%;
-  object-fit: cover;
-  object-position: center center;
-}
+  .card-blog {
+    height: 25rem;
+  }
 
-.card-description {
-  font-family: "Roboto Regular";
-  font-size: 15px;
-}
+  .card-event {
+    height: 27rem;
+  }
 
-.card-tag {
-  background: $tag-background-light;
-  width: fit-content;
-  margin-right: 0.3rem;
-  margin-bottom: 0.5rem;
-}
+  .card-webina {
+    height: 30rem;
+  }
 
-.row a {
-  text-decoration: none;
-}
+  .card-speaker {
+    height: 28rem;
+  }
 
-.card-datetime {
-  margin-left: 5px;
-  font-weight: 600;
-}
+  .author-name {
+    font-family: "Roboto Medium";
+  }
 
-.card-btn {
-  background: $card-btn-background-active;
-  color: $color-white;
-  font-family: "Roboto Medium";
-  border-radius: 10px;
-}
+  .datetime {
+    margin-top: 5px;
+  }
 
-.card-btn:hover {
-  background: $card-btn-background-hover;
-  color: $color-white;
-  font-family: "Roboto Medium";
-  border-radius: 10px;
-}
+  .event-datetime {
+    position: absolute;
+    bottom: 60px;
+  }
 
-.card-btn:focus, .card-btn:active {
-  outline: none !important;
-  box-shadow: none;
-}
+  .webina-datetime {
+    position: absolute;
+    bottom: 60px;
+  }
 
-.card-btn::after {
-  background: $card-btn-background-active;
+  .button {
+    position: absolute;
+    bottom: 10px;
+  }
+
+  .card-height {
+    .cell {
+      display: flex;
+      align-items: stretch;
+    }
+  }
+  
+  .row.align-items-stretch .card:only-of-type { 
+    height: 100%; 
+  }
+  
+  .card-img-top {
+    border-radius: 5px 5px 0px 0px;
+    height: 180px;
+    width: 100%;
+    object-fit: cover;
+    object-position: center center;
+  }
+
+  .card-speaker-img {
+    border-radius: 5px 5px 0px 0px;
+    height: 300px;
+    width: 100%;
+    object-fit: cover;
+    object-position: center center;
+  }
+  
+  .card-description {
+    font-family: "Roboto Regular";
+    font-size: 15px;
+  }
+  
+  .card-tag {
+    background: $tag-background-light;
+    font-size: 11px;
+    width: fit-content;
+    margin-right: 0.3rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .row a {
+    text-decoration: none;
+  }
+  
+  .card-datetime {
+    margin-left: 5px;
+    font-family: "Roboto Medium";
+  }
+  
+  .card-btn {
+    background: $card-btn-background-active;
+    color: $color-white;
+    font-family: "Roboto Regular";
+    border-radius: 5px;
+  }
+  
+  .card-btn:hover {
+    background: $card-btn-background-hover;
+    color: $color-white;
+    font-family: "Roboto Bold";
+  }
+  
+  .card-btn:focus, .card-btn:active {
+    outline: none !important;
+    box-shadow: none;
+  }
+  
+  .card-btn::after {
+    background: $card-btn-background-active;
+  }
+
+  .card-blog-emoji {
+    content: url('../assets/emoji/hand_write.png');
+    width: 20px;
+  }
+
+  .card-calendar-emoji {
+    content: url('../assets/emoji/calendar.png');
+    width: 18px;
+    height: 18px;
+  }
+
+  .card-event-calendar-emoji {
+    content: url('../assets/emoji/calendar.png');
+    width: 18px;
+    height: 18px;
+  }
+
+  .card-webina-calendar-emoji {
+    content: url('../assets/emoji/calendar.png');
+    width: 18px;
+    height: 18px;
+  }
+
+  .speaker-social-icon {
+    margin-left: 5px;
+    margin-top: auto;
+    font-size: 26px;
+  } 
+
+  .social-media-section {
+    position: absolute;
+    bottom: 8px;
+  }
 }

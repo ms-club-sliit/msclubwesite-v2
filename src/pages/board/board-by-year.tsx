@@ -4,12 +4,10 @@ import boardData from "../../data/BoardSectionData.json";
 import BoardMemberCard from "./board-member-card";
 
 const BoardByYear: React.FC = () => {
-  const [id, setid] = useState(0);
-  const [year, setyear] = useState("2020");
+  const [id, setid] = useState<number>(0);
+  const [year, setyear] = useState<string>("2020");
   const [boardList, setboardList] = useState<IBoard[]>([]);
-  const [boardMemberList, setboardMemberList] = useState<IBoardMemberDetails[]>(
-    []
-  );
+  const [boardMemberList, setboardMemberList] = useState<IBoardMemberDetails[]>([]);
 
   useEffect(() => {
     setboardList(boardData);
@@ -32,32 +30,31 @@ const BoardByYear: React.FC = () => {
     year,
   };
   return (
-    <div className="container">
+    <div className="board-year">
+      <div className="hero-section-bg" />
       <div className="row">
-        <span className="board-topic mt-2">
-          Meet the Board
-          <b className="board-topic-year">
-            {nextBoard.year} - {incrementNumber(nextBoard.year)}
-          </b>
+        <span className="title">
+          Meet the Board {nextBoard.year} - {incrementNumber(nextBoard.year)}
+          <span className="wave-hand-emoji" />
         </span>
-        <hr />
-        <div className="col-md-2 pt-4">
+        <div className="d-flex">
           {boardList.map((board) => (
-            <div className="row">
+            <div className="mb-4">
               <button
                 type="button"
-                className="btndiv year-btn col text-center"
+                className="button btn text-center"
                 onClick={() => handleClick(board.id, board.year)}
               >
-                {board.year} - {incrementNumber(board.year)}
+                <span className="calendar-emoji"></span>{board.year}/{incrementNumber(board.year.slice(-2))}
               </button>
+              &nbsp;&nbsp;&nbsp;
             </div>
           ))}
         </div>
-        <div className="col-md-10">
+        <div className="col-md-12">
           <div className="row">
             {boardMemberList.map((member) => (
-              <div className="col-md-4 col-sm-6">
+              <div className="col d-flex justify-content-center">
                 <BoardMemberCard
                   id={member.id}
                   image={member.image}

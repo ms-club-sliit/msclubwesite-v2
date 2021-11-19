@@ -1,6 +1,8 @@
 interface ICard {
   id:number;
-  title?: string;
+  type: string;
+  title: string;
+  author?: string,
   imageUrl?: string;
   tags?: string[];
   dateTime?: string;
@@ -11,7 +13,7 @@ interface ICard {
 }
 
 interface socialMediaURLs {
-  fb: string;
+  facebook: string;
   instagram: string;
   twitter: string;
   linkedIn: string;

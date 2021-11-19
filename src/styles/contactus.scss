@@ -1,0 +1,214 @@
+.contact-us-title {
+  font-family: "Product Sans Bold";
+  font-size: 40px;
+  margin-bottom: 20px;
+}
+
+.contact-us-primary-btn {
+  background: $primary-color-active;
+  color: $color-white;
+  border-radius: 7px;
+  font-family: "Product Sans Regular";
+  font-size: 18px;
+  width: 230px;
+}
+
+.contact-us-primary-btn:hover {
+  background: $primary-color-hover;
+  color: $color-white;
+}
+
+.contact-us-primary-btn:focus, .contact-us-primary-btn:active {
+  background: $primary-color-active;
+  color: $color-white;
+  outline: none !important;
+  box-shadow: none;
+}
+
+.contact-us-card-section {
+  margin-bottom: 10px;
+}
+
+.contact-us-header-title {
+  font-family: "Product Sans Bold";
+
+  @include media("<=phone") {
+    font-size: 50px;
+  }
+
+  @include media(">=phone", '<tablet') {
+    font-size: 55px;
+  }
+
+  @include media('>=tablet', '<smalldesktop') {
+    font-size: 55px;
+  }
+
+  @include media('>=smalldesktop', '<desktop') {
+    font-size: 70px;
+  }
+
+  @include media(">=desktop", '<largedesktop') {
+    font-size: 70px;
+  }
+
+  @include media('>=largedesktop') {
+    font-size: 80px;
+  }
+}
+
+.contact-us-header-description {
+  @include media("<=phone") {
+    font-size: 18px;
+  }
+
+  @include media(">=phone", '<tablet') {
+    font-size: 18px;
+  }
+
+  @include media('>=tablet', '<smalldesktop') {
+    font-size: 18px;
+  }
+
+  @include media('>=smalldesktop', '<desktop') {
+    font-size: 18px;
+  }
+
+  @include media(">=desktop", '<largedesktop') {
+    font-size: 20px;
+  }
+
+  @include media('>=largedesktop') {
+    font-size: 24px;
+  }
+}
+
+.contact-us-header-img {
+  margin-left: 20px;
+  margin-top: 10px;
+  display: block;
+  visibility: visible;
+
+  @include media("<=phone") {
+    width: 80%
+  }
+
+  @include media(">=phone", '<tablet') {
+    width: 400px;
+  }
+
+  @include media('>=tablet', '<smalldesktop') {
+    width: 350px;
+  }
+
+  @include media('>=smalldesktop', '<desktop') {
+    width: 400px;
+  }
+
+  @include media(">=desktop", '<largedesktop') {
+    width: 450px;
+  }
+
+  @include media('>=largedesktop') {
+    width: 550px;
+  }
+}
+
+.contact-us .fa-youtube {
+  background-image: #FF0000;
+  color: #FF0000;
+}
+
+.social-facebook-link {
+  font-family: "Consolas";
+  font-size: 22px;
+  margin-left: 10px;
+  &:hover {
+    cursor: pointer;
+    color: $facebook-color;
+  }
+}
+
+.social-instagram-link {
+  font-family: "Consolas";
+  font-size: 22px;
+  margin-left: 10px;
+  &:hover {
+    text-decoration: underline;
+    cursor: pointer;
+    background-image: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    -moz-background-clip: text;
+    -moz-text-fill-color: transparent;
+  }
+}
+
+.social-linkedin-link {
+  font-family: "Consolas";
+  font-size: 22px;
+  margin-left: 10px;
+  &:hover {
+    cursor: pointer;
+    color: $linkedin-color;
+  }
+}
+
+.social-youtube-link {
+  font-family: "Consolas";
+  font-size: 22px;
+  margin-left: 10px;
+  &:hover {
+    cursor: pointer;
+    color: $youtube-color;
+  }
+}
+
+.social-github-link {
+  font-family: "Consolas";
+  font-size: 22px;
+  margin-left: 10px;
+  &:hover {
+    cursor: pointer;
+    color: $github-color;
+  }
+}
+
+.contact-us-form {
+  width: 65%;
+}
+
+.contact-us-label-text {
+  font-size: 20px;
+}
+
+.contact-btn {
+  background: $primary-color-active;
+  color: $color-white;
+  border-radius: 7px;
+  font-family: "Product Sans Regular";
+  font-size: 18px;
+  width: 120px;
+
+  .icon {
+    margin-left: 10px;
+  }
+}
+
+.contact-btn:hover {
+  background: $primary-color-hover;
+  color: $color-white;
+}
+
+.contact-btn:focus, .contact-btn:active {
+  background: $primary-color-active;
+  color: $color-white;
+  outline: none !important;
+  box-shadow: none;
+}
+
+.contact-title {
+  font-family: "Product Sans Medium";
+  font-size: 40px;
+}
