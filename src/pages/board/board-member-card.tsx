@@ -16,7 +16,7 @@ const BoardMemberCard: React.FC<IBoardMemberDetails> = ({
   
   return (
     <div className="card board-member">
-      {image && <img src={image} className="profile-picture" alt="image" />}
+      {image && <img src={image} className="profile-picture" alt="mamber-profile" />}
 
       <div className="card-body">
         <div className="row">

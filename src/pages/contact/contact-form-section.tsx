@@ -1,6 +1,9 @@
 import React, { useState } from "react";
 import emailjs from "emailjs-com";
-import { VALIDATE_EMAIL_REGEX } from '../../constants';
+
+const emailRegEx = RegExp(
+  /^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i
+);
 
 const initialState = {
   email: '',
@@ -27,7 +30,7 @@ class ContactFormSection extends React.Component {
       this.setState({ email: null });
       isFormNotValid = true;
     } else {
-      if (!VALIDATE_EMAIL_REGEX.test(stateValue.email)) {
+      if (!emailRegEx.test(stateValue.email)) {
         this.setState({ email: null });
         isFormNotValid = true;
       }

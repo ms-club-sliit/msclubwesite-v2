@@ -18,7 +18,7 @@ const CardScreen: React.FC<ICardScreen> = ({
         >
           <div className="d-flex justify-content-center">
             <img
-              alt="about-us-image"
+              alt="about-us"
               className="img-fluid about-us-card-img"
               src={imageUrl}
             />
@@ -35,7 +35,7 @@ const CardScreen: React.FC<ICardScreen> = ({
         {rightSide ? (
           <div className="col-lg-5 col-md-12 col-sm-12 d-none d-xl-block">
             <img
-              alt="about-us-image"
+              alt="about-us"
               className="img-fluid about-us-card-img"
               src={imageUrl}
             />

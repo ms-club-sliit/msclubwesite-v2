@@ -3,9 +3,6 @@ export const CARD_TYPE_BLOG = 'BLOG';
 export const CARD_TYPE_SPEAKER = 'SPEAKER';
 export const CARD_TYPE_EVENT = 'EVENT';
 export const CARD_TYPE_WEBINA = 'WEBINA';
-export const VALIDATE_EMAIL_REGEX = RegExp(
-  /^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i
-);
 export const SLIDER_RESPONSIVE_BREAKPOINTS = {
   0: {
     items: 1,

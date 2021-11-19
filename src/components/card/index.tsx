@@ -19,7 +19,7 @@ const Card: React.FC<ICard> = ({
     <div className="card card-block mb-3">
     {type === 'BLOG' 
       ? <div className="card-blog">
-          {imageUrl && <img src={imageUrl} className="card-img-top" alt="image" />}
+          {imageUrl && <img src={imageUrl} className="card-img-top" alt="post-flyer" />}
 
           {icon && (
             <div className="d-flex justify-content-center mt-4">
@@ -59,6 +59,7 @@ const Card: React.FC<ICard> = ({
                 <a
                   href={link}
                   target="_blank"
+                  rel="noreferrer"
                   className="d-flex justify-content-center"
                 >
                   <button className="btn card-btn button">READ MORE</button>
@@ -74,7 +75,7 @@ const Card: React.FC<ICard> = ({
     {type === 'EVENT'
       ?
         <div className="card-event">
-          {imageUrl && <img src={imageUrl} className="card-img-top" alt="image" />}
+          {imageUrl && <img src={imageUrl} className="card-img-top" alt="post-flyer" />}
 
           <div className="card-body">
             {tags &&
@@ -106,6 +107,7 @@ const Card: React.FC<ICard> = ({
                 <a
                   href={link}
                   target="_blank"
+                  rel="noreferrer"
                   className="d-flex justify-content-center"
                 >
                   <button className="btn card-btn button">MORE INFO</button>
@@ -121,7 +123,7 @@ const Card: React.FC<ICard> = ({
     {type === 'WEBINA' 
       ?
         <div className="card-webina">
-          {imageUrl && <img src={imageUrl} className="card-img-top" alt="image" />}
+          {imageUrl && <img src={imageUrl} className="card-img-top" alt="post-flyer" />}
 
           <div className="card-body">
             {tags &&
@@ -153,6 +155,7 @@ const Card: React.FC<ICard> = ({
                 <a
                   href={link}
                   target="_blank"
+                  rel="noreferrer"
                   className="d-flex justify-content-center"
                 >
                   <button className="btn card-btn button">MORE INFO</button>
@@ -168,7 +171,7 @@ const Card: React.FC<ICard> = ({
     {type === 'SPEAKER' 
       ? 
         <div className="card-speaker">
-          {imageUrl && <img src={imageUrl} className="card-speaker-img" alt="image" />}
+          {imageUrl && <img src={imageUrl} className="card-speaker-img" alt="post-flyer" />}
 
           <div className="card-body">
             <div className="row">
