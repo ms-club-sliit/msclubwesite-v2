@@ -1,5 +1,4 @@
-import React, { useState } from "react";
-import emailjs from "emailjs-com";
+import React from "react";
 
 const emailRegEx = RegExp(
   /^[^\s@]+@[^\s@]+\.[^\s@]+$/
