@@ -26,10 +26,10 @@ export const SLIDER_RESPONSIVE_BREAKPOINTS = {
     items: 3.4,
   },
   1400: {
-    items: 3.9,
+    items: 3.3,
   },
   1700: {
-    items: 4,
+    items: 4.4,
   },
   2000: {
     items: 5,

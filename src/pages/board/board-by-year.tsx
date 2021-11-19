@@ -45,7 +45,7 @@ const BoardByYear: React.FC = () => {
                 className="button btn text-center"
                 onClick={() => handleClick(board.id, board.year)}
               >
-                <span className="calendar-emoji"></span>{board.year} - {incrementNumber(board.year)}
+                <span className="calendar-emoji"></span>{board.year}/{incrementNumber(board.year.slice(-2))}
               </button>
               &nbsp;&nbsp;&nbsp;
             </div>
@@ -54,7 +54,7 @@ const BoardByYear: React.FC = () => {
         <div className="col-md-12">
           <div className="row">
             {boardMemberList.map((member) => (
-              <div className="col-md-3 col-sm-6">
+              <div className="col d-flex justify-content-center">
                 <BoardMemberCard
                   id={member.id}
                   image={member.image}

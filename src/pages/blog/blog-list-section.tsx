@@ -20,7 +20,7 @@ const BlogList: React.FC = () => {
 
   return (
     <div className="container">
-      <h1>Blogs</h1>
+      <h1 className="blog-title">Blog Posts</h1>
       <div className="row">
         {blogList &&
           blogList.items?.map((item, index) => (

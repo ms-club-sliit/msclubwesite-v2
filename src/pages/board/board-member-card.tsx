@@ -25,47 +25,49 @@ const BoardMemberCard: React.FC<IBoardMemberDetails> = ({
             (
               <span className="" style={{ paddingLeft: '0px'}}>
                 <p className="position">{position}</p>
-                <span className="d-flex justify-content-end">
-                  {socialmedia.facebook && (
-                    <a
-                      href={socialmedia.facebook}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <i className="fab fa-facebook fa-2x social-icon" />
-                    </a>
-                  )}
+                <div className="d-flex justify-content-end">
+                  <span>
+                    {socialmedia.facebook && (
+                      <a
+                        href={socialmedia.facebook}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <i className="fab fa-facebook social-icon" />
+                      </a>
+                    )}
 
-                  {socialmedia.instagram && (
-                    <a
-                      href={socialmedia.instagram}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <i className="fab fa-instagram fa-2x social-icon" />
-                    </a>
-                  )}
+                    {socialmedia.instagram && (
+                      <a
+                        href={socialmedia.instagram}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <i className="fab fa-instagram social-icon" />
+                      </a>
+                    )}
 
-                  {socialmedia.linkedin && (
-                    <a
-                      href={socialmedia.linkedin}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <i className="fab fa-linkedin fa-2x social-icon" />
-                    </a>
-                  )}
+                    {socialmedia.linkedin && (
+                      <a
+                        href={socialmedia.linkedin}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <i className="fab fa-linkedin social-icon" />
+                      </a>
+                    )}
 
-                  {socialmedia.twitter && (
-                    <a
-                      href={socialmedia.twitter}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <i className="fab fa-twitter fa-2x social-icon" />
-                    </a>
-                  )}
-                </span>
+                    {socialmedia.twitter && (
+                      <a
+                        href={socialmedia.twitter}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <i className="fab fa-twitter social-icon" />
+                      </a>
+                    )}
+                  </span>
+                </div>
               </span>
             )
           }
