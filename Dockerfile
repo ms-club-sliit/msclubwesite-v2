@@ -1,14 +1,14 @@
 FROM node:14.18-alpine AS BUILD_IMAGE 
-COPY package.json package-lock.json yarn.lock ./
-RUN npm set progress=false && npm config set depth 0 && npm cache clean --force
-RUN npm install && mkdir /ms-website && cp -R ./node_modules ./ms-website
+RUN apk add --no-cache nodejs npm
 WORKDIR /ms-website
+COPY ["yarn.lock", "package.json", "./"]
+RUN yarn install --check-files --non-interactive --ignore-optional --frozen-lockfile
 COPY . .
 RUN yarn build 
 
 FROM node:14.18-alpine
-COPY --from=BUILD_IMAGE /ms-website/build ./build
-COPY --from=BUILD_IMAGE /ms-website/node_modules ./node_modules
+WORKDIR /app
+COPY --from=BUILD_IMAGE /ms-website /app/
 EXPOSE 9090
 ENTRYPOINT [ "yarn" ] 
 CMD [ "start" ]
