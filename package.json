@@ -23,6 +23,7 @@
     "react-owl-carousel": "^2.3.3",
     "react-router-dom": "^6.0.2",
     "react-scripts": "4.0.3",
+    "react-scroll-to-top": "^1.0.5",
     "typescript": "^4.1.2",
     "web-vitals": "^1.0.1"
   },
@@ -49,6 +50,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "devDependencies": {}
+  }
 }
