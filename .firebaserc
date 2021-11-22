@@ -1,5 +1,7 @@
 {
   "projects": {
-    "default": "msclubofsliit-v2"
-  }
+    "default": "msclubofsliit-v2",
+    "development": "ms-club-site-dev"
+  },
+  "targets": {}
 }
