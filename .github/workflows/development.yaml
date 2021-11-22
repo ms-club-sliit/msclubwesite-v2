@@ -44,6 +44,7 @@ jobs:
         with:
           name: build
           path: build
+      - run: firebase use development
       - name: Depoy to Firebase
         uses: w9jds/firebase-action@master
         with:
