@@ -9,12 +9,18 @@ const HeroSection: React.FC = () => (
         <p className="blog-header-description">
           Read all the blog post which written by our students.
         </p>
+        <a
+          href="https://medium.com/ms-club-of-sliit"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
         <button className="btn blog-primary-btn">
           Follow Medium Page
           <span>
             <i className="far fa-thumbs-up mx-2"></i>
           </span>
         </button>
+        </a>
       </div>
 
       <div className="col-sm-12 col-md-5 col-lg-5">
