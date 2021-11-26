@@ -9,19 +9,31 @@ const HeroSection: React.FC = () => (
         <p className="event-header-description">
           Explore all the events organized by our students.
         </p>
+        <a
+          href="https://www.facebook.com/msclubsliit"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
         <button className="btn event-primary-btn">
           More Information on
           <span>
             <i className="fab fa-facebook-square fa-lg mx-2 mt-1"></i>
           </span>
         </button>
+        </a>
 
+        <a
+          href="https://www.youtube.com/channel/UCoSzsIgJZY52iiWu5YNI0Xg"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
         <button className="btn event-youtube-btn">
           Subscribe on
           <span>
             <i className="fab fa-youtube fa-lg mx-2 mt-1"></i>
           </span>
         </button>
+        </a>
       </div>
 
       <div className="col-sm-12 col-md-5 col-lg-5">
