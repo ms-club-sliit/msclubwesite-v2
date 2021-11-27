@@ -13,7 +13,7 @@ const NavBar: React.FC = () => {
 
   const resizeLogoOnScroll = () => {
     const distanceY = window.pageYOffset || document.documentElement.scrollTop,
-                        shrinkOn: number = 200,
+                        shrinkOn: number = 5,
                         headerEl: any = document.getElementById('header');
     
     if (distanceY > shrinkOn) {

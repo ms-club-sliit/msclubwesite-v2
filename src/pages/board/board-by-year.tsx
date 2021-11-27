@@ -39,7 +39,7 @@ const BoardByYear: React.FC = () => {
         </span>
         <div className="d-flex">
           {boardList.map((board) => (
-            <div className="mb-4">
+            <div className="mb-4" key={board.id}>
               <button
                 type="button"
                 className="button btn text-center"
@@ -54,7 +54,7 @@ const BoardByYear: React.FC = () => {
         <div className="col-md-12">
           <div className="row">
             {boardMemberList.map((member) => (
-              <div className="col d-flex justify-content-center">
+              <div className="col d-flex justify-content-center" key={member.id}>
                 <BoardMemberCard
                   id={member.id}
                   image={member.image}
