@@ -5,6 +5,10 @@ const emailRegEX = RegExp(
   /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/
 );
 
+const webUrlRegEx = RegExp(
+  /(http(s)?:\/\/.)?(www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&/=]*)/g
+);
+
 const formValid = (formErrors: any) => {
   let valid = true;
 
@@ -24,12 +28,28 @@ class JoinUsFormSection extends React.Component<IProps, IState> {
       email: '',
       mobileNumber: '',
       academicYear: '',
+      selfIntroduction: '',
+      reason: '',
+      linkedInProfile: '',
+      githubProfile: '',
+      blog: '',
+      experiences: '',
+      challengesAndProblems: '',
+      timeline: '',
       formErrors: {
         sliitId: '',
         name: '',
         email: '',
         mobileNumber: '',
         academicYear: '',
+        selfIntroduction: '',
+        reason: '',
+        linkedInProfile: '',
+        githubProfile: '',
+        blog: '',
+        experiences: '',
+        challengesAndProblems: '',
+        timeline: '',
       },
     };
   }
@@ -43,6 +63,14 @@ class JoinUsFormSection extends React.Component<IProps, IState> {
             Email : ${this.state.email}
             Whatsapp Phone Number : ${this.state.mobileNumber}
             Crrent Academic Year : ${this.state.academicYear}
+            Self Introduction: ${this.state.selfIntroduction}
+            Reason to Join: ${this.state.reason}
+            LinkedIn Profile: ${this.state.linkedInProfile}
+            GitHub Profile: ${this.state.githubProfile}
+            Blog: ${this.state.blog}
+            Experiences: ${this.state.experiences}
+            Challenges & Problems: ${this.state.challengesAndProblems}
+            In 5 Years: ${this.state.timeline}
             `);
     } else {
       console.error('From Invalid -- Display Error Message');
@@ -57,13 +85,13 @@ class JoinUsFormSection extends React.Component<IProps, IState> {
     switch (name) {
       case 'sliitId':
         formErrors.sliitId =
-          value.length == 10
-            ? 'SLIIT ID must contain 10 characters (ITXXXXXXXX)'
+          value.length < 10
+            ? 'SLIIT ID must contain 10 characters Ex: ITXXXXXXXX)'
             : '';
         break;
       case 'name':
         formErrors.name =
-          value.length > 0
+          value.length < 10
             ? 'Minimum 10 Characters required as (MS Club Of SLIIT)'
             : '';
         break;
@@ -74,14 +102,60 @@ class JoinUsFormSection extends React.Component<IProps, IState> {
         break;
       case 'mobileNumber':
         formErrors.mobileNumber =
-          value.length == 10
-            ? 'WhatsApp Phone Number must contain 10 numbers (07XXXXXXXX)'
+          value.length < 10
+            ? 'WhatsApp Phone Number must contain 10 numbers Ex: 07XXXXXXXX)'
             : '';
         break;
       case 'academicYear':
         formErrors.academicYear =
-          value.length > 10
+          value.length < 0
             ? 'Academic Year cannot be Empty'
+            : '';
+        break;
+      case 'selfIntroduction':
+        formErrors.selfIntroduction =
+          value.length > 200
+            ? 'Maximum 200 Characters required'
+            : '';
+        break;
+      case 'reason':
+        formErrors.reason =
+          value.length < 10
+            ? 'Minimum 10 Characters required'
+            : '';
+        break;
+      case 'linkedInProfile':
+        formErrors.linkedInProfile = webUrlRegEx.test(value)
+          ? ''
+          : 'Please provide a valid link Ex: https://www.linkedin.com/in/<Profile Name>/';
+        break;
+      case 'githubProfile':
+        formErrors.githubProfile = webUrlRegEx.test(value)
+          ? ''
+          : 'Please provide a valid link Ex: https://github.com/<Profile Name>';
+        break;
+      case 'blog':
+        formErrors.blog =
+          value.length < 0
+            ? 'Please Provide an Answer'
+            : '';
+        break;
+      case 'experiences':
+        formErrors.experiences =
+          value.length < 10
+            ? 'Minimum 10 Characters required'
+            : '';
+        break;
+      case 'challengesAndProblems':
+        formErrors.challengesAndProblems =
+          value.length < 10
+            ? 'Minimum 10 Characters required'
+            : '';
+        break;
+      case 'timeline':
+        formErrors.timeline =
+          value.length < 10
+            ? 'Minimum 10 Characters required'
             : '';
         break;
       default:
@@ -152,7 +226,7 @@ class JoinUsFormSection extends React.Component<IProps, IState> {
                     <input
                       id="email"
                       name="email"
-                      type="email"
+                      type="text"
                       className={
                         formErrors.email.length > 0
                           ? 'form-control border-danger'
@@ -207,16 +281,16 @@ class JoinUsFormSection extends React.Component<IProps, IState> {
                       <span className="text-danger">{formErrors.academicYear}</span>
                     )}
                   </div>
-                  {/* SAMPLE TEXT FIELD */}
-                  {/* <div className="form-group mt-3">
-                    <label htmlFor="message" className="contact-us-label-text">
-                      Message
+                  {/* Self Introduction */}
+                  <div className="form-group mt-3">
+                    <label htmlFor="selfIntroduction" className="contact-us-label-text">
+                      Self Introduction (200 words max)
                     </label>
                     <textarea
-                      id="message"
-                      name="message"
+                      id="selfIntroduction"
+                      name="selfIntroduction"
                       className={
-                        formErrors.message.length > 0
+                        formErrors.selfIntroduction.length > 0
                           ? 'form-control border-danger'
                           : 'form-control'
                       }
@@ -224,10 +298,157 @@ class JoinUsFormSection extends React.Component<IProps, IState> {
                       onChange={this.onChange}
                       required
                     />
-                    {formErrors.message.length > 0 && (
-                      <span className="text-danger">{formErrors.message}</span>
+                    {formErrors.selfIntroduction.length > 0 && (
+                      <span className="text-danger">{formErrors.selfIntroduction}</span>
                     )}
-                  </div> */}
+                  </div>
+                  {/* Reason */}
+                  <div className="form-group mt-3">
+                    <label htmlFor="reason" className="contact-us-label-text">
+                      Why would you like to join the Organizing Committee of MS Club?
+                    </label>
+                    <textarea
+                      id="reason"
+                      name="reason"
+                      className={
+                        formErrors.reason.length > 0
+                          ? 'form-control border-danger'
+                          : 'form-control'
+                      }
+                      rows={3}
+                      onChange={this.onChange}
+                      required
+                    />
+                    {formErrors.reason.length > 0 && (
+                      <span className="text-danger">{formErrors.reason}</span>
+                    )}
+                  </div>
+                  {/* Linked In Profile */}
+                  <div className="form-group mt-3">
+                    <label htmlFor="linkedInProfile" className="contact-us-label-text">
+                      LinkedIn Profile
+                    </label>
+                    <input
+                      id="linkedInProfile"
+                      name="linkedInProfile"
+                      type="text"
+                      className={
+                        formErrors.linkedInProfile.length > 0
+                          ? 'form-control border-danger'
+                          : 'form-control'
+                      }
+                      onChange={this.onChange}
+                      required
+                    />
+                    {formErrors.linkedInProfile.length > 0 && (
+                      <span className="text-danger">{formErrors.linkedInProfile}</span>
+                    )}
+                  </div>
+                  {/* GitHub Profile */}
+                  <div className="form-group mt-3">
+                    <label htmlFor="githubProfile" className="contact-us-label-text">
+                      Github Profile
+                    </label>
+                    <input
+                      id="githubProfile"
+                      name="githubProfile"
+                      type="text"
+                      className={
+                        formErrors.githubProfile.length > 0
+                          ? 'form-control border-danger'
+                          : 'form-control'
+                      }
+                      onChange={this.onChange}
+                      required
+                    />
+                    {formErrors.githubProfile.length > 0 && (
+                      <span className="text-danger">{formErrors.githubProfile}</span>
+                    )}
+                  </div>
+                  {/* Blog */}
+                  <div className="form-group mt-3">
+                    <label htmlFor="blog" className="contact-us-label-text">
+                      Blog
+                    </label>
+                    <input
+                      id="blog"
+                      name="blog"
+                      type="text"
+                      className={
+                        formErrors.blog.length > 0
+                          ? 'form-control border-danger'
+                          : 'form-control'
+                      }
+                      onChange={this.onChange}
+                      required
+                    />
+                    {formErrors.blog.length > 0 && (
+                      <span className="text-danger">{formErrors.blog}</span>
+                    )}
+                  </div>
+                  {/* Experience */}
+                  <div className="form-group mt-3">
+                    <label htmlFor="experiences" className="contact-us-label-text">
+                      What are your prior volunteering/leadership experiences?
+                    </label>
+                    <textarea
+                      id="experiences"
+                      name="experiences"
+                      className={
+                        formErrors.experiences.length > 0
+                          ? 'form-control border-danger'
+                          : 'form-control'
+                      }
+                      rows={3}
+                      onChange={this.onChange}
+                      required
+                    />
+                    {formErrors.experiences.length > 0 && (
+                      <span className="text-danger">{formErrors.experiences}</span>
+                    )}
+                  </div>
+                  {/* Problems and Challenges */}
+                  <div className="form-group mt-3">
+                    <label htmlFor="challengesAndProblems" className="contact-us-label-text">
+                      Tell us about a challenge/problem that you have faced in life and how you overcame/solved that?
+                    </label>
+                    <textarea
+                      id="challengesAndProblems"
+                      name="challengesAndProblems"
+                      className={
+                        formErrors.challengesAndProblems.length > 0
+                          ? 'form-control border-danger'
+                          : 'form-control'
+                      }
+                      rows={3}
+                      onChange={this.onChange}
+                      required
+                    />
+                    {formErrors.challengesAndProblems.length > 0 && (
+                      <span className="text-danger">{formErrors.challengesAndProblems}</span>
+                    )}
+                  </div>
+                  {/* TimeLine Plan */}
+                  <div className="form-group mt-3">
+                    <label htmlFor="timeline" className="contact-us-label-text">
+                      Where do you see yourself in 5 years time?
+                    </label>
+                    <input
+                      id="timeline"
+                      name="timeline"
+                      type="text"
+                      className={
+                        formErrors.blog.length > 0
+                          ? 'form-control border-danger'
+                          : 'form-control'
+                      }
+                      onChange={this.onChange}
+                      required
+                    />
+                    {formErrors.timeline.length > 0 && (
+                      <span className="text-danger">{formErrors.timeline}</span>
+                    )}
+                  </div>
                   <div className="form-group mt-3 d-flex justify-content-end">
                     <button type="submit" className="contact-btn btn">
                       Apply
@@ -240,8 +461,8 @@ class JoinUsFormSection extends React.Component<IProps, IState> {
               </div>
             </div>
           </div>
-        </div>
-      </div>
+        </div >
+      </div >
     );
   }
 }
