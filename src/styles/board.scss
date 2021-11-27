@@ -206,7 +206,7 @@
   }
 
   @include media('>=smalldesktop', '<desktop') {
-    width: 18rem;
+    width: 15rem;
 
     .link {
       width: 20px;
@@ -217,8 +217,8 @@
     }
 
     .profile-picture {
-      width: 18rem;
-      height: 18rem;
+      width: 15rem;
+      height: 15rem;
     }
 
     .position {
@@ -227,7 +227,7 @@
   }
 
   @include media(">=desktop", '<largedesktop') {
-    width: 20rem;
+    width: 15rem;
 
     .link {
       width: 20px;
@@ -238,8 +238,8 @@
     }
 
     .profile-picture {
-      width: 20rem;
-      height: 20rem;
+      width: 15rem;
+      height: 15rem;
     }
 
     .position {
@@ -248,23 +248,23 @@
   }
 
   @include media('>=largedesktop') {
-    width: 20rem;
+    width: 15rem;
 
     .link {
-      width: 20px;
+      width: 18px;
     }
 
     .name {
-      font-size: 24px;
+      font-size: 20px;
     }
 
     .profile-picture {
-      width: 20rem;
-      height: 20rem;
+      width: 15rem;
+      height: 15rem;
     }
 
     .position {
-      font-size: 20px;
+      font-size: 18px;
     }
   }
 }
