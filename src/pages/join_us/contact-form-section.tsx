@@ -1,5 +1,20 @@
 import React from 'react';
 import { IProps, IState } from '../../interfaces/JoinUsFormInterface';
+import Select from 'react-select';
+import makeAnimated from 'react-select/animated';
+
+const animatedComponents = makeAnimated();
+
+const options = [
+  { value: 'Public Speaking', label: 'Public Speaking' },
+  { value: 'Designing', label: 'Designing' },
+  { value: 'Video Editing', label: 'Video Editing' },
+  { value: 'Content Writing', label: 'Content Writing' },
+  { value: 'Video Editing', label: 'Vanilla' },
+  { value: 'Web Development', label: 'Web Development' },
+  { value: 'UI/UX', label: 'UI/UX' },
+  { value: 'Community building', label: 'Community building' }
+]
 
 const emailRegEX = RegExp(
   /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/
@@ -36,6 +51,7 @@ class JoinUsFormSection extends React.Component<IProps, IState> {
       experiences: '',
       challengesAndProblems: '',
       timeline: '',
+      skills: '',
       formErrors: {
         sliitId: '',
         name: '',
@@ -50,6 +66,7 @@ class JoinUsFormSection extends React.Component<IProps, IState> {
         experiences: '',
         challengesAndProblems: '',
         timeline: '',
+        skills: '',
       },
     };
   }
@@ -71,6 +88,7 @@ class JoinUsFormSection extends React.Component<IProps, IState> {
             Experiences: ${this.state.experiences}
             Challenges & Problems: ${this.state.challengesAndProblems}
             In 5 Years: ${this.state.timeline}
+            Skills: ${this.state.skills}
             `);
     } else {
       console.error('From Invalid -- Display Error Message');
@@ -447,6 +465,24 @@ class JoinUsFormSection extends React.Component<IProps, IState> {
                     />
                     {formErrors.timeline.length > 0 && (
                       <span className="text-danger">{formErrors.timeline}</span>
+                    )}
+                  </div>
+                  {/* skills/talent */}
+                  <div className="form-group mt-3">
+                    <label htmlFor="skills" className="contact-us-label-text">
+                      What are your skills/talent?
+                    </label>
+                    <Select
+                      isMulti
+                      closeMenuOnSelect={false}
+                      components={animatedComponents}
+                      id="skills"
+                      name="skills"
+                      options={options}
+                      onChange={this.onChange}
+                    />
+                    {formErrors.skills.length > 0 && (
+                      <span className="text-danger">{formErrors.skills}</span>
                     )}
                   </div>
                   <div className="form-group mt-3 d-flex justify-content-end">

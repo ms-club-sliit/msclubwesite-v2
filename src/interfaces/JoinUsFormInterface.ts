@@ -14,6 +14,7 @@ interface IState {
   experiences?: string;
   challengesAndProblems?: string;
   timeline?: string;
+  skills?: string;
   formErrors: {
     sliitId: string;
     name: string;
@@ -28,6 +29,7 @@ interface IState {
     experiences: string;
     challengesAndProblems: string;
     timeline: string;
+    skills: string;
   };
 }
 
