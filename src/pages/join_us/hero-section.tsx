@@ -7,7 +7,7 @@ const HeroSection: React.FC = () => (
       <div className="col-sm-12 col-md-7 col-lg-7">
         <h1 className="contact-us-header-title">Join with Us</h1>
         <p className="contact-us-header-description">
-          Join with MS CLUB OF SLIIT
+          Fill your application form today
         </p>
       </div>
 
