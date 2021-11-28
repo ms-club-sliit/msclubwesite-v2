@@ -27,21 +27,25 @@ class ContactFormSection extends React.Component<IProps, IState> {
     let message = this.state.message;
     let valid = true;
 
-    if(name && name.length < 10){
+    if(!name){
       formErrors.name = 'Name is required';
+      valid = false;
+    }
+    if(!email){
+      formErrors.email = 'Email is required';
       valid = false;
     }
     if(email && !emailRegEX.test(email)){
       formErrors.email = 'Invalid email address';
       valid = false;
     }
-    if(message && message.length < 10){
-      formErrors.message = 'Write a message to us / Minimum 10 Characters required'
+    if(!message){
+      formErrors.message = 'Message is required';
       valid = false;
     }
 
     this.setState({ formErrors });
-    
+
     return valid;
   };
 
@@ -53,28 +57,34 @@ class ContactFormSection extends React.Component<IProps, IState> {
             Email : ${this.state.email}
             Message : ${this.state.message}
             `);
-    } else {
-      console.error('From Invalid -- Display Error Message');
     }
   };
 
   onChange = (e: any) => {
     e.preventDefault();
     const { name, value } = e.target;
+    let formErrors = this.state.formErrors;
 
     switch (name) {
       case 'name':
-        this.setState({name: value });
+        if(formErrors.name){
+          formErrors.name = '';
+        }
         break;
       case 'email':
-        this.setState({email: value });
+        if(formErrors.email){
+          formErrors.email = '';
+        }
         break;
       case 'message':
-        this.setState({message: value });
+        if(formErrors.message){
+          formErrors.message = '';
+        }
         break;
       default:
         break;
     }
+    this.setState({ formErrors, [name]: value });
   };
 
   render() {
