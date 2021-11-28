@@ -8,9 +8,8 @@ const animatedComponents = makeAnimated();
 const options = [
   { value: 'Public Speaking', label: 'Public Speaking' },
   { value: 'Designing', label: 'Designing' },
-  { value: 'Video Editing', label: 'Video Editing' },
   { value: 'Content Writing', label: 'Content Writing' },
-  { value: 'Video Editing', label: 'Vanilla' },
+  { value: 'Video Editing', label: 'Video Editing' },
   { value: 'Web Development', label: 'Web Development' },
   { value: 'UI/UX', label: 'UI/UX' },
   { value: 'Community building', label: 'Community building' }
@@ -37,10 +36,10 @@ const formValid = (formErrors: any) => {
 class JoinUsFormSection extends React.Component<IProps, IState> {
   constructor(props: IProps) {
     super(props);
+    this.onSkillChange = this.onSkillChange.bind(this);
     this.state = {
       sliitId: '',
       name: '',
-      email: '',
       mobileNumber: '',
       academicYear: '',
       selfIntroduction: '',
@@ -51,7 +50,7 @@ class JoinUsFormSection extends React.Component<IProps, IState> {
       experiences: '',
       challengesAndProblems: '',
       timeline: '',
-      skills: '',
+      skills: [],
       formErrors: {
         sliitId: '',
         name: '',
@@ -94,6 +93,11 @@ class JoinUsFormSection extends React.Component<IProps, IState> {
       console.error('From Invalid -- Display Error Message');
     }
   };
+
+  onSkillChange = (event: any) => {
+    console.log(event.value);
+    debugger;
+  }
 
   onChange = (e: any) => {
     e.preventDefault();
@@ -474,12 +478,11 @@ class JoinUsFormSection extends React.Component<IProps, IState> {
                     </label>
                     <Select
                       isMulti
-                      closeMenuOnSelect={false}
                       components={animatedComponents}
                       id="skills"
                       name="skills"
                       options={options}
-                      onChange={this.onChange}
+                      onChange={this.onSkillChange}
                     />
                     {formErrors.skills.length > 0 && (
                       <span className="text-danger">{formErrors.skills}</span>
