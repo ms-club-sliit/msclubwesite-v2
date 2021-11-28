@@ -103,7 +103,6 @@ class ContactFormSection extends React.Component<IProps, IState> {
                           : 'form-control'
                       }
                       onChange={this.onChange}
-                      required
                     />
                     {formErrors.name.length > 0 && (
                       <span className="text-danger">{formErrors.name}</span>
@@ -123,7 +122,6 @@ class ContactFormSection extends React.Component<IProps, IState> {
                           : 'form-control'
                       }
                       onChange={this.onChange}
-                      required
                     />
                     {formErrors.email.length > 0 && (
                       <span className="text-danger">{formErrors.email}</span>
@@ -143,7 +141,6 @@ class ContactFormSection extends React.Component<IProps, IState> {
                       }
                       rows={6}
                       onChange={this.onChange}
-                      required
                     />
                     {formErrors.message.length > 0 && (
                       <span className="text-danger">{formErrors.message}</span>
