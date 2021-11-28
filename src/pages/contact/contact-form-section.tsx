@@ -5,16 +5,6 @@ const emailRegEX = RegExp(
   /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/
 );
 
-const formValid = (formErrors: any) => {
-  let valid = true;
-
-  Object.values(formErrors).forEach((val: any) => {
-    val.length > 0 && (valid = false);
-  });
-
-  return valid;
-};
-
 class ContactFormSection extends React.Component<IProps, IState> {
   constructor(props: IProps) {
     super(props);
@@ -30,9 +20,34 @@ class ContactFormSection extends React.Component<IProps, IState> {
     };
   }
 
+  formValid = () => {
+    let formErrors = this.state.formErrors;
+    let name = this.state.name;
+    let email = this.state.email;
+    let message = this.state.message;
+    let valid = true;
+
+    if(name && name.length < 10){
+      formErrors.name = 'Name is required';
+      valid = false;
+    }
+    if(email && !emailRegEX.test(email)){
+      formErrors.email = 'Invalid email address';
+      valid = false;
+    }
+    if(message && message.length < 10){
+      formErrors.message = 'Write a message to us / Minimum 10 Characters required'
+      valid = false;
+    }
+
+    this.setState({ formErrors });
+    
+    return valid;
+  };
+
   handleSubmit = (event: any) => {
     event.preventDefault();
-    if (formValid(this.state.formErrors)) {
+    if (this.formValid()) {
       console.log(`----Clicked Send Button---
             Name : ${this.state.name}
             Email : ${this.state.email}
@@ -46,30 +61,20 @@ class ContactFormSection extends React.Component<IProps, IState> {
   onChange = (e: any) => {
     e.preventDefault();
     const { name, value } = e.target;
-    let formErrors = this.state.formErrors;
 
     switch (name) {
       case 'name':
-        formErrors.name =
-          value.length < 10
-            ? 'Minimum 10 Characters required as (Ms Club Of Sliit)'
-            : '';
+        this.setState({name: value });
         break;
       case 'email':
-        formErrors.email = emailRegEX.test(value)
-          ? ''
-          : 'Invalid email address';
+        this.setState({email: value });
         break;
       case 'message':
-        formErrors.message =
-          value.length < 10
-            ? 'Write a message to us / Minimum 10 Characters required'
-            : '';
+        this.setState({message: value });
         break;
       default:
         break;
     }
-    this.setState({ formErrors, [name]: value });
   };
 
   render() {
