@@ -5,16 +5,6 @@ const emailRegEX = RegExp(
   /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/
 );
 
-const formValid = (formErrors: any) => {
-  let valid = true;
-
-  Object.values(formErrors).forEach((val: any) => {
-    val.length > 0 && (valid = false);
-  });
-
-  return valid;
-};
-
 class ContactFormSection extends React.Component<IProps, IState> {
   constructor(props: IProps) {
     super(props);
@@ -30,16 +20,43 @@ class ContactFormSection extends React.Component<IProps, IState> {
     };
   }
 
+  formValid = () => {
+    let formErrors = this.state.formErrors;
+    let name = this.state.name;
+    let email = this.state.email;
+    let message = this.state.message;
+    let valid = true;
+
+    if(!name){
+      formErrors.name = 'Name is required';
+      valid = false;
+    }
+    if(!email){
+      formErrors.email = 'Email is required';
+      valid = false;
+    }
+    if(email && !emailRegEX.test(email)){
+      formErrors.email = 'Invalid email address';
+      valid = false;
+    }
+    if(!message){
+      formErrors.message = 'Message is required';
+      valid = false;
+    }
+
+    this.setState({ formErrors });
+
+    return valid;
+  };
+
   handleSubmit = (event: any) => {
     event.preventDefault();
-    if (formValid(this.state.formErrors)) {
+    if (this.formValid()) {
       console.log(`----Clicked Send Button---
             Name : ${this.state.name}
             Email : ${this.state.email}
             Message : ${this.state.message}
             `);
-    } else {
-      console.error('From Invalid -- Display Error Message');
     }
   };
 
@@ -50,21 +67,19 @@ class ContactFormSection extends React.Component<IProps, IState> {
 
     switch (name) {
       case 'name':
-        formErrors.name =
-          value.length < 10
-            ? 'Minimum 10 Characters required as (Ms Club Of Sliit)'
-            : '';
+        if(formErrors.name){
+          formErrors.name = '';
+        }
         break;
       case 'email':
-        formErrors.email = emailRegEX.test(value)
-          ? ''
-          : 'Invalid email address';
+        if(formErrors.email){
+          formErrors.email = '';
+        }
         break;
       case 'message':
-        formErrors.message =
-          value.length < 10
-            ? 'Write a message to us / Minimum 10 Characters required'
-            : '';
+        if(formErrors.message){
+          formErrors.message = '';
+        }
         break;
       default:
         break;
@@ -98,7 +113,6 @@ class ContactFormSection extends React.Component<IProps, IState> {
                           : 'form-control'
                       }
                       onChange={this.onChange}
-                      required
                     />
                     {formErrors.name.length > 0 && (
                       <span className="text-danger">{formErrors.name}</span>
@@ -118,7 +132,6 @@ class ContactFormSection extends React.Component<IProps, IState> {
                           : 'form-control'
                       }
                       onChange={this.onChange}
-                      required
                     />
                     {formErrors.email.length > 0 && (
                       <span className="text-danger">{formErrors.email}</span>
@@ -138,7 +151,6 @@ class ContactFormSection extends React.Component<IProps, IState> {
                       }
                       rows={6}
                       onChange={this.onChange}
-                      required
                     />
                     {formErrors.message.length > 0 && (
                       <span className="text-danger">{formErrors.message}</span>
