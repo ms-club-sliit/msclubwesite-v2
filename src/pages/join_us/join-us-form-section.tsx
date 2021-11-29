@@ -76,9 +76,9 @@ const ApplicationForm: React.FC = () => {
     skills: Yup.string().ensure().required('Skills are required'),
   });
 
-  const { 
-    register, 
-    handleSubmit, 
+  const {
+    register,
+    handleSubmit,
     formState: { errors }
   } = useForm<IApplicationForm>({
     resolver: yupResolver(validationSchema)
@@ -104,9 +104,9 @@ const ApplicationForm: React.FC = () => {
                 <label className="contact-us-label-text">
                   SLIIT Student ID
                 </label>
-                <input 
-                  type="text" 
-                  className={`form-control ${errors.studentId ? `border-danger`: null}`}
+                <input
+                  type="text"
+                  className={`form-control ${errors.studentId ? `border-danger` : null}`}
                   {...register('studentId')}
                 />
                 <span className="text-danger">{errors.studentId?.message}</span>
@@ -116,9 +116,9 @@ const ApplicationForm: React.FC = () => {
                 <label className="contact-us-label-text">
                   Full Name
                 </label>
-                <input 
-                  type="text" 
-                  className={`form-control ${errors.name ? `border-danger`: null}`}
+                <input
+                  type="text"
+                  className={`form-control ${errors.name ? `border-danger` : null}`}
                   {...register('name')}
                 />
                 <span className="text-danger">{errors.name?.message}</span>
@@ -128,9 +128,9 @@ const ApplicationForm: React.FC = () => {
                 <label className="contact-us-label-text">
                   Email Address
                 </label>
-                <input 
-                  type="text" 
-                  className={`form-control ${errors.email ? `border-danger`: null}`}
+                <input
+                  type="text"
+                  className={`form-control ${errors.email ? `border-danger` : null}`}
                   {...register('email')}
                 />
                 <span className="text-danger">{errors.email?.message}</span>
@@ -140,9 +140,9 @@ const ApplicationForm: React.FC = () => {
                 <label className="contact-us-label-text">
                   Mobile Number
                 </label>
-                <input 
-                  type="text" 
-                  className={`form-control ${errors.mobileNumber ? `border-danger`: null}`}
+                <input
+                  type="text"
+                  className={`form-control ${errors.mobileNumber ? `border-danger` : null}`}
                   {...register('mobileNumber')}
                 />
                 <span className="text-danger">{errors.mobileNumber?.message}</span>
@@ -152,9 +152,9 @@ const ApplicationForm: React.FC = () => {
                 <label className="contact-us-label-text">
                   Academic Year
                 </label>
-                <input 
-                  type="text" 
-                  className={`form-control ${errors.academicYear ? `border-danger`: null}`}
+                <input
+                  type="text"
+                  className={`form-control ${errors.academicYear ? `border-danger` : null}`}
                   {...register('academicYear')}
                 />
                 <span className="text-danger">{errors.academicYear?.message}</span>
@@ -164,9 +164,9 @@ const ApplicationForm: React.FC = () => {
                 <label className="contact-us-label-text">
                   Self Introduction (200 words max)
                 </label>
-                <textarea 
+                <textarea
                   rows={6}
-                  className={`form-control ${errors.description ? `border-danger`: null}`}
+                  className={`form-control ${errors.description ? `border-danger` : null}`}
                   {...register('description')}
                 />
                 <span className="text-danger">{errors.description?.message}</span>
@@ -176,9 +176,9 @@ const ApplicationForm: React.FC = () => {
                 <label className="contact-us-label-text">
                   Why would you like to join the Organizing Committee of MS Club?
                 </label>
-                <textarea 
+                <textarea
                   rows={6}
-                  className={`form-control ${errors.reason ? `border-danger`: null}`}
+                  className={`form-control ${errors.reason ? `border-danger` : null}`}
                   {...register('reason')}
                 />
                 <span className="text-danger">{errors.reason?.message}</span>
@@ -188,9 +188,9 @@ const ApplicationForm: React.FC = () => {
                 <label className="contact-us-label-text">
                   LinkedIn Profile Link
                 </label>
-                <input 
-                  type="text" 
-                  className={`form-control ${errors.linkedInProfile ? `border-danger`: null}`}
+                <input
+                  type="text"
+                  className={`form-control ${errors.linkedInProfile ? `border-danger` : null}`}
                   {...register('linkedInProfile')}
                 />
                 <span className="text-danger">{errors.linkedInProfile?.message}</span>
@@ -200,9 +200,9 @@ const ApplicationForm: React.FC = () => {
                 <label className="contact-us-label-text">
                   GitHub Profile Link
                 </label>
-                <input 
-                  type="text" 
-                  className={`form-control ${errors.gitHubProfile ? `border-danger`: null}`}
+                <input
+                  type="text"
+                  className={`form-control ${errors.gitHubProfile ? `border-danger` : null}`}
                   {...register('gitHubProfile')}
                 />
                 <span className="text-danger">{errors.gitHubProfile?.message}</span>
@@ -212,9 +212,9 @@ const ApplicationForm: React.FC = () => {
                 <label className="contact-us-label-text">
                   Blog Page Link
                 </label>
-                <input 
-                  type="text" 
-                  className={`form-control ${errors.blogPage ? `border-danger`: null}`}
+                <input
+                  type="text"
+                  className={`form-control ${errors.blogPage ? `border-danger` : null}`}
                   {...register('blogPage')}
                 />
                 <span className="text-danger">{errors.blogPage?.message}</span>
@@ -224,9 +224,9 @@ const ApplicationForm: React.FC = () => {
                 <label className="contact-us-label-text">
                   What are your prior volunteering/leadership experiences?
                 </label>
-                <textarea 
+                <textarea
                   rows={6}
-                  className={`form-control ${errors.experiences ? `border-danger`: null}`}
+                  className={`form-control ${errors.experiences ? `border-danger` : null}`}
                   {...register('experiences')}
                 />
                 <span className="text-danger">{errors.experiences?.message}</span>
@@ -236,9 +236,9 @@ const ApplicationForm: React.FC = () => {
                 <label className="contact-us-label-text">
                   Tell us about a challenge/problem that you have faced in life and how you overcame/solved that?
                 </label>
-                <textarea 
+                <textarea
                   rows={6}
-                  className={`form-control ${errors.challenges ? `border-danger`: null}`}
+                  className={`form-control ${errors.challenges ? `border-danger` : null}`}
                   {...register('challenges')}
                 />
                 <span className="text-danger">{errors.challenges?.message}</span>
@@ -248,9 +248,9 @@ const ApplicationForm: React.FC = () => {
                 <label className="contact-us-label-text">
                   Where do you see yourself in 5 years time?
                 </label>
-                <input 
-                  type="text" 
-                  className={`form-control ${errors.timeLine ? `border-danger`: null}`}
+                <input
+                  type="text"
+                  className={`form-control ${errors.timeLine ? `border-danger` : null}`}
                   {...register('timeLine')}
                 />
                 <span className="text-danger">{errors.timeLine?.message}</span>
