@@ -13,7 +13,7 @@ const HeroSection: React.FC = () => (
 
       <div className="col-sm-12 col-md-5 col-lg-5">
         <div className="d-felx justify-content-center">
-          <img src="https://i.pinimg.com/originals/8b/b3/68/8bb3685b21793b5c1b54360bc295ac18.png" alt="home header" className="contact-us-header-img" />
+          <img src="/assets/join_us_header.svg" alt="home header" className="contact-us-header-img" />
         </div>
       </div>
     </div>
