@@ -62,15 +62,21 @@ const ApplicationForm: React.FC = () => {
       .max(10, 'Mobile number not exceed 10 numbers')
       .matches(mobileNumberRegEx, 'Invalid mobile number'),
     academicYear: Yup.string().required('Academic year is required'),
-    description: Yup.string().required('Introduction is required').max(1000, 'Introduction not exceed 1000 characters'),
-    reason: Yup.string().required('Reason to join MS club is required').max(500, 'Reason not exceed 500 characters'),
+    description: Yup.string()
+      .required('Introduction is required')
+      .min(150, 'Introduction must have at leaset 150 charaters')
+      .max(1000, 'Introduction not exceed 1000 characters'),
+    reason: Yup.string()
+      .required('Reason to join MS club is required')
+      .min(150, 'Reason must have at least 150 characters')
+      .max(500, 'Reason not exceed 500 characters'),
     linkedInProfile: Yup.string().required('LinkedIn profile link is required').matches(webUrlRegEx, 'Invalid link (Ex: https://www.linkedin.com/in/account-name)'),
     gitHubProfile: Yup.string().required('GitHub profile link is required').matches(webUrlRegEx, 'Invalid link (Ex: https://github.com/account-name)'),
     blogPage: Yup.string().notRequired(),
     experiences: Yup.string().required('Your experiences is required'),
     challenges: Yup.string().required('Challenges are required'),
     timeLine: Yup.string().required('This field is required'),
-    skills: Yup.string().ensure().required('Skills are required'),
+    skills: Yup.string().notRequired(),
   });
 
   const {
@@ -159,7 +165,7 @@ const ApplicationForm: React.FC = () => {
 
               <div className="form-group mt-3">
                 <label className="contact-us-label-text">
-                  Self Introduction (200 words max)
+                  Self Introduction
                 </label>
                 <textarea
                   rows={6}
