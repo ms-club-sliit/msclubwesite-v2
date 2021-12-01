@@ -1,19 +1,18 @@
 import React from 'react';
-import { IProps, IState } from '../../interfaces/JoinUsFormInterface';
 import Select from 'react-select';
 import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as Yup from 'yup';
 
-const skillOptions = [
-  { id: 1, value: 'Public Speaking' },
-  { id: 2, value: 'Designing' },
-  { id: 3, value: 'Content Writing' },
-  { id: 4, value: 'Video Editing' },
-  { id: 5, value: 'Development' },
-  { id: 6, value: 'UI/ UX' },
-  { id: 7, value: 'Community Building' }
-];
+// const skillOptions = [
+//   { id: 1, value: 'Public Speaking' },
+//   { id: 2, value: 'Designing' },
+//   { id: 3, value: 'Content Writing' },
+//   { id: 4, value: 'Video Editing' },
+//   { id: 5, value: 'Development' },
+//   { id: 6, value: 'UI/ UX' },
+//   { id: 7, value: 'Community Building' }
+// ];
 
 const options = [
   { value: 'Public Speaking', label: 'Public Speaking' },
@@ -25,15 +24,13 @@ const options = [
   { value: 'Community building', label: 'Community building' }
 ]
 
-const emailRegEX = RegExp(
-  /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/
-);
-
 const webUrlRegEx = RegExp(
+  //eslint-disable-next-line
   /(http(s)?:\/\/.)?(www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&/=]*)/g
 );
 
 const mobileNumberRegEx = RegExp(
+  //eslint-disable-next-line
   /^((\\+[1-9]{1,4}[ \\-]*)|(\\([0-9]{2,3}\\)[ \\-]*)|([0-9]{2,4})[ \\-]*)*?[0-9]{3,4}?[ \\-]*[0-9]{3,4}?$/
 );
 

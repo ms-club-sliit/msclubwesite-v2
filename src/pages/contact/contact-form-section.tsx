@@ -1,22 +1,7 @@
 import React from 'react';
-import { IProps, IState } from '../../interfaces/ContactFormInterface';
 import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as Yup from 'yup';
-
-const emailRegEX = RegExp(
-  /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/
-);
-
-const formValid = (formErrors: any) => {
-  let valid = true;
-
-  Object.values(formErrors).forEach((val: any) => {
-    val.length > 0 && (valid = false);
-  });
-
-  return valid;
-};
 
 type IContactFormSection = {
   name: string;
