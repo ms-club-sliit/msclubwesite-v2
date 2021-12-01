@@ -4,16 +4,6 @@ import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as Yup from 'yup';
 
-// const skillOptions = [
-//   { id: 1, value: 'Public Speaking' },
-//   { id: 2, value: 'Designing' },
-//   { id: 3, value: 'Content Writing' },
-//   { id: 4, value: 'Video Editing' },
-//   { id: 5, value: 'Development' },
-//   { id: 6, value: 'UI/ UX' },
-//   { id: 7, value: 'Community Building' }
-// ];
-
 const options = [
   { value: 'Public Speaking', label: 'Public Speaking' },
   { value: 'Designing', label: 'Designing' },
