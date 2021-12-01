@@ -4,8 +4,10 @@
 name: MS CLUB SLIIT Node JS CI
 
 on:
+  push:
+    branches: [master, development]
   pull_request:
-    branches: [master]
+    branches: [master, development]
 
 jobs:
   build:
