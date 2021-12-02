@@ -4,5 +4,6 @@ import Contact from './contact';
 import Boards from './board';
 import Blogs from './blog';
 import Events from './event';
+import JoinUs from './join_us';
 
-export { Home, About, Contact, Boards,Blogs, Events };
+export { Home, About, Contact, Boards, Blogs, Events, JoinUs };
