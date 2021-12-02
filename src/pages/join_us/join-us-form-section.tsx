@@ -1,8 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Select from 'react-select';
 import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as Yup from 'yup';
+import { ToastContainer, toast } from "react-toastify";
+import { submitApplication } from '../../api/ApplicationAction';
 
 const options = [
   { value: 'Public Speaking', label: 'Public Speaking' },
@@ -19,7 +21,7 @@ const webUrlRegEx = RegExp(
   /(http(s)?:\/\/.)?(www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&/=]*)/g
 );
 
-const mobileNumberRegEx = RegExp(
+const contactNumberRegEx = RegExp(
   //eslint-disable-next-line
   /^((\\+[1-9]{1,4}[ \\-]*)|(\\([0-9]{2,3}\\)[ \\-]*)|([0-9]{2,4})[ \\-]*)*?[0-9]{3,4}?[ \\-]*[0-9]{3,4}?$/
 );
@@ -28,57 +30,104 @@ type IApplicationForm = {
   studentId: string;
   name: string;
   email: string;
-  mobileNumber: string;
-  academicYear: string;
-  description: string;
-  reason: string;
-  linkedInProfile: string;
-  gitHubProfile: string;
-  blogPage: string;
+  contactNumber: string;
+  currentAcademicYear: string;
+  selfIntroduction: string;
+  reasonForJoin: string;
+  linkedIn: string;
+  gitHub: string;
+  blog: string;
   experiences: string;
   challenges: string;
-  timeLine: string;
-  skills: string;
+  goal: string;
+  skillsAndTalents: string;
 };
 
 const ApplicationForm: React.FC = () => {
+  const [isLoading, setIsLoading] = useState<boolean>(false);
+
   const validationSchema = Yup.object().shape({
     studentId: Yup.string().required('Student ID is required').max(10, 'Student ID not exceed 10 characters'),
     name: Yup.string().required('Name is required'),
     email: Yup.string().required('Email is required').email('Email address is invalid (@ and . signs are required)'),
-    mobileNumber: Yup.string()
+    contactNumber: Yup.string()
       .required('Mobile number is required')
       .min(10, 'Mobile number is required 10 numbers')
       .max(10, 'Mobile number not exceed 10 numbers')
-      .matches(mobileNumberRegEx, 'Invalid mobile number'),
-    academicYear: Yup.string().required('Academic year is required'),
-    description: Yup.string()
+      .matches(contactNumberRegEx, 'Invalid mobile number'),
+    currentAcademicYear: Yup.string().required('Academic year is required'),
+    selfIntroduction: Yup.string()
       .required('Introduction is required')
       .min(150, 'Introduction must have at leaset 150 charaters')
       .max(1000, 'Introduction not exceed 1000 characters'),
-    reason: Yup.string()
+    reasonForJoin: Yup.string()
       .required('Reason to join MS club is required')
       .min(150, 'Reason must have at least 150 characters')
       .max(500, 'Reason not exceed 500 characters'),
-    linkedInProfile: Yup.string().required('LinkedIn profile link is required').matches(webUrlRegEx, 'Invalid link (Ex: https://www.linkedin.com/in/account-name)'),
-    gitHubProfile: Yup.string().required('GitHub profile link is required').matches(webUrlRegEx, 'Invalid link (Ex: https://github.com/account-name)'),
-    blogPage: Yup.string().notRequired(),
+    linkedIn: Yup.string().required('LinkedIn profile link is required').matches(webUrlRegEx, 'Invalid link (Ex: https://www.linkedin.com/in/account-name)'),
+    gitHub: Yup.string().required('GitHub profile link is required').matches(webUrlRegEx, 'Invalid link (Ex: https://github.com/account-name)'),
+    blog: Yup.string().notRequired(),
     experiences: Yup.string().required('Your experiences is required'),
     challenges: Yup.string().required('Challenges are required'),
-    timeLine: Yup.string().required('This field is required'),
-    skills: Yup.string().notRequired(),
+    goal: Yup.string().required('This field is required'),
+    skillsAndTalents: Yup.string().notRequired(),
   });
+
+  const toastNotification = (message: string, status: string) => {
+    if (status === "success") {
+      toast.success(message, {
+        position: "top-right",
+        autoClose: 4000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+      });
+    } else if (status === "error") {
+      toast.error(message, {
+        position: "top-right",
+        autoClose: 4000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+      });
+    } else {
+      toast.info(message, {
+        position: "top-right",
+        autoClose: 4000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+      });
+    }
+  };
 
   const {
     register,
     handleSubmit,
+    reset,
     formState: { errors }
   } = useForm<IApplicationForm>({
     resolver: yupResolver(validationSchema)
   });
 
   const onSubmit = (data: IApplicationForm) => {
-    console.log(JSON.stringify(data, null, 2));
+    setIsLoading(true);
+    submitApplication(data)
+    .then(() => {
+      reset();
+      toastNotification("Application succesfully sent", "success");
+      setIsLoading(false);
+    })
+    .catch(() => {
+      toastNotification("Something went wrong. Please try again", "error");
+      setIsLoading(false);
+    });
   }
 
   const handleChange = (select: any) => {
@@ -87,6 +136,7 @@ const ApplicationForm: React.FC = () => {
 
   return (
     <div>
+      <ToastContainer />
       <div className="hero-section-bg" />
       <div className="container contact-us-form">
         <div className="row mt-3 mb-5">
@@ -135,10 +185,10 @@ const ApplicationForm: React.FC = () => {
                 </label>
                 <input
                   type="text"
-                  className={`form-control ${errors.mobileNumber ? `border-danger` : null}`}
-                  {...register('mobileNumber')}
+                  className={`form-control ${errors.contactNumber ? `border-danger` : null}`}
+                  {...register('contactNumber')}
                 />
-                <span className="text-danger">{errors.mobileNumber?.message}</span>
+                <span className="text-danger">{errors.contactNumber?.message}</span>
               </div>
 
               <div className="form-group mt-3">
@@ -147,10 +197,10 @@ const ApplicationForm: React.FC = () => {
                 </label>
                 <input
                   type="text"
-                  className={`form-control ${errors.academicYear ? `border-danger` : null}`}
-                  {...register('academicYear')}
+                  className={`form-control ${errors.currentAcademicYear ? `border-danger` : null}`}
+                  {...register('currentAcademicYear')}
                 />
-                <span className="text-danger">{errors.academicYear?.message}</span>
+                <span className="text-danger">{errors.currentAcademicYear?.message}</span>
               </div>
 
               <div className="form-group mt-3">
@@ -159,10 +209,10 @@ const ApplicationForm: React.FC = () => {
                 </label>
                 <textarea
                   rows={6}
-                  className={`form-control ${errors.description ? `border-danger` : null}`}
-                  {...register('description')}
+                  className={`form-control ${errors.selfIntroduction ? `border-danger` : null}`}
+                  {...register('selfIntroduction')}
                 />
-                <span className="text-danger">{errors.description?.message}</span>
+                <span className="text-danger">{errors.selfIntroduction?.message}</span>
               </div>
 
               <div className="form-group mt-3">
@@ -171,10 +221,10 @@ const ApplicationForm: React.FC = () => {
                 </label>
                 <textarea
                   rows={6}
-                  className={`form-control ${errors.reason ? `border-danger` : null}`}
-                  {...register('reason')}
+                  className={`form-control ${errors.reasonForJoin ? `border-danger` : null}`}
+                  {...register('reasonForJoin')}
                 />
-                <span className="text-danger">{errors.reason?.message}</span>
+                <span className="text-danger">{errors.reasonForJoin?.message}</span>
               </div>
 
               <div className="form-group mt-3">
@@ -183,10 +233,10 @@ const ApplicationForm: React.FC = () => {
                 </label>
                 <input
                   type="text"
-                  className={`form-control ${errors.linkedInProfile ? `border-danger` : null}`}
-                  {...register('linkedInProfile')}
+                  className={`form-control ${errors.linkedIn ? `border-danger` : null}`}
+                  {...register('linkedIn')}
                 />
-                <span className="text-danger">{errors.linkedInProfile?.message}</span>
+                <span className="text-danger">{errors.linkedIn?.message}</span>
               </div>
 
               <div className="form-group mt-3">
@@ -195,10 +245,10 @@ const ApplicationForm: React.FC = () => {
                 </label>
                 <input
                   type="text"
-                  className={`form-control ${errors.gitHubProfile ? `border-danger` : null}`}
-                  {...register('gitHubProfile')}
+                  className={`form-control ${errors.gitHub ? `border-danger` : null}`}
+                  {...register('gitHub')}
                 />
-                <span className="text-danger">{errors.gitHubProfile?.message}</span>
+                <span className="text-danger">{errors.gitHub?.message}</span>
               </div>
 
               <div className="form-group mt-3">
@@ -207,10 +257,10 @@ const ApplicationForm: React.FC = () => {
                 </label>
                 <input
                   type="text"
-                  className={`form-control ${errors.blogPage ? `border-danger` : null}`}
-                  {...register('blogPage')}
+                  className={`form-control ${errors.blog ? `border-danger` : null}`}
+                  {...register('blog')}
                 />
-                <span className="text-danger">{errors.blogPage?.message}</span>
+                <span className="text-danger">{errors.blog?.message}</span>
               </div>
 
               <div className="form-group mt-3">
@@ -243,27 +293,27 @@ const ApplicationForm: React.FC = () => {
                 </label>
                 <input
                   type="text"
-                  className={`form-control ${errors.timeLine ? `border-danger` : null}`}
-                  {...register('timeLine')}
+                  className={`form-control ${errors.goal ? `border-danger` : null}`}
+                  {...register('goal')}
                 />
-                <span className="text-danger">{errors.timeLine?.message}</span>
+                <span className="text-danger">{errors.goal?.message}</span>
               </div>
 
               <div className="form-group mt-3">
                 <label className="contact-us-label-text">
-                  What are your skills/talent?
+                  What are your skillsAndTalents/talent?
                 </label>
                 <Select
                   isMulti
-                  id="skills"
+                  id="skillsAndTalents"
                   options={options}
                   onChange={handleChange}
                 />
-                <span className="text-danger">{errors.skills?.message}</span>
+                <span className="text-danger">{errors.skillsAndTalents?.message}</span>
               </div>
 
               <div className="form-group mt-3 d-flex justify-content-end">
-                <button type="submit" className="contact-btn btn">
+                <button type="submit" className="contact-btn btn" disabled={isLoading} >
                   Apply
                   <span>
                     <i className="fas fa-paper-plane icon"></i>
