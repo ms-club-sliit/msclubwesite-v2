@@ -1,177 +1,149 @@
-import React from 'react';
-import { IProps, IState } from '../../interfaces/ContactFormInterface';
+import React, { useState } from 'react';
+import { useForm } from 'react-hook-form';
+import { yupResolver } from '@hookform/resolvers/yup';
+import * as Yup from 'yup';
+import { ToastContainer, toast } from "react-toastify";
+import { sendMessage } from "../../api/ContactAction";
 
-const emailRegEX = RegExp(
-  /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/
-);
+type IContactFormSection = {
+  name: string;
+  email: string;
+  message: string;
+};
 
-class ContactFormSection extends React.Component<IProps, IState> {
-  constructor(props: IProps) {
-    super(props);
-    this.state = {
-      name: '',
-      email: '',
-      message: '',
-      formErrors: {
-        name: '',
-        email: '',
-        message: '',
-      },
+const ContactFormSection: React.FC = () => {
+  const [isLoading, setIsLoading] = useState<boolean>(false);
+
+  const validationSchema = Yup.object().shape({
+    name: Yup.string().required('Name is required'),
+    email: Yup.string().required('Email is required').email('Email address is invalid (@ and . signs are required)'),
+    message: Yup.string().required('Message is required').max(1000, 'Message not exceed 1000 characters'),
+  });
+
+  const {
+    register,
+    handleSubmit,
+    reset,
+    formState: { errors }
+  } = useForm<IContactFormSection>({
+    resolver: yupResolver(validationSchema)
+  });
+
+  const onSubmit = (data: IContactFormSection) => {
+    setIsLoading(true);
+    const messageDetails = {
+      name: data.name,
+      email: data.email,
+      message: data.message,
     };
+
+    sendMessage(messageDetails)
+      .then(() => {
+        reset();
+        toastNotification("Succesfully sent", "success");
+        setIsLoading(false);
+      })
+      .catch(() => {
+        toastNotification("Something went wrong. Please try again", "error");
+        setIsLoading(false);
+      });
   }
 
-  formValid = () => {
-    let formErrors = this.state.formErrors;
-    let name = this.state.name;
-    let email = this.state.email;
-    let message = this.state.message;
-    let valid = true;
-
-    if(!name){
-      formErrors.name = 'Name is required';
-      valid = false;
-    }
-    if(!email){
-      formErrors.email = 'Email is required';
-      valid = false;
-    }
-    if(email && !emailRegEX.test(email)){
-      formErrors.email = 'Invalid email address';
-      valid = false;
-    }
-    if(!message){
-      formErrors.message = 'Message is required';
-      valid = false;
-    }
-
-    this.setState({ formErrors });
-
-    return valid;
-  };
-
-  handleSubmit = (event: any) => {
-    event.preventDefault();
-    if (this.formValid()) {
-      console.log(`----Clicked Send Button---
-            Name : ${this.state.name}
-            Email : ${this.state.email}
-            Message : ${this.state.message}
-            `);
+  const toastNotification = (message: string, status: string) => {
+    if (status === "success") {
+      toast.success(message, {
+        position: "top-right",
+        autoClose: 4000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+      });
+    } else if (status === "error") {
+      toast.error(message, {
+        position: "top-right",
+        autoClose: 4000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+      });
+    } else {
+      toast.info(message, {
+        position: "top-right",
+        autoClose: 4000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+      });
     }
   };
 
-  onChange = (e: any) => {
-    e.preventDefault();
-    const { name, value } = e.target;
-    let formErrors = this.state.formErrors;
-
-    switch (name) {
-      case 'name':
-        if(formErrors.name){
-          formErrors.name = '';
-        }
-        break;
-      case 'email':
-        if(formErrors.email){
-          formErrors.email = '';
-        }
-        break;
-      case 'message':
-        if(formErrors.message){
-          formErrors.message = '';
-        }
-        break;
-      default:
-        break;
-    }
-    this.setState({ formErrors, [name]: value });
-  };
-
-  render() {
-    const { formErrors } = this.state;
-
-    return (
-      <div>
-        <div className="hero-section-bg" />
-        <div className="container contact-us-form">
-          <div className="row mt-3 mb-5">
-            <div className="col-md-12">
-              <div className="mt-5">
-                <form id="myForm" onSubmit={(e) => this.handleSubmit(e)}>
-                  <h1 className="contact-title">Send Your Message</h1>
-                  <div className="form-group mt-3">
-                    <label htmlFor="name" className="contact-us-label-text">
-                      Your Name
-                    </label>
-                    <input
-                      id="name"
-                      name="name"
-                      type="text"
-                      className={
-                        formErrors.name.length > 0
-                          ? 'form-control border-danger'
-                          : 'form-control'
-                      }
-                      onChange={this.onChange}
-                    />
-                    {formErrors.name.length > 0 && (
-                      <span className="text-danger">{formErrors.name}</span>
-                    )}
-                  </div>
-                  <div className="form-group mt-3">
-                    <label htmlFor="email" className="contact-us-label-text">
-                      Email address
-                    </label>
-                    <input
-                      id="email"
-                      name="email"
-                      type="text"
-                      className={
-                        formErrors.email.length > 0
-                          ? 'form-control border-danger'
-                          : 'form-control'
-                      }
-                      onChange={this.onChange}
-                    />
-                    {formErrors.email.length > 0 && (
-                      <span className="text-danger">{formErrors.email}</span>
-                    )}
-                  </div>
-                  <div className="form-group mt-3">
-                    <label htmlFor="message" className="contact-us-label-text">
-                      Message
-                    </label>
-                    <textarea
-                      id="message"
-                      name="message"
-                      className={
-                        formErrors.message.length > 0
-                          ? 'form-control border-danger'
-                          : 'form-control'
-                      }
-                      rows={6}
-                      onChange={this.onChange}
-                    />
-                    {formErrors.message.length > 0 && (
-                      <span className="text-danger">{formErrors.message}</span>
-                    )}
-                  </div>
-                  <div className="form-group mt-3 d-flex justify-content-end">
-                    <button type="submit" className="contact-btn btn">
-                      Send
-                      <span>
-                        <i className="fas fa-paper-plane icon"></i>
-                      </span>
-                    </button>
-                  </div>
-                </form>
-              </div>
+  return (
+    <div>
+      <ToastContainer />
+      <div className="hero-section-bg" />
+      <div className="container contact-us-form">
+        <div className="row mt-3 mb-5">
+          <div className="col-md-12">
+            <div className="mt-5">
+              <form id="myForm" onSubmit={handleSubmit(onSubmit)}>
+                <h1 className="contact-title">Send Your Message</h1>
+                <div className="form-group mt-3">
+                  <label htmlFor="name" className="contact-us-label-text">
+                    Your Name
+                  </label>
+                  <input
+                    id="name"
+                    type="text"
+                    className={`form-control ${errors.name ? `border-danger` : null}`}
+                    {...register('name')}
+                  />
+                  <span className="text-danger">{errors.name?.message}</span>
+                </div>
+                <div className="form-group mt-3">
+                  <label htmlFor="email" className="contact-us-label-text">
+                    Email address
+                  </label>
+                  <input
+                    id="email"
+                    type="text"
+                    className={`form-control ${errors.email ? `border-danger` : null}`}
+                    {...register('email')}
+                  />
+                  <span className="text-danger">{errors.email?.message}</span>
+                </div>
+                <div className="form-group mt-3">
+                  <label htmlFor="message" className="contact-us-label-text">
+                    Message
+                  </label>
+                  <textarea
+                    id="message"
+                    className={`form-control ${errors.message ? `border-danger` : null}`}
+                    {...register('message')}
+                    rows={6}
+                  />
+                  <span className="text-danger">{errors.message?.message}</span>
+                </div>
+                <div className="form-group mt-3 d-flex justify-content-end">
+                  <button type="submit" className="contact-btn btn" disabled={isLoading}>
+                    Send
+                    <span>
+                      <i className="fas fa-paper-plane icon"></i>
+                    </span>
+                  </button>
+                </div>
+              </form>
             </div>
           </div>
         </div>
       </div>
-    );
-  }
+    </div>
+  );
 }
 
 export default ContactFormSection;

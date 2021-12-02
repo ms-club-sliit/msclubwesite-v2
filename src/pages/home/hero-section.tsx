@@ -11,7 +11,7 @@ const HeroSection: React.FC = () => (
           between an Undergraduate and an Industry Professional.
         </p>
         <a
-          href="https://forms.office.com/r/xLw6LFrmJV"
+          href="/join-us"
           target="_blank"
           rel="noopener noreferrer"
         >
