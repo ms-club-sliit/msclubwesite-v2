@@ -40,7 +40,7 @@ const ContactFormSection: React.FC = () => {
     sendMessage(messageDetails)
       .then(() => {
         reset();
-        toastNotification("Application succesfully sent", "success");
+        toastNotification("Succesfully sent", "success");
         setIsLoading(false);
       })
       .catch(() => {
