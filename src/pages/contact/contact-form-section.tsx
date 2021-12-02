@@ -1,5 +1,8 @@
-import React from 'react';
-import { IProps, IState } from '../../interfaces/ContactFormInterface';
+import React from "react";
+import { IProps, IState } from "../../interfaces/ContactFormInterface";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import { sendMessage } from "../../api/ContactAction";
 
 const emailRegEX = RegExp(
   /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/
@@ -9,13 +12,13 @@ class ContactFormSection extends React.Component<IProps, IState> {
   constructor(props: IProps) {
     super(props);
     this.state = {
-      name: '',
-      email: '',
-      message: '',
+      name: "",
+      email: "",
+      message: "",
       formErrors: {
-        name: '',
-        email: '',
-        message: '',
+        name: "",
+        email: "",
+        message: "",
       },
     };
   }
@@ -27,20 +30,20 @@ class ContactFormSection extends React.Component<IProps, IState> {
     let message = this.state.message;
     let valid = true;
 
-    if(!name){
-      formErrors.name = 'Name is required';
+    if (!name) {
+      formErrors.name = "Name is required";
       valid = false;
     }
-    if(!email){
-      formErrors.email = 'Email is required';
+    if (!email) {
+      formErrors.email = "Email is required";
       valid = false;
     }
-    if(email && !emailRegEX.test(email)){
-      formErrors.email = 'Invalid email address';
+    if (email && !emailRegEX.test(email)) {
+      formErrors.email = "Invalid email address";
       valid = false;
     }
-    if(!message){
-      formErrors.message = 'Message is required';
+    if (!message) {
+      formErrors.message = "Message is required";
       valid = false;
     }
 
@@ -51,12 +54,60 @@ class ContactFormSection extends React.Component<IProps, IState> {
 
   handleSubmit = (event: any) => {
     event.preventDefault();
+    this.toastNotification("Please Wait", "info");
     if (this.formValid()) {
-      console.log(`----Clicked Send Button---
-            Name : ${this.state.name}
-            Email : ${this.state.email}
-            Message : ${this.state.message}
-            `);
+      const newMessage = {
+        name: this.state.name,
+        email: this.state.email,
+        message: this.state.message,
+      };
+
+      sendMessage(newMessage)
+        .then(() => {
+          this.toastNotification("Sent Succesfully", "success");
+          this.resetForm("myForm");
+        })
+        .catch(() => {
+          this.toastNotification("Something went wrong", "error");
+        });
+    }
+  };
+
+  resetForm = (formId: string) => {
+    (document.getElementById(formId) as HTMLFormElement).reset();
+  };
+
+  toastNotification = (message: string, status: string) => {
+    if (status === "success") {
+      toast.success(message, {
+        position: "top-right",
+        autoClose: 2000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+      });
+    } else if (status === "error") {
+      toast.error(message, {
+        position: "top-right",
+        autoClose: 2000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+      });
+    } else {
+      toast.info(message, {
+        position: "top-right",
+        autoClose: 2000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+      });
     }
   };
 
@@ -66,19 +117,19 @@ class ContactFormSection extends React.Component<IProps, IState> {
     let formErrors = this.state.formErrors;
 
     switch (name) {
-      case 'name':
-        if(formErrors.name){
-          formErrors.name = '';
+      case "name":
+        if (formErrors.name) {
+          formErrors.name = "";
         }
         break;
-      case 'email':
-        if(formErrors.email){
-          formErrors.email = '';
+      case "email":
+        if (formErrors.email) {
+          formErrors.email = "";
         }
         break;
-      case 'message':
-        if(formErrors.message){
-          formErrors.message = '';
+      case "message":
+        if (formErrors.message) {
+          formErrors.message = "";
         }
         break;
       default:
@@ -92,6 +143,7 @@ class ContactFormSection extends React.Component<IProps, IState> {
 
     return (
       <div>
+        <ToastContainer />
         <div className="hero-section-bg" />
         <div className="container contact-us-form">
           <div className="row mt-3 mb-5">
@@ -109,8 +161,8 @@ class ContactFormSection extends React.Component<IProps, IState> {
                       type="text"
                       className={
                         formErrors.name.length > 0
-                          ? 'form-control border-danger'
-                          : 'form-control'
+                          ? "form-control border-danger"
+                          : "form-control"
                       }
                       onChange={this.onChange}
                     />
@@ -128,8 +180,8 @@ class ContactFormSection extends React.Component<IProps, IState> {
                       type="text"
                       className={
                         formErrors.email.length > 0
-                          ? 'form-control border-danger'
-                          : 'form-control'
+                          ? "form-control border-danger"
+                          : "form-control"
                       }
                       onChange={this.onChange}
                     />
@@ -146,8 +198,8 @@ class ContactFormSection extends React.Component<IProps, IState> {
                       name="message"
                       className={
                         formErrors.message.length > 0
-                          ? 'form-control border-danger'
-                          : 'form-control'
+                          ? "form-control border-danger"
+                          : "form-control"
                       }
                       rows={6}
                       onChange={this.onChange}
