@@ -7,9 +7,12 @@ const Footer: React.FC = () => (
         <div className="row">
           <div className="col-xl-4 col-lg-4 mb-50">
             <div className="footer-widget">
-              <div className="footer-logo">
+              <div className="footer-logo d-flex g-3 mb-1 align-items-center">
                 <a href="/">
-                  <img src="/assets/ms_club_logo.png" className="img-fluid" width="150px" alt="logo" />
+                  <img src="/assets/ms_club_logo_light.png" className="img-fluid" width="150px" alt="logo" />
+                </a>
+                <a href="/">
+                  <img src="/assets/mlsa_logo.png" className="img-fluid" width="70px" alt="MLSA Logo" />
                 </a>
               </div>
               <div className="footer-text">
