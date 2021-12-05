@@ -20,7 +20,7 @@ type GLTFResult = GLTF & {
     Yellow: THREE.MeshPhongMaterial
     Blue: THREE.MeshPhongMaterial
   }
-}
+};
 
 const Logo3DModel: React.FC<JSX.IntrinsicElements['group']> = (
   props
@@ -85,8 +85,8 @@ const Logo3DModel: React.FC<JSX.IntrinsicElements['group']> = (
       />
     </group>
   )
-}
+};
 
-useGLTF.preload('assets/logo.gltf')
+useGLTF.preload('assets/logo.gltf');
 
 export default Logo3DModel;
