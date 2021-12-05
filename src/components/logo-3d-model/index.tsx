@@ -22,7 +22,9 @@ type GLTFResult = GLTF & {
   }
 }
 
-export default function Logo3DModel(props: JSX.IntrinsicElements['group']) {
+const Logo3DModel: React.FC<JSX.IntrinsicElements['group']> = (
+  props
+) => {
   const group = useRef<THREE.Group>()
   const { nodes, materials } = useGLTF('assets/logo.gltf') as unknown as GLTFResult
   return (
@@ -86,3 +88,5 @@ export default function Logo3DModel(props: JSX.IntrinsicElements['group']) {
 }
 
 useGLTF.preload('assets/logo.gltf')
+
+export default Logo3DModel;
