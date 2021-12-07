@@ -133,8 +133,16 @@
   }
 }
 
+.home-header-story {
+  @include media(">=phone") {
+    display: none;
+  }
+}
+
 .home-3d-model {
-  min-height: 250px;
+  @include media("<=phone") {
+    display: none;
+  }
 }
 
 // Home header styles - End
