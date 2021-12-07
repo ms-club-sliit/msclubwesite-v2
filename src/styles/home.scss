@@ -139,6 +139,12 @@
   }
 }
 
+.home-who-are-section-image{
+  @include media("<=phone") {
+    display: none;
+  }
+}
+
 .home-3d-model {
   @include media("<=phone") {
     display: none;

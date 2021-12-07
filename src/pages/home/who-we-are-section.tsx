@@ -5,7 +5,7 @@ const WhatWeDoSection: React.FC = () => (
     <h2 className="text-center header">Who Are We?</h2>
     <div className="container">
       <div className="row mt-5 mb-5">
-        <div className="col-md-6 col-sm-12">
+        <div className="col-md-6 col-sm-12 home-who-are-section-image">
           <div className="d-flex justify-content-center">
             <img
               alt="who-we-are"
