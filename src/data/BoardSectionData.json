@@ -1,6 +1,132 @@
 [
   {
     "id": 1,
+    "year": "2021",
+    "board": [
+      {
+        "id": 1,
+        "name": "Lasal Hettiarachchi",
+        "position": "President",
+        "image": "/assets/boards/2021/Lasal.jpg",
+        "socialmedia": {
+          "facebook": "https://www.facebook.com/lasalsandeepahettiarachchi",
+          "linkedin": "https://www.linkedin.com/in/lasal-hettiarachchi-b75643193/",
+          "instagram": "https://www.instagram.com/__candy_panda__/",
+          "twitter": "https://twitter.com/LasalHettiarac1"
+        }
+      },
+      {
+        "id": 2,
+        "name": "Senura Jayadeva",
+        "position": "Vice President",
+        "image": "/assets/boards/2021/Senura.jpg",
+        "socialmedia": {
+          "facebook": "https://www.facebook.com/senura.vihan/",
+          "linkedin": "https://www.linkedin.com/in/senura-vihan-jayadeva-7860b41a6/",
+          "instagram": "https://www.instagram.com/senuravihan/",
+          "twitter": "https://twitter.com/SenuraJayadeva"
+        }
+      },
+      {
+        "id": 3,
+        "name": "Yasiru Randika",
+        "position": "Secretary",
+        "image": "/assets/boards/2021/Yasiru.jpg",
+        "socialmedia": {
+          "facebook": "https://www.facebook.com/W.G.Y.Randika",
+          "linkedin": "https://www.linkedin.com/in/yasirurandika/",
+          "instagram": "https://www.instagram.com/",
+          "twitter": "https://twitter.com/YasiruRandika"
+        }
+      },
+      {
+        "id": 4,
+        "name": "Dilmi Palliyaguruge",
+        "position": "Assistant Secretary",
+        "image": "/assets/boards/2021/Dilmi.jpg",
+        "socialmedia": {
+          "facebook": "https://www.facebook.com/profile.php?id=100012033513168",
+          "linkedin": "https://www.linkedin.com/in/dilmi-palliyaguruge-334109178/",
+          "instagram": "https://www.instagram.com/d.i.l.m.i/",
+          "twitter": "https://twitter.com/dilmi98"
+        }
+      },
+      {
+        "id": 5,
+        "name": "Hansindu Maniyangama",
+        "position": "Treasurer",
+        "image": "/assets/boards/2021/Hansidu.jpeg",
+        "socialmedia": {
+          "facebook": "https://www.facebook.com/profile.php?id=100010182226869",
+          "linkedin": "https://www.linkedin.com/in/hansindu-maniyangama-352b951a2/",
+          "instagram": "https://www.instagram.com/h_a_n_s_i_n_d_u_/",
+          "twitter": "https://twitter.com/_Hansindu_"
+        }
+      },
+      {
+        "id": 6,
+        "name": "Lahiru Jayasinghe",
+        "position": "Assistant Treasurer",
+        "image": "/assets/boards/2021/Lahiru.jpg",
+        "socialmedia": {
+          "facebook": "https://www.facebook.com/salazaar.lj",
+          "linkedin": "https://www.linkedin.com/in/jlahiru/",
+          "instagram": "https://www.instagram.com/_lahirujay/",
+          "twitter": "https://twitter.com/_lahiruj"
+        }
+      },
+      {
+        "id": 7,
+        "name": "Rusiru Abhisheak",
+        "position": "Development Lead",
+        "image": "/assets/boards/2021/Rusiru.jpeg",
+        "socialmedia": {
+          "facebook": "https://www.facebook.com/rusiruabhisheak",
+          "linkedin": "https://www.linkedin.com/in/rusiru-abhisheak/",
+          "instagram": "https://www.instagram.com/ravb.abhisheak/",
+          "twitter": "https://twitter.com/AvbRusiru"
+        }
+      },
+      {
+        "id": 8,
+        "name": "Nisal Palliyaguru",
+        "position": "Main Organizer",
+        "image": "/assets/boards/2021/Nisal.jpg",
+        "socialmedia": {
+          "facebook": "https://www.facebook.com/nisal.renuja.56",
+          "linkedin": "https://www.linkedin.com/in/nisal-palliyaguru-899a73163/",
+          "instagram": "https://www.instagram.com/nisal.97/",
+          "twitter": "https://twitter.com/NisalRenuja"
+        }
+      },
+      {
+        "id": 9,
+        "name": "Susith Rupasinghe",
+        "position": "Automation Lead",
+        "image": "/assets/boards/2021/Susith.jpg",
+        "socialmedia": {
+          "facebook": "https://www.facebook.com/profile.php?id=100070098803999",
+          "linkedin": "https://www.linkedin.com/in/susith-rupasinghe/",
+          "instagram": "https://www.instagram.com",
+          "twitter": "https://twitter.com/SusithRupasing"
+        }
+      },
+      {
+        "id": 10,
+        "name": "Miyuru Gunarathna",
+        "position": "Editor",
+        "image": "/assets/boards/2021/Miyuru.jpeg",
+        "socialmedia": {
+          "facebook": "https://www.facebook.com",
+          "linkedin": "https://www.linkedin.com/in/miyurugunarathna/",
+          "instagram": "https://www.instagram.com",
+          "twitter": "https://twitter.com/"
+        }
+      }
+    ]
+  },
+  {
+    "id": 2,
     "year": "2020",
     "board": [
       {
@@ -102,7 +228,7 @@
     ]
   },
   {
-    "id": 2,
+    "id": 3,
     "year": "2019",
     "board": [
       {
