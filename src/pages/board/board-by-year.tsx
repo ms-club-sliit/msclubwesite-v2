@@ -5,7 +5,7 @@ import BoardMemberCard from "./board-member-card";
 
 const BoardByYear: React.FC = () => {
   const [id, setid] = useState<number>(0);
-  const [year, setyear] = useState<string>("2020");
+  const [year, setyear] = useState<string>("2021");
   const [boardList, setboardList] = useState<IBoard[]>([]);
   const [boardMemberList, setboardMemberList] = useState<IBoardMemberDetails[]>([]);
 

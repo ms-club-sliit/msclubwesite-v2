@@ -14,8 +14,6 @@ const BlogSection: React.FC = () => {
   useEffect(() => {
     getBlogs()
       .then((data) => {
-        console.log(data.data);
-        
         setBlogList(data.data);
       })
       .catch((error) => {
