@@ -82,10 +82,9 @@ const ApplicationForm: React.FC = () => {
         "Invalid link (Ex: https://github.com/account-name)"
       ),
     blog: Yup.string().notRequired(),
-    experiences: Yup.string().required("Your experiences is required"),
-    challenges: Yup.string().required("Challenges are required"),
+    experiences: Yup.string().notRequired(),
+    challenges: Yup.string().notRequired(),
     goal: Yup.string().required("This field is required"),
-    skillsAndTalents: Yup.string().notRequired(),
   });
 
   const toastNotification = (message: string, status: string) => {
@@ -170,10 +169,11 @@ const ApplicationForm: React.FC = () => {
         <div className="row mt-3 mb-5">
           <div className="col-md-12">
             <form id="myForm" onSubmit={handleSubmit(onSubmit)}>
-              <h1 className="contact-title">Application Form</h1>
+              <h1 className="contact-title">Application Form </h1>
+              <p className="text-danger"> * Required</p>
               <div className="form-group mt-3">
                 <label className="contact-us-label-text">
-                  SLIIT Student ID
+                  SLIIT Student ID<span className="text-danger"> *</span>
                 </label>
                 <input
                   type="text"
@@ -186,7 +186,9 @@ const ApplicationForm: React.FC = () => {
               </div>
 
               <div className="form-group mt-3">
-                <label className="contact-us-label-text">Full Name</label>
+                <label className="contact-us-label-text">
+                  Full Name<span className="text-danger"> *</span>
+                </label>
                 <input
                   type="text"
                   className={`form-control ${
@@ -198,7 +200,9 @@ const ApplicationForm: React.FC = () => {
               </div>
 
               <div className="form-group mt-3">
-                <label className="contact-us-label-text">Email Address</label>
+                <label className="contact-us-label-text">
+                  Email Address<span className="text-danger"> *</span>
+                </label>
                 <input
                   type="text"
                   className={`form-control ${
@@ -210,7 +214,9 @@ const ApplicationForm: React.FC = () => {
               </div>
 
               <div className="form-group mt-3">
-                <label className="contact-us-label-text">Mobile Number</label>
+                <label className="contact-us-label-text">
+                  Mobile Number<span className="text-danger"> *</span>
+                </label>
                 <input
                   type="text"
                   className={`form-control ${
@@ -224,14 +230,16 @@ const ApplicationForm: React.FC = () => {
               </div>
 
               <div className="form-group mt-3">
-                <label className="contact-us-label-text">Academic Year</label>
+                <label className="contact-us-label-text">
+                  Academic Year<span className="text-danger"> *</span>
+                </label>
                 <select
                   className={`form-control ${
                     errors.currentAcademicYear ? `border-danger` : null
                   }`}
                   {...register("currentAcademicYear")}
                 >
-                  <option selected>Select Your Academic Year</option>
+                  <option disabled selected hidden></option>
                   <option value="Year 1 Semester 1">Year 1 Semester 1</option>
                   <option value="Year 1 Semester 2">Year 1 Semester 2</option>
                   <option value="Year 2 Semester 1">Year 2 Semester 1</option>
@@ -246,7 +254,7 @@ const ApplicationForm: React.FC = () => {
 
               <div className="form-group mt-3">
                 <label className="contact-us-label-text">
-                  Self Introduction
+                  Self Introduction <span className="text-danger"> *</span>
                 </label>
                 <textarea
                   rows={6}
@@ -263,7 +271,7 @@ const ApplicationForm: React.FC = () => {
               <div className="form-group mt-3">
                 <label className="contact-us-label-text">
                   Why would you like to join the Organizing Committee of MS
-                  Club?
+                  Club?<span className="text-danger"> *</span>
                 </label>
                 <textarea
                   rows={6}
@@ -279,7 +287,7 @@ const ApplicationForm: React.FC = () => {
 
               <div className="form-group mt-3">
                 <label className="contact-us-label-text">
-                  LinkedIn Profile Link
+                  LinkedIn Profile Link<span className="text-danger"> *</span>
                 </label>
                 <input
                   type="text"
@@ -293,7 +301,7 @@ const ApplicationForm: React.FC = () => {
 
               <div className="form-group mt-3">
                 <label className="contact-us-label-text">
-                  GitHub Profile Link
+                  GitHub Profile Link<span className="text-danger"> *</span>
                 </label>
                 <input
                   type="text"
@@ -353,6 +361,7 @@ const ApplicationForm: React.FC = () => {
               <div className="form-group mt-3">
                 <label className="contact-us-label-text">
                   Where do you see yourself in 5 years time?
+                  <span className="text-danger"> *</span>
                 </label>
                 <input
                   type="text"
@@ -366,7 +375,8 @@ const ApplicationForm: React.FC = () => {
 
               <div className="form-group mt-3">
                 <label className="contact-us-label-text">
-                  What are your skillsAndTalents/talent?
+                  What are your skills/talent?
+                  <span className="text-danger"> *</span>
                 </label>
                 <MultiSelect
                   options={options}
