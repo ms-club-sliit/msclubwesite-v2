@@ -22,6 +22,12 @@ const HeroSection: React.FC = () => (
         </a>
       </div>
 
+      <div className="col-sm-12 home-header-story">
+        <div className="d-flex justify-content-center">
+          <img src="/assets/home_header.png" alt="home header" className="home-header-img" />
+        </div>
+      </div>
+
       <div className="col-sm-12 col-md-6 col-lg-6 home-3d-model">
         <Canvas shadows camera={{ position: [0, 0, 1.6], fov: 45 }}>
           <fog attach="fog" args={["#f5f5f5", 0, 40]} />
