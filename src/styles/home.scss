@@ -134,27 +134,7 @@
 }
 
 .home-header-story {
-  @include media("<=phone") {
-    display: block;
-  }
-
-  @include media(">=phone", '<tablet') {
-    display: none;
-  }
-
-  @include media('>=tablet', '<smalldesktop') {
-    display: none;
-  }
-
-  @include media('>=smalldesktop', '<desktop') {
-    display: none;
-  }
-
-  @include media(">=desktop", '<largedesktop') {
-    display: none;
-  }
-
-  @include media('>=largedesktop') {
+  @include media(">=phone") {
     display: none;
   }
 }
@@ -162,26 +142,6 @@
 .home-3d-model {
   @include media("<=phone") {
     display: none;
-  }
-
-  @include media(">=phone", '<tablet') {
-    display: block;
-  }
-
-  @include media('>=tablet', '<smalldesktop') {
-    display: block;
-  }
-
-  @include media('>=smalldesktop', '<desktop') {
-    display: block;
-  }
-
-  @include media(">=desktop", '<largedesktop') {
-    display: block;
-  }
-
-  @include media('>=largedesktop') {
-    display: block;
   }
 }
 
