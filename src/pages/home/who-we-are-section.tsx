@@ -10,7 +10,7 @@ const WhatWeDoSection: React.FC = () => (
             <img
               alt="who-we-are"
               className="image"
-              src="/assets/home_body.png"
+              src="/assets/home_header.png"
             />
           </div>
         </div>
