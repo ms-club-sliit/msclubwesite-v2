@@ -2,6 +2,36 @@
   "data": [
     {
       "id": 1,
+      "imageUrl": "/assets/events/pastwebinars/imaginecup.png",
+      "time": "6.00 PM",
+      "dateTime": "2021-10-13T18:00:00",
+      "title": "The Imagine Cup 2022",
+      "description": "The 2022 Imagine Cup is where passion meets innovation, and you can build together with students around the world to make a difference",
+      "tags": ["imaginecup", "msclubofsliit", "growtogether"],
+      "link": "https://www.facebook.com/msclubsliit/photos/2941736925950538"
+    },
+    {
+      "id": 2,
+      "imageUrl": "/assets/events/pastwebinars/azurecloudstreak.svg",
+      "time": "6.00 PM",
+      "dateTime": "2021-09-24T18:00:00",
+      "title": "Azure Cloud Streak 3.0",
+      "description": "Are you excited to enhance your knowledge of Azure? Then don’t miss this chance",
+      "tags": ["azurecloudstreak", "msclubofsliit", "growtogether"],
+      "link": "https://www.facebook.com/msclubsliit/photos/2874362352687996"
+    },
+    {
+      "id": 3,
+      "imageUrl": "/assets/events/pastwebinars/win10.png",
+      "time": "6.00 PM",
+      "dateTime": "2021-09-17T18:00:00",
+      "title": "Tips and Tricks in Windows 10",
+      "description": "Gain practical experience on the hidden features, tips and tricks of Windows 10 to make your work productive",
+      "tags": ["windows","tipsandtricks", "msclubofsliit", "growtogether"],
+      "link": "https://www.facebook.com/msclubsliit/photos/2844741098983455"
+    },
+    {
+      "id": 4,
       "imageUrl": "/assets/events/pastwebinars/ITPMERN.svg",
       "time": "6.00 PM",
       "dateTime": "2021-07-12T18:00:00",
@@ -11,7 +41,7 @@
       "link": "https://www.facebook.com/msclubsliit/photos/2678921442232089"
     },
     {
-      "id": 2,
+      "id": 5,
       "imageUrl": "/assets/events/pastwebinars/ITP.svg",
       "time": "6.00 PM",
       "dateTime": "2021-06-28T18:00:00",
@@ -21,7 +51,7 @@
       "link": "https://www.facebook.com/msclubsliit/photos/2648861178571449"
     },
     {
-      "id": 3,
+      "id": 6,
       "imageUrl": "/assets/events/pastwebinars/Azurefundementals.svg",
       "time": "7.30 PM",
       "dateTime": "2021-03-12T18:30:00",

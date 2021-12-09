@@ -1,0 +1,91 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1000" height="500" viewBox="0 0 1000 500">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #22028c;
+        stroke: #000;
+        stroke-width: 3.79px;
+        filter: url(#filter);
+      }
+
+      .cls-2, .cls-5 {
+        fill: none;
+      }
+
+      .cls-2, .cls-3, .cls-4, .cls-5 {
+        stroke: #fff;
+      }
+
+      .cls-2 {
+        stroke-width: 35.84px;
+        opacity: 0.16;
+      }
+
+      .cls-3, .cls-4, .cls-6, .cls-7, .cls-8 {
+        fill: #fff;
+      }
+
+      .cls-3, .cls-4 {
+        stroke-width: 28.15px;
+      }
+
+      .cls-3, .cls-5 {
+        fill-rule: evenodd;
+      }
+
+      .cls-3 {
+        opacity: 0.27;
+      }
+
+      .cls-4 {
+        opacity: 0.14;
+      }
+
+      .cls-5 {
+        stroke-width: 36.48px;
+        opacity: 0.13;
+      }
+
+      .cls-6, .cls-7, .cls-8 {
+        font-size: 113px;
+        text-anchor: middle;
+      }
+
+      .cls-6 {
+        font-family: Poppins;
+        font-weight: 600;
+      }
+
+      .cls-7 {
+        opacity: 0.38;
+        font-weight: 300;
+      }
+
+      .cls-7, .cls-8 {
+        font-family: "Segoe UI";
+      }
+
+      .cls-8 {
+        opacity: 0.29;
+        font-weight: 800;
+      }
+    </style>
+    <filter id="filter" x="-51" y="-105" width="1153" height="700" filterUnits="userSpaceOnUse">
+      <feImage preserveAspectRatio="none" x="-51" y="-105" width="1153" height="700" result="image" xlink:href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB3aWR0aD0iMTE1MyIgaGVpZ2h0PSI3MDAiIHZpZXdCb3g9IjAgMCAxMTUzIDcwMCI+CiAgPGRlZnM+CiAgICA8c3R5bGU+CiAgICAgIC5jbHMtMSB7CiAgICAgICAgZmlsbDogdXJsKCNsaW5lYXItZ3JhZGllbnQpOwogICAgICB9CiAgICA8L3N0eWxlPgogICAgPGxpbmVhckdyYWRpZW50IGlkPSJsaW5lYXItZ3JhZGllbnQiIHgxPSI2MTkuNDc1IiB5MT0iNzAwIiB4Mj0iNTMzLjUyNSIgZ3JhZGllbnRVbml0cz0idXNlclNwYWNlT25Vc2UiPgogICAgICA8c3RvcCBvZmZzZXQ9Ii0wLjI1IiBzdG9wLWNvbG9yPSIjTmFOTmFOTmFOIi8+CiAgICAgIDxzdG9wIG9mZnNldD0iMS4yNSIgc3RvcC1jb2xvcj0iIzVjMmM5MCIvPgogICAgPC9saW5lYXJHcmFkaWVudD4KICA8L2RlZnM+CiAgPHJlY3QgY2xhc3M9ImNscy0xIiB3aWR0aD0iMTE1MyIgaGVpZ2h0PSI3MDAiLz4KPC9zdmc+Cg=="/>
+      <feComposite result="composite" operator="in" in2="SourceGraphic"/>
+      <feBlend result="blend" in2="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g style="fill: #22028c; filter: url(#filter)">
+    <rect id="rect" class="cls-1" x="-51" y="-105" width="1153" height="700" style="stroke: inherit; filter: none; fill: inherit"/>
+  </g>
+  <use xlink:href="#rect" style="stroke: #000; filter: none; fill: none"/>
+  <circle class="cls-2" cx="59.781" cy="469.157" r="233.813"/>
+  <path class="cls-3" d="M760.75,358.054c30.265,0,54.8,24.936,54.8,55.7s-24.535,55.7-54.8,55.7-54.8-24.936-54.8-55.7S730.485,358.054,760.75,358.054Z"/>
+  <ellipse class="cls-4" cx="153.75" cy="413.75" rx="54.812" ry="55.688"/>
+  <path class="cls-5" d="M1014.25,47.4A143.75,143.75,0,1,1,870.5,191.15,143.75,143.75,0,0,1,1014.25,47.4Z"/>
+  <text id="Azure_Cloud_Streak_3.0" data-name="Azure Cloud Streak  3.0" class="cls-6" transform="translate(525.14 242.438) scale(0.638)"><tspan x="0">Azure Cloud Streak </tspan><tspan x="0" dy="135.6">3.0</tspan></text>
+  <text id="_..................._..................._..................._..." data-name="................... ................... ................... ..." class="cls-7" transform="translate(815.078 44.049) scale(0.364)"><tspan x="0">...................</tspan><tspan x="0" dy="135.6">...................</tspan><tspan x="0" dy="135.6">...................</tspan><tspan x="0" dy="135.6">...................</tspan><tspan x="0" dy="135.6">...................</tspan><tspan x="0" dy="135.6">...................</tspan></text>
+  <text id="_" data-name="+" class="cls-8" transform="translate(120.861 75.561) rotate(-45)"><tspan x="0">+</tspan></text>
+  <text id="_2" data-name="+" class="cls-8" transform="translate(137.861 386.561) rotate(-45)"><tspan x="0">+</tspan></text>
+</svg>
