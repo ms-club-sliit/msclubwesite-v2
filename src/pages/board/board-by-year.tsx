@@ -37,12 +37,12 @@ const BoardByYear: React.FC = () => {
           Meet the Board {nextBoard.year} - {incrementNumber(nextBoard.year)}
           <span className="wave-hand-emoji" />
         </span>
-        <div className="d-flex">
+        <div className="row">
           {boardList.map((board) => (
-            <div className="mb-4" key={board.id}>
+            <div className="col-lg-2 col-md-3 col-sm-6 board-col" key={board.id}>
               <button
                 type="button"
-                className="button btn text-center"
+                className="button btn text-center board-button"
                 onClick={() => handleClick(board.id, board.year)}
               >
                 <span className="calendar-emoji"></span>{board.year}/{incrementNumber(board.year.slice(-2))}
