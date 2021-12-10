@@ -8,41 +8,41 @@
       padding-left: 10px;
     }
 
-    @include media(">=phone", '<tablet') {
+    @include media(">=phone", "<tablet") {
       font-size: 40px;
       padding-left: 10px;
     }
 
-    @include media('>=tablet', '<smalldesktop') {
+    @include media(">=tablet", "<smalldesktop") {
       font-size: 50px;
       padding-left: 10px;
     }
 
-    @include media('>=smalldesktop', '<desktop') {
+    @include media(">=smalldesktop", "<desktop") {
       font-size: 60px;
       padding-left: 10px;
     }
 
-    @include media(">=desktop", '<largedesktop') {
+    @include media(">=desktop", "<largedesktop") {
       font-size: 70px;
       padding-left: 10px;
     }
 
-    @include media('>=largedesktop') {
+    @include media(">=largedesktop") {
       font-size: 75px;
       padding-left: 0px;
     }
   }
 
   .calendar-emoji {
-    content: url('../assets/emoji/calendar.png');
+    content: url("../assets/emoji/calendar.png");
     width: 18px;
     margin-right: 8px;
     margin-top: 5px;
   }
 
   .wave-hand-emoji {
-    content: url('../assets/emoji/wave.png');
+    content: url("../assets/emoji/wave.png");
     margin-left: 10px;
     position: absolute;
 
@@ -51,27 +51,27 @@
       margin-top: 8px;
     }
 
-    @include media(">=phone", '<tablet') {
+    @include media(">=phone", "<tablet") {
       width: 40px;
       margin-top: 10px;
     }
 
-    @include media('>=tablet', '<smalldesktop') {
+    @include media(">=tablet", "<smalldesktop") {
       width: 50px;
       margin-top: 10px;
     }
 
-    @include media('>=smalldesktop', '<desktop') {
+    @include media(">=smalldesktop", "<desktop") {
       width: 60px;
       margin-top: 12px;
     }
 
-    @include media(">=desktop", '<largedesktop') {
+    @include media(">=desktop", "<largedesktop") {
       width: 70px;
       margin-top: 15px;
     }
 
-    @include media('>=largedesktop') {
+    @include media(">=largedesktop") {
       width: 75px;
       margin-top: 15px;
     }
@@ -86,13 +86,14 @@
     font-size: 18px;
     width: 180px;
   }
-  
+
   .button:hover {
     background: $primary-color-hover;
     color: $color-white;
   }
-  
-  .button:focus, .button:active {
+
+  .button:focus,
+  .button:active {
     background: $primary-color-active;
     color: $color-white;
     outline: none !important;
@@ -105,7 +106,7 @@
   margin-bottom: 30px;
 
   .link {
-    content: url('../assets/emoji/link.png');
+    content: url("../assets/emoji/link.png");
     position: absolute;
     margin-top: 5px;
     margin-left: 5px;
@@ -163,7 +164,7 @@
     }
   }
 
-  @include media(">=phone", '<tablet') {
+  @include media(">=phone", "<tablet") {
     width: 18rem;
 
     .link {
@@ -184,7 +185,7 @@
     }
   }
 
-  @include media('>=tablet', '<smalldesktop') {
+  @include media(">=tablet", "<smalldesktop") {
     width: 20rem;
 
     .link {
@@ -205,7 +206,7 @@
     }
   }
 
-  @include media('>=smalldesktop', '<desktop') {
+  @include media(">=smalldesktop", "<desktop") {
     width: 15rem;
 
     .link {
@@ -226,7 +227,7 @@
     }
   }
 
-  @include media(">=desktop", '<largedesktop') {
+  @include media(">=desktop", "<largedesktop") {
     width: 15rem;
 
     .link {
@@ -247,7 +248,7 @@
     }
   }
 
-  @include media('>=largedesktop') {
+  @include media(">=largedesktop") {
     width: 15rem;
 
     .link {
@@ -265,6 +266,16 @@
 
     .position {
       font-size: 18px;
+    }
+  }
+}
+
+@include media("<=phone") {
+  .board-col {
+    width: 50%;
+
+    .board-button {
+      width: 97%;
     }
   }
 }
