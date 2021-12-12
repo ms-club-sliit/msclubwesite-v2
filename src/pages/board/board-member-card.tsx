@@ -27,6 +27,16 @@ const BoardMemberCard: React.FC<IBoardMemberDetails> = ({
                 <p className="position">{position}</p>
                 <div className="d-flex justify-content-end">
                   <span>
+                  {socialmedia.mlsa && (
+                      <a
+                        href={socialmedia.mlsa}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                         <img src="/assets/mlsa_logo.png" className="img-fluid" width="22px" alt="MLSA Logo" style={{"verticalAlign": "sub"}}/>
+                      </a>
+                    )}
+
                     {socialmedia.facebook && (
                       <a
                         href={socialmedia.facebook}
