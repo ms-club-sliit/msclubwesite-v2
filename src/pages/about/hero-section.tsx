@@ -8,7 +8,7 @@ const HeroSection: React.FC = () => (
         <div className="col-md-6">
           <p className="about-us-header-title">About Us</p>
           <p className="about-us-header-description">
-            A volunteer-driven student community aiming to bridge the skill gap between an Undergraduate and an Industry Professional.
+            A MLSA driven student community aiming to bridge the skill gap between an Undergraduate and an Industry Professional.
           </p>
         </div>
         <div className="col-md-6 header-img">
