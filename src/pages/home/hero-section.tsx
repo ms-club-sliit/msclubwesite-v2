@@ -10,7 +10,7 @@ const HeroSection: React.FC = () => (
       <div className="col-sm-12 col-md-6 col-lg-6">
         <h1 className="home-header-title">MS CLUB OF SLIIT</h1>
         <p className="home-header-description">
-          A volunteer-driven student community aiming to bridge the skill gap
+          A MLSA driven student community aiming to bridge the skill gap
           between an Undergraduate and an Industry Professional.
         </p>
         <a

@@ -17,6 +17,7 @@ interface ISocialmedia {
     linkedin: string;
     instagram: string;
     twitter: string;
+    mlsa ?:string;
 }
 
 export type { IBoard, IBoardMemberDetails };
