@@ -13,10 +13,10 @@ interface IBoardMemberDetails {
 }
 
 interface ISocialmedia {
-    facebook: string;
+    facebook?: string;
     linkedin: string;
-    instagram: string;
-    twitter: string;
+    instagram?: string;
+    twitter?: string;
     mlsa ?:string;
 }
 
