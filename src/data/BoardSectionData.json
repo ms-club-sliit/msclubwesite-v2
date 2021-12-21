@@ -112,7 +112,6 @@
         "socialmedia": {
           "facebook": "https://www.facebook.com/profile.php?id=100070098803999",
           "linkedin": "https://www.linkedin.com/in/susith-rupasinghe/",
-          "instagram": "https://www.instagram.com",
           "twitter": "https://twitter.com/SusithRupasing"
         }
       },
@@ -122,10 +121,7 @@
         "position": "Editor",
         "image": "/assets/boards/2021/Miyuru.jpeg",
         "socialmedia": {
-          "facebook": "https://www.facebook.com",
-          "linkedin": "https://www.linkedin.com/in/miyurugunarathna/",
-          "instagram": "https://www.instagram.com",
-          "twitter": "https://twitter.com/"
+          "linkedin": "https://www.linkedin.com/in/miyurugunarathna/"
         }
       }
     ]
@@ -261,9 +257,7 @@
         "image": "/assets/boards/2019/vino.jpg",
         "socialmedia": {
           "facebook": "https://www.facebook.com/vino.m6",
-          "linkedin": "https://www.linkedin.com/in/vino-manohar-701984153/",
-          "instagram": "https://ms-club-website.web.app/",
-          "twitter": "https://ms-club-website.web.app/"
+          "linkedin": "https://www.linkedin.com/in/vino-manohar-701984153/"
         }
       },
       {
@@ -273,9 +267,7 @@
         "image": "/assets/boards/2019/hesha.jpg",
         "socialmedia": {
           "facebook": "https://www.facebook.com/Heshajay",
-          "linkedin": "https://www.linkedin.com/in/hesha-nirmani-jayarathne-b13881176/",
-          "instagram": "https://ms-club-website.web.app/",
-          "twitter": "https://ms-club-website.web.app/"
+          "linkedin": "https://www.linkedin.com/in/hesha-nirmani-jayarathne-b13881176/"
         }
       },
       {
@@ -285,9 +277,8 @@
         "image": "/assets/boards/femaleAvatar.jpg",
         "socialmedia": {
           "facebook": "https://www.facebook.com/lakna.rajaratne",
-          "linkedin": "https://ms-club-website.web.app/",
-          "instagram": "https://ms-club-website.web.app/",
-          "twitter": "https://ms-club-website.web.app/"
+          "instagram": "https://www.instagram.com/laknar13/",
+          "linkedin": "https://www.linkedin.com/in/lakna-rajaratne-719265178/"
         }
       },
       {
@@ -296,10 +287,7 @@
         "position": "Treasurer",
         "image": "/assets/boards/2019/tharindu.jpg",
         "socialmedia": {
-          "facebook": "https://ms-club-website.web.app/",
-          "linkedin": "https://www.linkedin.com/in/tharindu-shehan/",
-          "instagram": "https://ms-club-website.web.app/",
-          "twitter": "https://ms-club-website.web.app/"
+          "linkedin": "https://www.linkedin.com/in/tharindu-shehan/"
         }
       },
       {
@@ -309,9 +297,7 @@
         "image": "/assets/boards/2019/pasan.jpg",
         "socialmedia": {
           "facebook": "https://www.facebook.com/pasan.nethsara",
-          "linkedin": "https://www.linkedin.com/in/pasan-nethsara-4b5b17159/",
-          "instagram": "https://ms-club-website.web.app/",
-          "twitter": "https://ms-club-website.web.app/"
+          "linkedin": "https://www.linkedin.com/in/pasan-nethsara-4b5b17159/"
         }
       },
       {
@@ -321,9 +307,7 @@
         "image": "/assets/boards/2019/kalana.jpg",
         "socialmedia": {
           "facebook": "https://www.facebook.com/kalanaelapatha1",
-          "linkedin": "https://www.linkedin.com/in/kalanaelapatha/",
-          "instagram": "https://ms-club-website.web.app/",
-          "twitter": "https://ms-club-website.web.app/"
+          "linkedin": "https://www.linkedin.com/in/kalanaelapatha/"
         }
       }
     ]
