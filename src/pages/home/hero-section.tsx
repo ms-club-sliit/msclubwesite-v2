@@ -1,4 +1,5 @@
 import { ContactShadows, OrbitControls } from "@react-three/drei";
+import {translation} from '../../locales/en-US/translation.json';
 import { Canvas } from "@react-three/fiber";
 import React, { Suspense } from "react";
 import { Logo3DModel } from "../../components";
@@ -8,17 +9,16 @@ const HeroSection: React.FC = () => (
     <div className="hero-section-bg" />
     <div className="row">
       <div className="col-sm-12 col-md-6 col-lg-6">
-        <h1 className="home-header-title">MS CLUB OF SLIIT</h1>
+        <h1 className="home-header-title">{translation.label["home-hero-title"]}</h1>
         <p className="home-header-description">
-          A MLSA driven student community aiming to bridge the skill gap
-          between an Undergraduate and an Industry Professional.
+        {translation.label["home-hero-description"]}
         </p>
         <a
           href="/join-us"
           target="_blank"
           rel="noopener noreferrer"
         >
-          <button className="btn home-primary-btn">Join Now</button>
+          <button className="btn home-primary-btn">{translation.button["join"]}</button>
         </a>
       </div>
 
