@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import {translation} from '../../locales/en-US/translation.json';
 
 const NavBar: React.FC = () => {
   const [isNavBarScroll, setNavbarScroll] = useState<boolean>(false);
@@ -55,22 +56,22 @@ const NavBar: React.FC = () => {
             <ul className="navbar-nav m-auto mb-lg-0" />
             <ul className="navbar-nav d-flex me-2 navbar-items">
               <li className="nav-item">
-                <a className="nav-link" href="/">Home</a>
+                <a className="nav-link" href="/">{translation.label["navbar-home"]}</a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="/about">About</a>
+                <a className="nav-link" href="/about">{translation.label["navbar-about"]}</a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="/events">Events</a>
+                <a className="nav-link" href="/events">{translation.label["navbar-events"]}</a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="/board">Board</a>
+                <a className="nav-link" href="/board">{translation.label["navbar-board"]}</a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="/blogs">Blogs</a>
+                <a className="nav-link" href="/blogs">{translation.label["navbar-blogs"]}</a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="/contact">Contact Us</a>
+                <a className="nav-link" href="/contact">{translation.label["navbar-contact-us"]}</a>
               </li>
             </ul>
           </div>

@@ -1,4 +1,5 @@
 import React from "react";
+import {translation} from '../../locales/en-US/translation.json';
 
 const HeroSection: React.FC = () => (
   <div className="container mb-5">
@@ -6,28 +7,28 @@ const HeroSection: React.FC = () => (
 
     <div className="row">
       <div className="col-sm-12 col-md-7 col-lg-7">
-        <h1 className="contact-us-header-title">Join with Us</h1>
+        <h1 className="contact-us-header-title">{translation.label["join-us-hero-title"]}</h1>
         <p className="contact-us-header-description">
-          Fill your application form today
+          {translation.label["join-us-hero-description"]}
         </p>
         <div className="row">
           <div className="col-sm-12 col-md-7 col-lg-7">
             <div className="d-flex justify-content-start mb-2">
               <i className="fab fa-facebook fa-2x social-icon" />
               <span className="social-facebook-link">
-                facebook.com/msclubsliit
+                {translation.label["fb-link"]}
               </span>
             </div>
             <div className="d-flex justify-content-start mb-2">
               <i className="fab fa-instagram fa-2x social-icon" />
               <span className="social-instagram-link">
-                instagram.com/msclub.sliit
+                {translation.label["instagram-link"]}
               </span>
             </div>
             <div className="d-flex justify-content-start mb-2">
               <i className="fab fa-linkedin fa-2x social-icon" />
               <span className="social-linkedin-link">
-                linkedin.com/msclubsliit
+                {translation.label["linkedin-link"]}
               </span>
             </div>
             <div className="d-flex justify-content-start mb-2">
@@ -36,12 +37,14 @@ const HeroSection: React.FC = () => (
                 style={{ color: "#FF0000" }}
               />
               <span className="social-youtube-link">
-                youtube.com/msclubsliit
+                {translation.label["yt-link"]}
               </span>
             </div>
             <div className="d-flex justify-content-start mb-2">
               <i className="fab fa-github fa-2x social-icon" />
-              <span className="social-github-link">github.com/msclubsliit</span>
+              <span className="social-github-link">
+                {translation.label["github-link"]}
+              </span>
             </div>
           </div>
         </div>

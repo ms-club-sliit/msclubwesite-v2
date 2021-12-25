@@ -3,6 +3,7 @@ import { Card } from '../../components';
 import { CARD_TYPE_SPEAKER, SLIDER_RESPONSIVE_BREAKPOINTS } from '../../constants';
 import Slider from 'react-owl-carousel';
 import speakers from '../../data/TopSpeakersData.json';
+import {translation} from '../../locales/en-US/translation.json';
 
 const TopSpeakers: React.FC = () => {
   let slider: any;
@@ -34,9 +35,9 @@ const TopSpeakers: React.FC = () => {
 
   return (
     <div className="container mt-3">
-      <h2 className="item-header">Top Speakers</h2>
+      <h2 className="item-header">{translation.label["event-top-speakers-title"]}</h2>
       <div className="item-navigation">
-        <div className="view-more-text">View More</div>
+        <div className="view-more-text">{translation.label["view-more"]}</div>
         <div
           onClick={slidePrev}
           onKeyDown={slidePrevKeyBoard}

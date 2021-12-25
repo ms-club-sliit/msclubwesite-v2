@@ -2,12 +2,13 @@ import React from "react";
 import OwlCarousel from 'react-owl-carousel';
 import pioneers from '../../data/PioneersData.json';
 import { SLIDER_RESPONSIVE_BREAKPOINTS } from '../../constants';
+import {translation} from '../../locales/en-US/translation.json';
 
 const PioneersSection: React.FC = () => (
   <div className="pioneers">
     <div className="row justify-content-center text-center">
       <h2 className="topic text-center about-us-pioneer-header">
-        <strong>Pioneers of MS Club</strong>
+        <strong>{translation.label["about-pioneers-title"]}</strong>
       </h2>
       <div>
         <OwlCarousel className="owl-theme" dots={false} loop responsive={SLIDER_RESPONSIVE_BREAKPOINTS}>

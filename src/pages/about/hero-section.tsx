@@ -1,4 +1,5 @@
 import React from "react";
+import {translation} from '../../locales/en-US/translation.json';
 
 const HeroSection: React.FC = () => (
   <div>
@@ -6,9 +7,9 @@ const HeroSection: React.FC = () => (
       <div className="hero-section-bg" />
       <div className="row">
         <div className="col-md-6">
-          <p className="about-us-header-title">About Us</p>
+          <p className="about-us-header-title">{translation.label["about-hero-title"]}</p>
           <p className="about-us-header-description">
-            A MLSA driven student community aiming to bridge the skill gap between an Undergraduate and an Industry Professional.
+            {translation.label["about-hero-description"]}
           </p>
         </div>
         <div className="col-md-6 header-img">

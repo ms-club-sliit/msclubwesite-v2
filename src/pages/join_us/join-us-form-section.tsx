@@ -5,6 +5,7 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import * as Yup from "yup";
 import { ToastContainer, toast } from "react-toastify";
 import { submitApplication } from "../../api/ApplicationAction";
+import {translation} from '../../locales/en-US/translation.json';
 
 const options = [
   { value: "Public Speaking", label: "Public Speaking" },
@@ -169,11 +170,11 @@ const ApplicationForm: React.FC = () => {
         <div className="row mt-3 mb-5">
           <div className="col-md-12">
             <form id="myForm" onSubmit={handleSubmit(onSubmit)}>
-              <h1 className="contact-title">Application Form </h1>
-              <p className="text-danger"> * Required</p>
+              <h1 className="contact-title">{translation.label["join-us-form-title"]} </h1>
+              <p className="text-danger"> {translation.label["join-us-form-required"]} </p>
               <div className="form-group mt-3">
                 <label className="contact-us-label-text">
-                  SLIIT Student ID<span className="text-danger"> *</span>
+                  {translation.label["join-us-form-sliitid"]}<span className="text-danger"> *</span>
                 </label>
                 <input
                   type="text"
@@ -187,7 +188,7 @@ const ApplicationForm: React.FC = () => {
 
               <div className="form-group mt-3">
                 <label className="contact-us-label-text">
-                  Full Name<span className="text-danger"> *</span>
+                  {translation.label["join-us-form-name"]}<span className="text-danger"> *</span>
                 </label>
                 <input
                   type="text"
@@ -201,7 +202,7 @@ const ApplicationForm: React.FC = () => {
 
               <div className="form-group mt-3">
                 <label className="contact-us-label-text">
-                  Email Address<span className="text-danger"> *</span>
+                  {translation.label["join-us-form-email"]}<span className="text-danger"> *</span>
                 </label>
                 <input
                   type="text"
@@ -215,7 +216,7 @@ const ApplicationForm: React.FC = () => {
 
               <div className="form-group mt-3">
                 <label className="contact-us-label-text">
-                  Mobile Number<span className="text-danger"> *</span>
+                 {translation.label["join-us-form-mobile"]}<span className="text-danger"> *</span>
                 </label>
                 <input
                   type="text"
@@ -231,7 +232,7 @@ const ApplicationForm: React.FC = () => {
 
               <div className="form-group mt-3">
                 <label className="contact-us-label-text">
-                  Academic Year<span className="text-danger"> *</span>
+                  {translation.label["join-us-form-academic-year"]}<span className="text-danger"> *</span>
                 </label>
                 <select
                   className={`form-control ${
@@ -240,12 +241,12 @@ const ApplicationForm: React.FC = () => {
                   {...register("currentAcademicYear")}
                 >
                   <option disabled selected hidden></option>
-                  <option value="Year 1 Semester 1">Year 1 Semester 1</option>
-                  <option value="Year 1 Semester 2">Year 1 Semester 2</option>
-                  <option value="Year 2 Semester 1">Year 2 Semester 1</option>
-                  <option value="Year 2 Semester 2">Year 2 Semester 2</option>
-                  <option value="Year 3 Semester 1">Year 3 Semester 1</option>
-                  <option value="Year 3 Semester 2">Year 3 Semester 2</option>
+                  <option value="Year 1 Semester 1">{translation.label["join-us-form-y1-s1"]}</option>
+                  <option value="Year 1 Semester 2">{translation.label["join-us-form-y1-s2"]}</option>
+                  <option value="Year 2 Semester 1">{translation.label["join-us-form-y2-s1"]}</option>
+                  <option value="Year 2 Semester 2">{translation.label["join-us-form-y2-s2"]}</option>
+                  <option value="Year 3 Semester 1">{translation.label["join-us-form-y3-s1"]}</option>
+                  <option value="Year 3 Semester 2">{translation.label["join-us-form-y3-s2"]}</option>
                 </select>
                 <span className="text-danger">
                   {errors.currentAcademicYear?.message}
@@ -254,7 +255,7 @@ const ApplicationForm: React.FC = () => {
 
               <div className="form-group mt-3">
                 <label className="contact-us-label-text">
-                  Self Introduction <span className="text-danger"> *</span>
+                  {translation.label["join-us-form-self-intro"]} <span className="text-danger"> *</span>
                 </label>
                 <textarea
                   rows={6}
@@ -270,8 +271,7 @@ const ApplicationForm: React.FC = () => {
 
               <div className="form-group mt-3">
                 <label className="contact-us-label-text">
-                  Why would you like to join the Organizing Committee of MS
-                  Club?<span className="text-danger"> *</span>
+                  {translation.label["join-us-form-why-join"]}<span className="text-danger"> *</span>
                 </label>
                 <textarea
                   rows={6}
@@ -287,7 +287,7 @@ const ApplicationForm: React.FC = () => {
 
               <div className="form-group mt-3">
                 <label className="contact-us-label-text">
-                  LinkedIn Profile Link<span className="text-danger"> *</span>
+                  {translation.label["join-us-form-linkedin-link"]}<span className="text-danger"> *</span>
                 </label>
                 <input
                   type="text"
@@ -301,7 +301,7 @@ const ApplicationForm: React.FC = () => {
 
               <div className="form-group mt-3">
                 <label className="contact-us-label-text">
-                  GitHub Profile Link<span className="text-danger"> *</span>
+                  {translation.label["join-us-form-github-link"]}<span className="text-danger"> *</span>
                 </label>
                 <input
                   type="text"
@@ -314,7 +314,7 @@ const ApplicationForm: React.FC = () => {
               </div>
 
               <div className="form-group mt-3">
-                <label className="contact-us-label-text">Blog Page Link</label>
+                <label className="contact-us-label-text">{translation.label["join-us-form-blog-link"]}</label>
                 <input
                   type="text"
                   className={`form-control ${
@@ -327,7 +327,7 @@ const ApplicationForm: React.FC = () => {
 
               <div className="form-group mt-3">
                 <label className="contact-us-label-text">
-                  What are your prior volunteering/leadership experiences?
+                  {translation.label["join-us-form-experience"]}
                 </label>
                 <textarea
                   rows={6}
@@ -343,8 +343,7 @@ const ApplicationForm: React.FC = () => {
 
               <div className="form-group mt-3">
                 <label className="contact-us-label-text">
-                  Tell us about a challenge/problem that you have faced in life
-                  and how you overcame/solved that?
+                  {translation.label["join-us-form-challenges-faced"]}
                 </label>
                 <textarea
                   rows={6}
@@ -360,7 +359,7 @@ const ApplicationForm: React.FC = () => {
 
               <div className="form-group mt-3">
                 <label className="contact-us-label-text">
-                  Where do you see yourself in 5 years time?
+                  {translation.label["join-us-form-5y-plan"]}
                   <span className="text-danger"> *</span>
                 </label>
                 <input
@@ -375,7 +374,7 @@ const ApplicationForm: React.FC = () => {
 
               <div className="form-group mt-3">
                 <label className="contact-us-label-text">
-                  What are your skills/talent?
+                  {translation.label["join-us-form-skills"]}
                   <span className="text-danger"> *</span>
                 </label>
                 <MultiSelect
@@ -395,7 +394,7 @@ const ApplicationForm: React.FC = () => {
                   className="contact-btn btn"
                   disabled={isLoading}
                 >
-                  Apply
+                  {translation.button["apply"]}
                   <span>
                     <i className="fas fa-paper-plane icon"></i>
                   </span>
