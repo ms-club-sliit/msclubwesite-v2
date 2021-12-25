@@ -3,6 +3,7 @@ import { Card } from "../../components";
 import { IBlog } from "../../interfaces/BlogInterface";
 import { getBlogs } from "../../api/BlogAction";
 import { CARD_TYPE_BLOG } from '../../constants';
+import {translation} from '../../locales/en-US/translation.json';
 
 const BlogList: React.FC = () => {
   const [blogList, setBlogList] = useState<IBlog>();
@@ -20,7 +21,7 @@ const BlogList: React.FC = () => {
 
   return (
     <div className="container">
-      <h1 className="blog-title">Blog Posts</h1>
+      <h1 className="blog-title">{translation.label["blog-list-title"]}</h1>
       <div className="row">
         {blogList &&
           blogList.items?.map((item, index) => (

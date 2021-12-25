@@ -1,13 +1,14 @@
 import React from 'react';
+import {translation} from '../../locales/en-US/translation.json';
 
 const HeroSection: React.FC = () => (
   <div className="container mb-5">
     <div className="hero-section-bg" />
     <div className="row">
       <div className="col-sm-12 col-md-7 col-lg-7">
-        <h1 className="event-header-title">Explore Events</h1>
+        <h1 className="event-header-title">{translation.label["event-hero-title"]}</h1>
         <p className="event-header-description">
-          Explore all the events organized by our students.
+        {translation.label["event-hero-description"]}
         </p>
         <a
           href="https://www.facebook.com/msclubsliit"
@@ -15,7 +16,7 @@ const HeroSection: React.FC = () => (
           rel="noopener noreferrer"
         >
         <button className="btn event-primary-btn">
-          More Information on
+          {translation.button["more-info-fb"]}
           <span>
             <i className="fab fa-facebook-square fa-lg mx-2 mt-1"></i>
           </span>
@@ -28,7 +29,7 @@ const HeroSection: React.FC = () => (
           rel="noopener noreferrer"
         >
         <button className="btn event-youtube-btn">
-          Subscribe on
+          {translation.button["subs-yt"]}
           <span>
             <i className="fab fa-youtube fa-lg mx-2 mt-1"></i>
           </span>
