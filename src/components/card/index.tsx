@@ -1,6 +1,7 @@
 import React from "react";
 import moment from "moment";
 import { ICard } from "../../interfaces/CardInterface";
+import {translation} from '../../locales/en-US/translation.json';
 
 const Card: React.FC<ICard> = ({
   title,
@@ -62,7 +63,7 @@ const Card: React.FC<ICard> = ({
                   rel="noreferrer"
                   className="d-flex justify-content-center"
                 >
-                  <button className="btn card-btn button">READ MORE</button>
+                  <button className="btn card-btn button">{translation.button["read-more"]}</button>
                 </a>
               </div>
             )}
@@ -110,7 +111,7 @@ const Card: React.FC<ICard> = ({
                   rel="noreferrer"
                   className="d-flex justify-content-center"
                 >
-                  <button className="btn card-btn button">MORE INFO</button>
+                  <button className="btn card-btn button">{translation.button["more-info"]}</button>
                 </a>
               </div>
             )}
@@ -158,7 +159,7 @@ const Card: React.FC<ICard> = ({
                   rel="noreferrer"
                   className="d-flex justify-content-center"
                 >
-                  <button className="btn card-btn button">MORE INFO</button>
+                  <button className="btn card-btn button">{translation.button["more-info"]}</button>
                 </a>
               </div>
             )}

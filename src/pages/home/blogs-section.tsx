@@ -4,6 +4,7 @@ import { getBlogs } from "../../api/BlogAction";
 import Slider from "react-owl-carousel";
 import { Card } from "../../components";
 import { CARD_TYPE_BLOG, SLIDER_RESPONSIVE_BREAKPOINTS } from '../../constants';
+import {translation} from '../../locales/en-US/translation.json';
 
 const BlogSection: React.FC = () => {
   let slider: any;
@@ -47,9 +48,9 @@ const BlogSection: React.FC = () => {
 
   return (
     <div className="container section-padding">
-      <h2 className="item-header">Blogs</h2>
+      <h2 className="item-header">{translation.label["home-blogs-title"]}</h2>
       <div className="item-navigation">
-        <div className="view-more-text">View More</div>
+        <div className="view-more-text">{translation.label["view-more"]}</div>
         <div
           onClick={slidePrev}
           onKeyDown={slidePrevKeyBoard}

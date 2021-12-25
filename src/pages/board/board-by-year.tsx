@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { IBoard, IBoardMemberDetails } from "../../interfaces/BoardInterface";
 import boardData from "../../data/BoardSectionData.json";
 import BoardMemberCard from "./board-member-card";
+import {translation} from '../../locales/en-US/translation.json';
 
 const BoardByYear: React.FC = () => {
   const [id, setid] = useState<number>(0);
@@ -34,7 +35,7 @@ const BoardByYear: React.FC = () => {
       <div className="hero-section-bg" />
       <div className="row">
         <span className="title">
-          Meet the Board {nextBoard.year} - {incrementNumber(nextBoard.year)}
+          {translation.label["board-board-by-year-title"]} {nextBoard.year} - {incrementNumber(nextBoard.year)}
           <span className="wave-hand-emoji" />
         </span>
         <div className="row">

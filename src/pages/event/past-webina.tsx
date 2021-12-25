@@ -3,6 +3,7 @@ import { Card } from '../../components';
 import { CARD_TYPE_WEBINA, SLIDER_RESPONSIVE_BREAKPOINTS } from '../../constants';
 import Slider from 'react-owl-carousel';
 import webinars from '../../data/PastWebinarsData.json';
+import {translation} from '../../locales/en-US/translation.json';
 
 const PastWebinars: React.FC = () => {
   let slider: any;
@@ -34,9 +35,9 @@ const PastWebinars: React.FC = () => {
 
   return (
     <div className="container">
-      <h2 className="item-header">Past Webinars</h2>
+      <h2 className="item-header">{translation.label["event-past-webinars-title"]}</h2>
       <div className="item-navigation">
-        <div className="view-more-text">View More</div>
+        <div className="view-more-text">{translation.label["view-more"]}</div>
         <div
           onClick={slidePrev}
           onKeyDown={slidePrevKeyBoard}

@@ -1,4 +1,5 @@
 import React from 'react';
+import {translation} from '../../locales/en-US/translation.json';
 
 const Footer: React.FC = () => (
   <footer className="footer-section">
@@ -16,7 +17,7 @@ const Footer: React.FC = () => (
                 </a>
               </div>
               <div className="footer-text">
-                <p>A volunteer-driven student community aiming to bridge the skill gap between an Undergraduate and an Industry Professional.</p>
+                <p>{translation.label["footer-description"]}</p>
                 <div className="row social-media-row mb-3">
                   <div className="col-lg-1 col-md-1 col-sm-1 social-media-col">
                     <a href="https://www.facebook.com/msclubsliit" rel="noreferrer" target="_blank">
@@ -41,26 +42,26 @@ const Footer: React.FC = () => (
           <div className="col-xl-4 col-lg-4 col-md-6 mb-30">
             <div className="footer-widget">
               <div className="footer-widget-heading">
-                <h3>Useful Links</h3>
+                <h3>{translation.label["footer-useful-link-title"]}</h3>
               </div>
               <ul>
                 <li>
-                  <a href="/">Home</a>
+                  <a href="/">{translation.label["footer-useful-link-home"]}</a>
                 </li>
                 <li>
-                  <a href="/contact">Contact us</a>
+                  <a href="/contact">{translation.label["footer-useful-link-contact-us"]}</a>
                 </li>
                 <li>
-                  <a href="/blogs">Blog</a>
+                  <a href="/blogs">{translation.label["footer-useful-link-blog"]}</a>
                 </li>
                 <li>
-                  <a href="/events">Events</a>
+                  <a href="/events">{translation.label["footer-useful-link-event"]}</a>
                 </li>
                 <li>
-                  <a href="/">Code of Conduct</a>
+                  <a href="/">{translation.label["footer-useful-link-code-of-conduct"]}</a>
                 </li>
                 <li>
-                  <a href="/">Brand Assets</a>
+                  <a href="/">{translation.label["footer-useful-link-brand-assets"]}</a>
                 </li>
               </ul>
             </div>
@@ -69,10 +70,10 @@ const Footer: React.FC = () => (
           <div className="col-xl-4 col-lg-4 col-md-6 mb-30">
             <div className="footer-widget">
               <div className="footer-widget-heading">
-                <h3>Subscribe</h3>
+                <h3>{translation.label["footer-subscribe-title"]}</h3>
               </div>
               <div className="footer-text mb-25">
-                <p>Get the latest updates and information regarding MS Club of SLIIT right to your inbox!</p>
+                <p>{translation.label["footer-subscribe-description"]}</p>
               </div>
               <div className="subscribe-email-section">
                 <form action="#">
@@ -94,8 +95,8 @@ const Footer: React.FC = () => (
           <div className="col-xl-12 col-lg-12 text-center">
             <div className="copyright-text">
               <p>
-                Copyright &copy; 2021, All Right Reserved&nbsp;
-                <a href="/">MS Club of SLIIT</a>
+                {translation.label["footer-copyright"]} &copy; {translation.label["footer-reserved"]}&nbsp;
+                <a href="/">{translation.label["footer-msclub"]}</a>
               </p>
             </div>
           </div>

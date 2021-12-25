@@ -4,6 +4,7 @@ import { yupResolver } from '@hookform/resolvers/yup';
 import * as Yup from 'yup';
 import { ToastContainer, toast } from "react-toastify";
 import { sendMessage } from "../../api/ContactAction";
+import {translation} from '../../locales/en-US/translation.json';
 
 type IContactFormSection = {
   name: string;
@@ -92,10 +93,10 @@ const ContactFormSection: React.FC = () => {
           <div className="col-md-12">
             <div className="mt-5">
               <form id="myForm" onSubmit={handleSubmit(onSubmit)}>
-                <h1 className="contact-title">Send Your Message</h1>
+                <h1 className="contact-title">{translation.label["contact-form-title"]}</h1>
                 <div className="form-group mt-3">
                   <label htmlFor="name" className="contact-us-label-text">
-                    Your Name
+                    {translation.label["contact-form-name"]}
                   </label>
                   <input
                     id="name"
@@ -107,7 +108,7 @@ const ContactFormSection: React.FC = () => {
                 </div>
                 <div className="form-group mt-3">
                   <label htmlFor="email" className="contact-us-label-text">
-                    Email address
+                    {translation.label["contact-form-email"]}
                   </label>
                   <input
                     id="email"
@@ -119,7 +120,7 @@ const ContactFormSection: React.FC = () => {
                 </div>
                 <div className="form-group mt-3">
                   <label htmlFor="message" className="contact-us-label-text">
-                    Message
+                    {translation.label["contact-form-message"]}
                   </label>
                   <textarea
                     id="message"
@@ -131,7 +132,7 @@ const ContactFormSection: React.FC = () => {
                 </div>
                 <div className="form-group mt-3 d-flex justify-content-end">
                   <button type="submit" className="contact-btn btn" disabled={isLoading}>
-                    Send
+                    {translation.button["send"]}
                     <span>
                       <i className="fas fa-paper-plane icon"></i>
                     </span>
