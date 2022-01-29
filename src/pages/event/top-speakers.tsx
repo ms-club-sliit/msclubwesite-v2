@@ -1,9 +1,12 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Card } from '../../components';
 import { CARD_TYPE_SPEAKER, SLIDER_RESPONSIVE_BREAKPOINTS } from '../../constants';
 import Slider from 'react-owl-carousel';
-import speakers from '../../data/TopSpeakersData.json';
+// import speakers from '../../data/TopSpeakersData.json';
 import {translation} from '../../locales/en-US/translation.json';
+
+import { getTopSpeakers } from "../../api/TopSpeakerAction";
+import { ITopSpeaker } from "../../interfaces/TopSpeakerInterface";
 
 const TopSpeakers: React.FC = () => {
   let slider: any;
@@ -33,6 +36,18 @@ const TopSpeakers: React.FC = () => {
     }
   }
 
+  const [topSpeakers, setTopSpeakers] = useState<ITopSpeaker[]>();
+
+  useEffect(() => {
+    getTopSpeakers()
+      .then((data) => {
+        setTopSpeakers(data.data);
+      })
+      .catch((error) => {
+        console.log(error.message);
+      });
+  }, []);
+
   return (
     <div className="container mt-3">
       <h2 className="item-header">{translation.label["event-top-speakers-title"]}</h2>
@@ -58,7 +73,7 @@ const TopSpeakers: React.FC = () => {
         </div>
       </div>
 
-      {speakers && speakers.data.length > 0 && 
+      {topSpeakers && topSpeakers.length > 0 && 
       (
         <Slider
           className="owl-theme"
@@ -70,7 +85,7 @@ const TopSpeakers: React.FC = () => {
             slider = slide;
           }}
         >
-          {speakers.data.map((speaker, index) => (
+          {topSpeakers.map((speaker, index) => (
             <Card 
               key={index}
               id={index}
