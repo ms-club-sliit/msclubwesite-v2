@@ -24,6 +24,8 @@ jobs:
           node-version: ${{ matrix.node-version }}
       - run: npm install -g yarn
       - name: yarn install, build and test
+        env:
+          REACT_APP_BACKEND_URL: ${{ secrets.REACT_APP_BACKEND_URL }}
         run: |
           yarn install
           yarn build
