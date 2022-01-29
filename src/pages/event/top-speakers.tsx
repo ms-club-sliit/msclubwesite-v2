@@ -40,8 +40,8 @@ const TopSpeakers: React.FC = () => {
 
   useEffect(() => {
     getTopSpeakers()
-      .then((data) => {
-        setTopSpeakers(data.data);
+      .then((response) => {
+        setTopSpeakers(response.data);
       })
       .catch((error) => {
         console.log(error.message);
