@@ -1,11 +1,26 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Card } from '../../components';
 import { CARD_TYPE_WEBINA, SLIDER_RESPONSIVE_BREAKPOINTS } from '../../constants';
 import Slider from 'react-owl-carousel';
-import webinars from '../../data/PastWebinarsData.json';
 import {translation} from '../../locales/en-US/translation.json';
+import { IWebinar } from '../../interfaces/IWebinar';
+import { getWebinars } from '../../api/WebinarAction';
 
 const PastWebinars: React.FC = () => {
+
+  const [webinarList, setWebinarList] = useState<IWebinar>();
+
+  //fetch all webinar items
+  useEffect(() =>{
+    getWebinars()
+    .then((data) =>{
+      setWebinarList(data.data);
+    })
+    .catch((error) => {
+      console.log(error.message);
+    });
+  }, []);
+
   let slider: any;
   let keyboardCode: number;
 
@@ -58,7 +73,7 @@ const PastWebinars: React.FC = () => {
         </div>
       </div>
 
-      {webinars && webinars.data.length > 0 && 
+      {webinarList && webinarList.Items.length > 0 && 
       (
         <Slider
           className="owl-theme"
@@ -70,7 +85,7 @@ const PastWebinars: React.FC = () => {
             slider = slide;
           }}
         >
-          {webinars.data.map((event, index) => (
+          {webinarList.Items.map((event, index) => (
             <Card 
               key={index}
               id={event.id}
