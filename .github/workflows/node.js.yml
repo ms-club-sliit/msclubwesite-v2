@@ -20,6 +20,8 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Use Node.js ${{ matrix.node-version }}
+        env:
+          REACT_APP_BACKEND_URL: ${{ secrets.REACT_APP_BACKEND_URL }}
         uses: actions/setup-node@v2
         with:
           node-version: ${{ matrix.node-version }}
