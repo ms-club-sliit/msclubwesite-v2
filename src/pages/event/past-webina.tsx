@@ -3,23 +3,10 @@ import { Card } from '../../components';
 import { CARD_TYPE_WEBINA, SLIDER_RESPONSIVE_BREAKPOINTS } from '../../constants';
 import Slider from 'react-owl-carousel';
 import {translation} from '../../locales/en-US/translation.json';
-import { IWebinar } from '../../interfaces/IWebinar';
+import { IWebinar } from "../../interfaces/WebinarInterface";
 import { getWebinars } from '../../api/WebinarAction';
 
 const PastWebinars: React.FC = () => {
-
-  const [webinarList, setWebinarList] = useState<IWebinar>();
-
-  //fetch all webinar items
-  useEffect(() =>{
-    getWebinars()
-    .then((data) =>{
-      setWebinarList(data.data);
-    })
-    .catch((error) => {
-      console.log(error.message);
-    });
-  }, []);
 
   let slider: any;
   let keyboardCode: number;
@@ -48,6 +35,22 @@ const PastWebinars: React.FC = () => {
     }
   }
 
+  const [webinarList, setWebinarList] = useState<IWebinar[]>();
+
+  //fetch all webinar items
+  useEffect(() => {
+    getWebinars()
+    .then((response) => {
+      if(response.data){
+        setWebinarList(response.data)
+        // setWebinarList(response.data);
+      }   
+    })
+    .catch((error) => {
+      console.log(error.message);
+    });
+  }, []);
+
   return (
     <div className="container">
       <h2 className="item-header">{translation.label["event-past-webinars-title"]}</h2>
@@ -73,7 +76,7 @@ const PastWebinars: React.FC = () => {
         </div>
       </div>
 
-      {webinarList && webinarList.Items.length > 0 && 
+      {webinarList && webinarList.length > 0 && 
       (
         <Slider
           className="owl-theme"
@@ -85,12 +88,12 @@ const PastWebinars: React.FC = () => {
             slider = slide;
           }}
         >
-          {webinarList.Items.map((event, index) => (
+          {webinarList.map((event, index) => (
             <Card 
               key={index}
-              id={event.id}
+              id={index}
               title={event.title}
-              dateTime={event.dateTime}
+              dateTime={event.dateTime.toString()}
               description={event.description}
               imageUrl={event.imageUrl}
               link={event.link}
