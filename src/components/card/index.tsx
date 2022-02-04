@@ -3,6 +3,15 @@ import moment from "moment";
 import { ICard } from "../../interfaces/CardInterface";
 import { translation } from "../../locales/en-US/translation.json";
 
+const HtmlToReactParser = require("html-to-react").Parser;
+
+const convertToPlain = (html: string) => {
+  const htmlToParser = new HtmlToReactParser();
+  const reactElement = htmlToParser.parse(html);
+  return reactElement;
+};
+
+
 const Card: React.FC<ICard> = ({
   title,
   type,
@@ -15,6 +24,8 @@ const Card: React.FC<ICard> = ({
   socialMediaURLs,
   icon,
 }) => (
+
+  
   <div className="card-height">
     <div className="cell">
       <div className="card card-block mb-3">
@@ -137,7 +148,7 @@ const Card: React.FC<ICard> = ({
         {type === "WEBINA" ? (
           <div className="card-webina">
             {imageUrl && (
-              <img src={imageUrl} className="card-img-top" alt="post-flyer" />
+              <img src={`${process.env.REACT_APP_STORAGE_BUCKET_URL}/${process.env.REACT_APP_STORAGE_BUCKET_NAME}/${imageUrl}`} className="card-img-top" alt="post-flyer" />
             )}
 
             <div className="card-body">
@@ -155,7 +166,7 @@ const Card: React.FC<ICard> = ({
               <div className="row">
                 <h5 className="card-title">{title}</h5>
                 {description && (
-                  <p className="card-description">{description}</p>
+                  <p className="card-description">{convertToPlain(description)}</p>
                 )}
               </div>
 
