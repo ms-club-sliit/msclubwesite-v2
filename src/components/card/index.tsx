@@ -25,7 +25,7 @@ const Card: React.FC<ICard> = ({
   icon,
 }) => (
 
-  
+
   <div className="card-height">
     <div className="cell">
       <div className="card card-block mb-3">
@@ -94,7 +94,7 @@ const Card: React.FC<ICard> = ({
         {type === "EVENT" ? (
           <div className="card-event">
             {imageUrl && (
-              <img src={imageUrl} className="card-img-top" alt="post-flyer" />
+              <img src={`${process.env.REACT_APP_STORAGE_BUCKET_URL}/${process.env.REACT_APP_STORAGE_BUCKET_NAME}/${imageUrl}`} className="card-img-top" alt="post-flyer" />
             )}
 
             <div className="card-body">
@@ -112,7 +112,7 @@ const Card: React.FC<ICard> = ({
               <div className="row">
                 <h5 className="card-title">{title}</h5>
                 {description && (
-                  <p className="card-description">{description}</p>
+                  <p className="card-description">{convertToPlain(description)}</p>
                 )}
               </div>
 
