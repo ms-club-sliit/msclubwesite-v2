@@ -11,7 +11,6 @@ const convertToPlain = (html: string) => {
   return reactElement;
 };
 
-
 const Card: React.FC<ICard> = ({
   title,
   type,

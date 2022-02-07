@@ -2,7 +2,7 @@ import React from 'react';
 import {translation} from '../../locales/en-US/translation.json';
 
 const Footer: React.FC = () => (
-  <footer className="footer-section">
+  <footer className="footer-section mt-3">
     <div className="footer-container">
       <div className="footer-content pt-5 pb-5">
         <div className="row">
