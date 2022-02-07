@@ -4,7 +4,7 @@ import ScrollToTop from "react-scroll-to-top";
 
 const Boards: React.FC = () => (
   <div className="container">
-    <ScrollToTop smooth style={{marginBottom:60}}/>
+    <ScrollToTop smooth style={{marginBottom:60,right:35}}/>
     <BoardByYear/>
   </div>
 );
