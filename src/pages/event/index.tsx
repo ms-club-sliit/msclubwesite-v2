@@ -5,7 +5,7 @@ import ScrollToTop from "react-scroll-to-top";
 
 const Events: React.FC = () => (
   <div>
-    <ScrollToTop smooth />
+    <ScrollToTop smooth style={{marginBottom:60}}/>
     <HeroSection />
     <EventList />
   </div>

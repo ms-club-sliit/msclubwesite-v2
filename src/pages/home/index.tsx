@@ -8,7 +8,7 @@ import ScrollToTop from "react-scroll-to-top";
 
 const Home: React.FC = () => (
   <div>
-    <ScrollToTop smooth />
+    <ScrollToTop smooth style={{marginBottom:60}}/>
     <HeroSection />
     <WhatWeDoSection />
     <BlogsSection />
