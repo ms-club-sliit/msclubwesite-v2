@@ -1,9 +1,10 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Slider from "react-owl-carousel";
-import events from '../../data/PastEventData.json';
+import { getEvents } from '../../api/EventAction';
+import { IEvent } from '../../interfaces/EventInterface';
 import { CARD_TYPE_EVENT, SLIDER_RESPONSIVE_BREAKPOINTS } from '../../constants';
 import { Card } from '../../components';
-import {translation} from '../../locales/en-US/translation.json';
+import { translation } from '../../locales/en-US/translation.json';
 
 const PastEvents: React.FC = () => {
   let slider: any;
@@ -32,6 +33,23 @@ const PastEvents: React.FC = () => {
       slidePrev();
     }
   }
+
+  const [eventList, setEventList] = useState<IEvent[]>();
+
+  //fetch all event 
+  useEffect(() => {
+    getEvents()
+      .then((response) => {
+        if (response.data) {
+          setEventList(response.data)
+          //console.log(response.data)
+        }
+      })
+      .catch((error) => {
+        console.log(error.message);
+      });
+  }, []);
+
   return (
     <div className="container mt-3">
       <h2 className="item-header">{translation.label["event-past-events-title"]}</h2>
@@ -57,33 +75,33 @@ const PastEvents: React.FC = () => {
         </div>
       </div>
 
-      {events && events.data.length > 0 && 
-      (
-        <Slider
-          className="owl-theme"
-          dots={false}
-          loop={true}
-          margin={70}
-          responsive={SLIDER_RESPONSIVE_BREAKPOINTS}
-          ref={(slide) => {
-            slider = slide;
-          }}
-        >
-          {events.data.map((event, index) => (
-            <Card 
-              key={index}
-              id={event.id}
-              title={event.title}
-              dateTime={event.dateTime}
-              description={event.description}
-              imageUrl={event.imageUrl}
-              link={event.link}
-              tags={event.tags}
-              type={CARD_TYPE_EVENT}
-            />
-          ))}
-        </Slider>
-      )}
+      {eventList && eventList.length > 0 &&
+        (
+          <Slider
+            className="owl-theme"
+            dots={false}
+            loop={true}
+            margin={70}
+            responsive={SLIDER_RESPONSIVE_BREAKPOINTS}
+            ref={(slide) => {
+              slider = slide;
+            }}
+          >
+            {eventList.map((event, index) => (
+              <Card
+                key={index}
+                id={index}
+                title={event.title}
+                dateTime={event.dateTime.toString()}
+                description={event.description}
+                imageUrl={event.imageUrl}
+                link={event.link}
+                tags={event.tags}
+                type={CARD_TYPE_EVENT}
+              />
+            ))}
+          </Slider>
+        )}
     </div>
   );
 };
