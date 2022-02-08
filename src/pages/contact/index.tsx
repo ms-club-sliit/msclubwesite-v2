@@ -5,7 +5,7 @@ import ScrollToTop from "react-scroll-to-top";
 
 const Contact: React.FC = () => (
   <div className="container">
-    <ScrollToTop smooth style={{marginBottom:60,right:35}}/>
+    <ScrollToTop smooth className="scroll-to-top"/>
     <HeroSection />
     <ContactFormSection />
   </div>
