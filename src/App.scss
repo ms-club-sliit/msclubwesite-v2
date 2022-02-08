@@ -46,7 +46,7 @@ ul {
 
 .text-danger {
   font-size: 16px;
-  font-family: 'Product Sans Medium';
+  font-family: "Product Sans Medium";
 }
 
 .container {
@@ -54,23 +54,23 @@ ul {
     max-width: 100vw;
   }
 
-  @include media(">=phone", '<tablet') {
+  @include media(">=phone", "<tablet") {
     max-width: 98vw;
   }
 
-  @include media('>=tablet', '<smalldesktop') {
+  @include media(">=tablet", "<smalldesktop") {
     max-width: 98vw;
   }
 
-  @include media('>=smalldesktop', '<desktop') {
+  @include media(">=smalldesktop", "<desktop") {
     max-width: 98vw;
   }
 
-  @include media(">=desktop", '<largedesktop') {
+  @include media(">=desktop", "<largedesktop") {
     max-width: 98vw;
   }
 
-  @include media('>=largedesktop') {
+  @include media(">=largedesktop") {
     max-width: 75vw;
   }
 }
@@ -80,7 +80,7 @@ ul {
   left: 0px;
   top: 0px;
   position: absolute;
-  content: '';
+  content: "";
   z-index: -1;
   background: $hero-section-background-light;
 
@@ -89,27 +89,27 @@ ul {
     clip-path: polygon(0 0, 100% 0%, 100% 90%, 0 100%);
   }
 
-  @include media(">=phone", '<tablet') {
+  @include media(">=phone", "<tablet") {
     height: 560px;
     clip-path: polygon(0 0, 100% 0%, 100% 85%, 0 100%);
   }
 
-  @include media('>=tablet', '<smalldesktop') {
+  @include media(">=tablet", "<smalldesktop") {
     height: 500px;
     clip-path: polygon(0 0, 100% 0%, 100% 85%, 0 100%);
   }
 
-  @include media('>=smalldesktop', '<desktop') {
+  @include media(">=smalldesktop", "<desktop") {
     height: 480px;
     clip-path: polygon(0 0, 100% 0%, 100% 85%, 0 100%);
   }
 
-  @include media(">=desktop", '<largedesktop') {
+  @include media(">=desktop", "<largedesktop") {
     height: 480px;
     clip-path: polygon(0 0, 100% 0%, 100% 85%, 0 100%);
   }
 
-  @include media('>=largedesktop') {
+  @include media(">=largedesktop") {
     height: 550px;
     clip-path: polygon(0 0, 100% 0%, 100% 70%, 0 100%);
   }
@@ -121,10 +121,17 @@ ul {
 }
 
 .fa-instagram {
-  background-image: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 
+  background-image: linear-gradient(
+    45deg,
+    #f09433 0%,
+    #e6683c 25%,
+    #dc2743 50%,
+    #cc2366 75%,
+    #bc1888 100%
+  );
   background-size: 100%;
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent; 
+  -webkit-text-fill-color: transparent;
   -moz-background-clip: text;
   -moz-text-fill-color: transparent;
 }
@@ -148,4 +155,24 @@ ul {
   border-color: $card-btn-background-active;
   outline: 0;
   box-shadow: 0 0 0 0rem rgba(0, 123, 255, 0.25);
+}
+
+.scroll-to-top {
+  background-color: white;
+  right: 35px;
+  bottom: 100px;
+  position: fixed;
+  z-index: 2;
+  cursor: pointer;
+  border-radius: 7px;
+  width: 40px;
+  height: 40px;
+  transition: opacity 1s ease-in-out;
+  box-shadow: 0 9px 25px 0 rgba(132, 128, 177, 0.28);
+  border: none;
+  outline: none;
+}
+
+.scroll-to-top:active {
+  transform: matrix(0.95, 0, 0, 0.95, 0, 0);
 }

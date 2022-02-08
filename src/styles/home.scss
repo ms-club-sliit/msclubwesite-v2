@@ -4,7 +4,7 @@
   Search Keywords - Home Page
   Header - "Home header"
   Who We Are - "Who We Are"
-*/ 
+*/
 
 .item-header {
   font-family: "Product Sans Medium";
@@ -41,7 +41,8 @@
   color: $color-white;
 }
 
-.home-primary-btn:focus, .home-primary-btn:active {
+.home-primary-btn:focus,
+.home-primary-btn:active {
   background: $primary-color-active;
   color: $color-white;
   outline: none !important;
@@ -55,23 +56,23 @@
     font-size: 50px;
   }
 
-  @include media(">=phone", '<tablet') {
+  @include media(">=phone", "<tablet") {
     font-size: 55px;
   }
 
-  @include media('>=tablet', '<smalldesktop') {
+  @include media(">=tablet", "<smalldesktop") {
     font-size: 55px;
   }
 
-  @include media('>=smalldesktop', '<desktop') {
+  @include media(">=smalldesktop", "<desktop") {
     font-size: 70px;
   }
 
-  @include media(">=desktop", '<largedesktop') {
+  @include media(">=desktop", "<largedesktop") {
     font-size: 70px;
   }
 
-  @include media('>=largedesktop') {
+  @include media(">=largedesktop") {
     font-size: 80px;
   }
 }
@@ -81,23 +82,23 @@
     font-size: 18px;
   }
 
-  @include media(">=phone", '<tablet') {
+  @include media(">=phone", "<tablet") {
     font-size: 18px;
   }
 
-  @include media('>=tablet', '<smalldesktop') {
+  @include media(">=tablet", "<smalldesktop") {
     font-size: 18px;
   }
 
-  @include media('>=smalldesktop', '<desktop') {
+  @include media(">=smalldesktop", "<desktop") {
     font-size: 18px;
   }
 
-  @include media(">=desktop", '<largedesktop') {
+  @include media(">=desktop", "<largedesktop") {
     font-size: 20px;
   }
 
-  @include media('>=largedesktop') {
+  @include media(">=largedesktop") {
     font-size: 24px;
   }
 }
@@ -109,26 +110,26 @@
   visibility: visible;
 
   @include media("<=phone") {
-    width: 80%
+    width: 80%;
   }
 
-  @include media(">=phone", '<tablet') {
+  @include media(">=phone", "<tablet") {
     width: 400px;
   }
 
-  @include media('>=tablet', '<smalldesktop') {
+  @include media(">=tablet", "<smalldesktop") {
     width: 350px;
   }
 
-  @include media('>=smalldesktop', '<desktop') {
+  @include media(">=smalldesktop", "<desktop") {
     width: 400px;
   }
 
-  @include media(">=desktop", '<largedesktop') {
+  @include media(">=desktop", "<largedesktop") {
     width: 450px;
   }
 
-  @include media('>=largedesktop') {
+  @include media(">=largedesktop") {
     width: 520px;
   }
 }
@@ -139,7 +140,7 @@
   }
 }
 
-.home-who-are-section-image{
+.home-who-are-section-image {
   @include media("<=phone") {
     display: none;
   }
@@ -164,24 +165,24 @@
     @include media("<=phone") {
       font-size: 18px;
     }
-  
-    @include media(">=phone", '<tablet') {
+
+    @include media(">=phone", "<tablet") {
       font-size: 18px;
     }
-  
-    @include media('>=tablet', '<smalldesktop') {
+
+    @include media(">=tablet", "<smalldesktop") {
       font-size: 18px;
     }
-  
-    @include media('>=smalldesktop', '<desktop') {
+
+    @include media(">=smalldesktop", "<desktop") {
       font-size: 18px;
     }
-  
-    @include media(">=desktop", '<largedesktop') {
+
+    @include media(">=desktop", "<largedesktop") {
       font-size: 20px;
     }
-  
-    @include media('>=largedesktop') {
+
+    @include media(">=largedesktop") {
       font-size: 22px;
     }
   }
@@ -191,23 +192,23 @@
       width: 80%;
     }
 
-    @include media(">=phone", '<tablet') {
+    @include media(">=phone", "<tablet") {
       width: 300px;
     }
 
-    @include media('>=tablet', '<smalldesktop') {
+    @include media(">=tablet", "<smalldesktop") {
       width: 320px;
     }
 
-    @include media('>=smalldesktop', '<desktop') {
+    @include media(">=smalldesktop", "<desktop") {
       width: 330px;
     }
 
-    @include media(">=desktop", '<largedesktop') {
+    @include media(">=desktop", "<largedesktop") {
       width: 400px;
     }
 
-    @include media('>=largedesktop') {
+    @include media(">=largedesktop") {
       width: 400px;
     }
   }

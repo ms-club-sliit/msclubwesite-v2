@@ -5,7 +5,7 @@ import ScrollToTop from "react-scroll-to-top";
 
 const JoinUs: React.FC = () => (
   <div className="container">
-    <ScrollToTop smooth  style={{marginBottom:60}}/>
+    <ScrollToTop smooth className="scroll-to-top"/>
     <HeroSection />
     <JoinUsFormSection />
   </div>
