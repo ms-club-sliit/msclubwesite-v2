@@ -30,6 +30,8 @@ jobs:
       - name: yarn build
         env: 
           REACT_APP_BACKEND_URL: ${{ secrets.REACT_APP_BACKEND_URL }}
+          REACT_APP_STORAGE_BUCKET_URL: ${{ secrets.REACT_APP_STORAGE_BUCKET_URL }}
+          REACT_APP_STORAGE_BUCKET_NAME: ${{ secrets.REACT_APP_STORAGE_BUCKET_NAME }}
         run: yarn build
       - name: Upload a Build Artifact
         uses: actions/upload-artifact@v2.3.0
