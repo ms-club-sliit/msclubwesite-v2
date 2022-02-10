@@ -5,7 +5,7 @@ import ScrollToTop from "react-scroll-to-top";
 
 const Blogs: React.FC = () => (
   <div className="container">
-      <ScrollToTop smooth />
+      <ScrollToTop smooth className="scroll-to-top"/>
       <HeroSection/>
       <BlogList/>
   </div>
