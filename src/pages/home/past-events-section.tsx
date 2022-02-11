@@ -49,7 +49,7 @@ const PastEventSection: React.FC = () => {
       .catch((error) => {
         console.log(error.message);
       });
-  }, []);
+  });
   return (
     <div className="container">
       <h2 className="item-header">
