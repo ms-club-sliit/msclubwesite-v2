@@ -21,4 +21,4 @@ interface socialMediaURLs {
 };
 
 
-export type { ICard };
+export type { ICard, socialMediaURLs };

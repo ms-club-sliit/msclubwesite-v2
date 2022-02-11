@@ -1,6 +1,9 @@
 export const GET_BLOGS_URL = 'https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/ms-club-of-sliit';
 export const SEND_MESSAGE_URL = `${process.env.REACT_APP_BACKEND_URL}/contact/`;
 export const SUBMIT_APPLICATION_URL = `${process.env.REACT_APP_BACKEND_URL}/application/`;
+export const GET_WEBINAR_URL = `${process.env.REACT_APP_BACKEND_URL}/webinar`;
+export const GET_EVENT_URL = `${process.env.REACT_APP_BACKEND_URL}/event/`;
+export const TOP_SPEAKER_URL = `${process.env.REACT_APP_BACKEND_URL}/topspeaker/`;
 export const CARD_TYPE_BLOG = 'BLOG';
 export const CARD_TYPE_SPEAKER = 'SPEAKER';
 export const CARD_TYPE_EVENT = 'EVENT';
