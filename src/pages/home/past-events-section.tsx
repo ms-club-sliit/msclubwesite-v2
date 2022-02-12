@@ -1,6 +1,8 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Slider from "react-owl-carousel";
-import events from "../../data/PastEventData.json";
+import { getPastEvents } from "../../api/EventAction";
+import { IEvent } from "../../interfaces/EventInterface";
+import { ToastContainer, toast } from "react-toastify";
 import {
   CARD_TYPE_EVENT,
   SLIDER_RESPONSIVE_BREAKPOINTS,
@@ -35,12 +37,61 @@ const PastEventSection: React.FC = () => {
       slidePrev();
     }
   };
+
+  const [eventList, setEventList] = useState<IEvent[]>();
+  //fetch all pastevent
+  useEffect(() => {
+    getPastEvents()
+      .then((response) => {
+        if (response.data) {
+          setEventList(response.data);
+        }
+      })
+      .catch((error) => {
+        toastNotification("Something went wrong", "error");
+      });
+  });
+
+  const toastNotification = (message: string, status: string) => {
+    if (status === "success") {
+      toast.success(message, {
+        position: "top-right",
+        autoClose: 4000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+      });
+    } else if (status === "error") {
+      toast.error(message, {
+        position: "top-right",
+        autoClose: 4000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+      });
+    } else {
+      toast.info(message, {
+        position: "top-right",
+        autoClose: 4000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+      });
+    }
+  };
   return (
     <div className="container">
+      <ToastContainer />
       <h2 className="item-header">
         {translation.label["home-past-events-title"]}
       </h2>
-      {events && events.data.length > 0 ? (
+      {eventList && eventList.length > 0 ? (
         <>
           <div className="item-navigation">
             <div className="view-more-text">
@@ -75,12 +126,12 @@ const PastEventSection: React.FC = () => {
               slider = slide;
             }}
           >
-            {events.data.map((event, index) => (
+            {eventList.map((event, index) => (
               <Card
                 key={index}
-                id={event.id}
+                id={index}
                 title={event.title}
-                dateTime={event.dateTime}
+                dateTime={event.dateTime.toString()}
                 description={event.description}
                 imageUrl={event.imageUrl}
                 link={event.link}

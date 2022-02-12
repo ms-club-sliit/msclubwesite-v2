@@ -1,13 +1,15 @@
-export const GET_BLOGS_URL = 'https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/ms-club-of-sliit';
+export const GET_BLOGS_URL =
+  "https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/ms-club-of-sliit";
 export const SEND_MESSAGE_URL = `${process.env.REACT_APP_BACKEND_URL}/contact/`;
 export const SUBMIT_APPLICATION_URL = `${process.env.REACT_APP_BACKEND_URL}/application/`;
 export const GET_WEBINAR_URL = `${process.env.REACT_APP_BACKEND_URL}/webinar`;
 export const GET_EVENT_URL = `${process.env.REACT_APP_BACKEND_URL}/event/`;
+export const GET_PASTEVENT_URL = `${process.env.REACT_APP_BACKEND_URL}/pastevent`;
 export const TOP_SPEAKER_URL = `${process.env.REACT_APP_BACKEND_URL}/topspeaker/`;
-export const CARD_TYPE_BLOG = 'BLOG';
-export const CARD_TYPE_SPEAKER = 'SPEAKER';
-export const CARD_TYPE_EVENT = 'EVENT';
-export const CARD_TYPE_WEBINA = 'WEBINA';
+export const CARD_TYPE_BLOG = "BLOG";
+export const CARD_TYPE_SPEAKER = "SPEAKER";
+export const CARD_TYPE_EVENT = "EVENT";
+export const CARD_TYPE_WEBINA = "WEBINA";
 export const SLIDER_RESPONSIVE_BREAKPOINTS = {
   0: {
     items: 1,
@@ -39,4 +41,4 @@ export const SLIDER_RESPONSIVE_BREAKPOINTS = {
   2000: {
     items: 5,
   },
-}
+};
