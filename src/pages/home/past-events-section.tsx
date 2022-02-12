@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Slider from "react-owl-carousel";
-import { getPastEvents } from "../../api/PastEventAction";
+import { getPastEvents } from "../../api/EventAction";
 import { IEvent } from "../../interfaces/EventInterface";
 import {
   CARD_TYPE_EVENT,
@@ -44,11 +44,10 @@ const PastEventSection: React.FC = () => {
       .then((response) => {
         if (response.data) {
           setEventList(response.data);
+          console.log(response.data);
         }
       })
-      .catch((error) => {
-        console.log(error.message);
-      });
+      .catch((error) => {});
   });
   return (
     <div className="container">
