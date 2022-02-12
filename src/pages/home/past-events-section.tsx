@@ -44,7 +44,6 @@ const PastEventSection: React.FC = () => {
       .then((response) => {
         if (response.data) {
           setEventList(response.data);
-          console.log(response.data);
         }
       })
       .catch((error) => {});
