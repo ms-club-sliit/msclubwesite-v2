@@ -1,11 +1,12 @@
-import React from "react";
+import React ,{useEffect, useState } from "react";
 import Slider from "react-owl-carousel";
 import {
   CARD_TYPE_WEBINA,
   SLIDER_RESPONSIVE_BREAKPOINTS,
 } from "../../constants";
 import { Card, NoContent } from "../../components";
-import webinars from "../../data/PastWebinarsData.json";
+import {getPastWebinars} from "../../api/WebinarAction";
+import {IWebinar} from "../../interfaces/WebinarInterface";
 import { translation } from "../../locales/en-US/translation.json";
 
 const PastWebinarSection: React.FC = () => {
@@ -35,12 +36,28 @@ const PastWebinarSection: React.FC = () => {
       slidePrev();
     }
   };
+
+  const [webinars, setwebinars] = useState<IWebinar[]>();
+  //fetch all pastwebinars
+  useEffect(() => {
+    getPastWebinars()
+      .then((response) => {
+        if (response.data) {
+          setwebinars(response.data);
+        }
+      })
+      .catch((error) => {
+        console.log(error.message);
+      });
+  } , []);
+
+  
   return (
     <div className="container">
       <h2 className="item-header">
         {translation.label["home-past-webinars-title"]}
       </h2>
-      {webinars && webinars.data.length > 0 ? (
+      {webinars && webinars.length > 0 ? (
         <>
           <div className="item-navigation">
             <div className="view-more-text">
@@ -75,12 +92,12 @@ const PastWebinarSection: React.FC = () => {
               slider = slide;
             }}
           >
-            {webinars.data.map((event, index) => (
+            {webinars.map((event, index) => (
               <Card
                 key={index}
-                id={event.id}
+                id={index}
                 title={event.title}
-                dateTime={event.dateTime}
+                dateTime={event.dateTime.toString()}
                 description={event.description}
                 imageUrl={event.imageUrl}
                 link={event.link}
