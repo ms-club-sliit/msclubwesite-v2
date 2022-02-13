@@ -3,6 +3,7 @@ export const GET_BLOGS_URL =
 export const SEND_MESSAGE_URL = `${process.env.REACT_APP_BACKEND_URL}/contact/`;
 export const SUBMIT_APPLICATION_URL = `${process.env.REACT_APP_BACKEND_URL}/application/`;
 export const GET_WEBINAR_URL = `${process.env.REACT_APP_BACKEND_URL}/webinar`;
+export const GET_PASTWEBINAR_URL = `${process.env.REACT_APP_BACKEND_URL}/pastwebinar/`;
 export const GET_EVENT_URL = `${process.env.REACT_APP_BACKEND_URL}/event/`;
 export const GET_PASTEVENT_URL = `${process.env.REACT_APP_BACKEND_URL}/pastevent`;
 export const TOP_SPEAKER_URL = `${process.env.REACT_APP_BACKEND_URL}/topspeaker/`;
