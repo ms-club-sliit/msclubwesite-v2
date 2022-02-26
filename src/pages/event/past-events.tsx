@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Slider from "react-owl-carousel";
-import { getEvents } from "../../api/EventAction";
+import { getPastEvents } from "../../api/EventAction";
 import { IEvent } from "../../interfaces/EventInterface";
 import {
   CARD_TYPE_EVENT,
@@ -37,14 +37,14 @@ const PastEvents: React.FC = () => {
     }
   };
 
-  const [eventList, setEventList] = useState<IEvent[]>();
+  const [pastEventList, setPastEventList] = useState<IEvent[]>();
 
-  //fetch all event
+  //fetch all past events
   useEffect(() => {
-    getEvents()
+    getPastEvents()
       .then((response) => {
         if (response.data) {
-          setEventList(response.data);
+          setPastEventList(response.data);
         }
       })
       .catch((error) => {
@@ -58,7 +58,7 @@ const PastEvents: React.FC = () => {
         {translation.label["event-past-events-title"]}
       </h2>
 
-      {eventList && eventList.length > 0 ? (
+      {pastEventList && pastEventList.length > 0 ? (
         <>
           <div className="item-navigation">
             <div className="view-more-text">
@@ -93,7 +93,7 @@ const PastEvents: React.FC = () => {
               slider = slide;
             }}
           >
-            {eventList.map((event, index) => (
+            {pastEventList.map((event, index) => (
               <Card
                 key={index}
                 id={index}
