@@ -15,6 +15,8 @@ const options = [
   { value: "Web Development", label: "Web Development" },
   { value: "UI/UX", label: "UI/UX" },
   { value: "Community building", label: "Community building" },
+  { value: "Process automation", label: "Process automation" },
+  { value: "Python Application Development", label: "Python Application Development" },
 ];
 
 const webUrlRegEx = RegExp(
