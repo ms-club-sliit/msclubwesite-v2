@@ -9,13 +9,13 @@ This folder contain the static files.
 | :page_facing_up: index.html | Root html file of the application |
 | :page_facing_up: favicon.ico | MS Club logo icon for browser tab image |
 | :file_folder: assets | Contains all the static images and icons for the application |
-> When you want to add images to the application, please add those imagest to the `/assets/` :file_folder:. To import the images, please use following format. Do not import images as file into the React components.
+> When you want to add images to the application, please add those images to the `/assets/` :file_folder:. To import the images, please use the following format. Do not import images as file into the React components.
 
 E.g.: Import MS Club logo to the image tag. \
 `<img src="/assets/ms-club-logo.png" alt="logo" />`
 
 ### :open_file_folder: `src` 
-This folder contain all the React components and pages that are renderd to the browser. The `src` :open_file_folder: include, \
+This folder contains all the React components and pages that are rendered to the browser. The `src` :open_file_folder: include, \
 | File/Folder Name | Description |
 | ---------------- | ----------- |
 | :file_folder: **api** | Implement all the API calling in this folder |
@@ -34,7 +34,7 @@ This folder contain all the React components and pages that are renderd to the b
 
 ## IMPORTANT NOTES :pencil2:
 ### Install Dependencies
-Please you `yarn` to install the dependencies to the application. <br>
+Please use `yarn` to install the dependencies to the application. <br>
 Example: *Install `axios` to the application.*
 ```
 $ yarn add axios
@@ -45,15 +45,15 @@ $ yarn install
 ```
 
 ### Start the Application
-Use following command to start the application. 
+Use the following command to start the application. 
 ``` 
 $ yarn start 
 ```
 
 ### Implement UI Components
-When you start implement a UI component, create a folder by using the name of the component. Then create an `index.tsx` :page_facing_up: to implement the UI logic. 
+When you start implementing a UI component, create a folder by using the name of the component. Then create an `index.tsx` :page_facing_up: to implement the UI logic. 
 Please go through the following example. 
-> Implement a `card` component. (This example already there in the codebase. Please take a :eyes:). The same steps are applied to the `pages` implementation.
+> Implement a `card` component. (This example is already there in the codebase. Please take a :eyes:). The same steps are applied to the `pages` implementation.
 1. Create a folder called `card` inside the `components` :open_file_folder:
 2. Create an `index.tsx` file inside the `card` folder.
 3. Implement your UI.
@@ -67,8 +67,8 @@ For the styling, this project use **SCSS (Sassy Cascading Styling Sheets)**. <br
 #### Declaring Colors
 When you are going to apply some colors to the UI component, make sure the color that you are 
 importing is already available in the `colors.scss` file. If it is available, please use that 
-color variable. Do not declare seperate variable names for same color.<br>
-:pencil2: *you can declare different name for same color only if it a necessary situation*
+color variable. Do not declare seperate variable names for the same color.<br>
+:pencil2: *you can declare different names for the same color only if it is a necessary situation*
 #### Responsive Breakpoints
 In this application, we use small `scss` library to implement responsive breakpoints.<br>
 :file_folder: `styles` &rarr; :page_facing_up: `breakpoint.scss` <br>
