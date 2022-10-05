@@ -21,18 +21,23 @@ const BoardMemberCard: React.FC<IBoardMemberDetails> = ({
     let image = profile_image.current;
     if(image){
       let loaded = image.complete && image.naturalHeight !== 0;
+
       setShowProfileImage(loaded);
-    
+      image.style.opacity = loaded ? "1" : "0";
+
       image.onload = () => {
         setShowProfileImage(true);
+        setTimeout(() => {
+          if(image) image.style.opacity = "1";
+        }, 100)
       }
     }
   }, [image]);
 
   return (
     <div className="card board-member">
-      <img ref={profile_image} src={image} className={`profile-picture ${showProfileImage ? "" : "d-none"}`} alt="member-profile" />
-      <div className={`profile-picture animated-background-profile ${!showProfileImage ? "" : "d-none"}`} style={{ backgroundColor: "#fff"}} />
+      <img ref={profile_image} src={image} className={`profile-picture transition-opacity-smooth ${showProfileImage ? "" : "d-none"}`} alt="member-profile" />
+      <div className={`profile-picture animated-background-profile ${!showProfileImage ? "" : "d-none"}`} />
 
       <div className="card-body">
         <div className="row">

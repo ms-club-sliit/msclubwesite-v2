@@ -300,3 +300,7 @@
   background-size: 800px 104px;
   position: relative;
 }
+
+.transition-opacity-smooth {
+  transition: opacity .5s ease-out;
+}
