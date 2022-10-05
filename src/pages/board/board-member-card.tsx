@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { IBoardMemberDetails } from "../../interfaces/BoardInterface";
 
 const BoardMemberCard: React.FC<IBoardMemberDetails> = ({
@@ -14,9 +14,25 @@ const BoardMemberCard: React.FC<IBoardMemberDetails> = ({
     }
   }
   
+  const profile_image = useRef<HTMLImageElement>(null);
+  const [showProfileImage, setShowProfileImage] = useState(false);
+
+  useEffect(() => {
+    let image = profile_image.current;
+    if(image){
+      let loaded = image.complete && image.naturalHeight !== 0;
+      setShowProfileImage(loaded);
+    
+      image.onload = () => {
+        setShowProfileImage(true);
+      }
+    }
+  }, [image]);
+
   return (
     <div className="card board-member">
-      {image && <img src={image} className="profile-picture" alt="mamber-profile" />}
+      <img ref={profile_image} src={image} className={`profile-picture ${showProfileImage ? "" : "d-none"}`} alt="member-profile" />
+      <div className={`profile-picture animated-background-profile ${!showProfileImage ? "" : "d-none"}`} style={{ backgroundColor: "#fff"}} />
 
       <div className="card-body">
         <div className="row">
