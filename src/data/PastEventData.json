@@ -30,6 +30,38 @@
       "registrationLink": "",
       "eventType": "",
       "imageUrl": "/assets/events/pastevents/cloudSkills.svg"
+    },
+    {
+      "_id": "3",
+      "title": "App in A Day",
+      "description": "Learn how to create and deploy your own web application within a day",
+      "dateTime": "2020-03-06T09:00:00",
+      "tags": [
+        "azure",
+        "nodejs",
+        "vscode",
+        "growtogether"
+      ],
+      "link": "https://www.facebook.com/events/232511521122355/?acontext=%7B%22event_action_history%22%3A[%7B%22surface%22%3A%22page%22%7D]%7D",
+      "registrationLink": "",
+      "eventType": "",
+      "imageUrl": "/assets/events/pastevents/appinaday.svg"
+    },
+    {
+      "_id": "4",
+      "title": "Imagine Cup Awareness Session",
+      "description": "Learn how to create and deploy your own web application within a day",
+      "dateTime": "2021-10-13T09:00:00",
+      "tags": [
+        "azure",
+        "nodejs",
+        "vscode",
+        "growtogether"
+      ],
+      "link": "https://www.facebook.com/msclubsliit/photos/gm.1075108129927807/2938437789613785/",
+      "registrationLink": "",
+      "eventType": "Online event",
+      "imageUrl": "https://www.facebook.com/msclubsliit/photos/gm.1075108129927807/2938437789613785/"
     }
   ]
 }
