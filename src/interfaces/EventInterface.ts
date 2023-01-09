@@ -2,7 +2,7 @@ interface IEvent {
     _id?: string;
     title: string;
     description: string;
-    dateTime: Date;
+    dateTime: any;
     tags?: string[];
     link?: string;
     registrationLink: string;
