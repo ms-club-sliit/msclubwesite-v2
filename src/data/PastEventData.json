@@ -15,6 +15,21 @@
       "registrationLink": "",
       "eventType": "Physical",
       "imageUrl": "/assets/events/pastevents/MinHackathon.svg"
+    },
+    {
+      "_id": "2",
+      "title": "Cloud Skills Challenge",
+      "description": "A self-paced competition to complete modules through the Microsoft Learn Platform",
+      "dateTime": "2021-01-10T18:00:00",
+      "tags": [
+        "csc21",
+        "azure",
+        "microsoftLearn"
+      ],
+      "link": "https://www.facebook.com/msclubsliit/photos/2225046060952965",
+      "registrationLink": "",
+      "eventType": "",
+      "imageUrl": "/assets/events/pastevents/cloudSkills.svg"
     }
   ]
 }
