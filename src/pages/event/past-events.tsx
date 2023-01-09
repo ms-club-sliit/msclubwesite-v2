@@ -4,6 +4,7 @@ import {IEvent} from "../../interfaces/EventInterface";
 import {CARD_TYPE_EVENT, SLIDER_RESPONSIVE_BREAKPOINTS,} from "../../constants";
 import {Card, NoContent} from "../../components";
 import {translation} from "../../locales/en-US/translation.json";
+import {EventData} from '../../data/PastEventData.json';
 
 const PastEvents: React.FC = () => {
     let slider: any;
@@ -48,6 +49,8 @@ const PastEvents: React.FC = () => {
         //         console.log(error.message);
         //
         //     });
+
+        setPastEventList(EventData);
     }, []);
 
     return (
