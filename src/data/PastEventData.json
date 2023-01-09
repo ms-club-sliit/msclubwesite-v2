@@ -1,46 +1,20 @@
 {
-  "data": [
+  "EventData": [
     {
-      "id": 1,
-      "imageUrl": "/assets/events/pastevents/MinHackathon.svg",
-      "time": "7.30 PM",
-      "dateTime": "2021-04-23T19:30:00",
+      "_id": "1",
       "title": "MINI-HACKATHON 4.0",
       "description": "Are you struggling to comprehend the WHATs, WHYs, and HOWs of Mini Hackathon 4.0?",
+      "dateTime": "2021-04-23T19:30:00",
       "tags": [
         "msclubofsliit",
         "fcsc",
         "growtogether",
         "minihackathon"
       ],
-      "link": "https://ms-club-sliit.github.io/minihackathon/"
-    },
-    {
-      "id": 2,
-      "imageUrl": "/assets/events/pastevents/cloudSkills.svg",
-      "dateTime": "2021-01-10T18:00:00",
-      "title": "Cloud Skills Challenge",
-      "description": "A self-paced competition to complete modules through the Microsoft Learn Platform",
-      "tags": [
-        "csc21",
-        "azure",
-        "microsoftLearn"
-      ],
-      "link": "https://www.facebook.com/msclubsliit/photos/2225046060952965"
-    },
-    {
-      "id": 3,
-      "imageUrl": "/assets/events/pastevents/appinaday.svg",
-      "dateTime": "2020-03-06T09:00:00",
-      "title": "App in A Day",
-      "description": "Learn how to create and deploy your own web application within a day",
-      "tags": [
-        "azure",
-        "nodejs",
-        "vscode",
-        "growtogether"
-      ],
-      "link": "https://www.facebook.com/events/232511521122355/?acontext=%7B%22event_action_history%22%3A[%7B%22surface%22%3A%22page%22%7D]%7D"
+      "link": "https://ms-club-sliit.github.io/minihackathon/",
+      "registrationLink": "",
+      "eventType": "Physical",
+      "imageUrl": "/assets/events/pastevents/MinHackathon.svg"
     }
   ]
 }
