@@ -1,7 +1,7 @@
 {
   "projects": {
-    "default": "msclubofsliit-v2",
-    "development": "ms-club-site-dev"
+    "default": "test-885a0",
+    "development": "test-dev-10ce5"
   },
   "targets": {}
 }
