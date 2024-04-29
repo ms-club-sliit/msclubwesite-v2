@@ -1,5 +1,7 @@
 import React from 'react';
-import {translation} from '../../locales/en-US/translation.json';
+import ts from '../../locales/en-US/translation.json';
+
+let translation = ts.translation;
 
 const Footer: React.FC = () => (
   <footer className="footer-section mt-3">

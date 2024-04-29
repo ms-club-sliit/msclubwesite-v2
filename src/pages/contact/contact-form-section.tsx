@@ -4,7 +4,9 @@ import { yupResolver } from '@hookform/resolvers/yup';
 import * as Yup from 'yup';
 import { ToastContainer, toast } from "react-toastify";
 import { sendMessage } from "../../api/ContactAction";
-import {translation} from '../../locales/en-US/translation.json';
+import ts from '../../locales/en-US/translation.json';
+
+let translation = ts.translation;
 
 type IContactFormSection = {
   name: string;

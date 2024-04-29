@@ -3,7 +3,9 @@ import { Card } from "../../components";
 import { IBlog } from "../../interfaces/BlogInterface";
 import { getBlogs } from "../../api/BlogAction";
 import { CARD_TYPE_BLOG } from '../../constants';
-import {translation} from '../../locales/en-US/translation.json';
+import ts from '../../locales/en-US/translation.json';
+
+let translation = ts.translation;
 
 const BlogList: React.FC = () => {
   const [blogList, setBlogList] = useState<IBlog>();

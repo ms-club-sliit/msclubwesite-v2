@@ -2,7 +2,9 @@ import React, { useState, useEffect } from "react";
 import { IBoard, IBoardMemberDetails } from "../../interfaces/BoardInterface";
 import boardData from "../../data/BoardSectionData.json";
 import BoardMemberCard from "./board-member-card";
-import { translation } from "../../locales/en-US/translation.json";
+import ts from "../../locales/en-US/translation.json";
+
+let translation = ts.translation;
 
 const BoardByYear: React.FC = () => {
   const [id, setid] = useState<number>(0);

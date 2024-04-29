@@ -1,5 +1,7 @@
 import React from 'react';
-import {translation} from '../../locales/en-US/translation.json';
+import ts from '../../locales/en-US/translation.json';
+
+let translation = ts.translation;
 
 const HeroSection: React.FC = () => (
   <div className="container mb-5">

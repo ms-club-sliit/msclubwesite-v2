@@ -4,7 +4,9 @@ import { getBlogs } from "../../api/BlogAction";
 import Slider from "react-owl-carousel";
 import { Card } from "../../components";
 import { CARD_TYPE_BLOG, SLIDER_RESPONSIVE_BREAKPOINTS } from '../../constants';
-import {translation} from '../../locales/en-US/translation.json';
+import ts from '../../locales/en-US/translation.json';
+
+let translation = ts.translation;
 
 const BlogSection: React.FC = () => {
   let slider: any;

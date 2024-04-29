@@ -7,7 +7,9 @@ import {
 import { Card, NoContent } from "../../components";
 import {getPastWebinars} from "../../api/WebinarAction";
 import {IWebinar} from "../../interfaces/WebinarInterface";
-import { translation } from "../../locales/en-US/translation.json";
+import ts from "../../locales/en-US/translation.json";
+
+let translation = ts.translation;
 
 const PastWebinarSection: React.FC = () => {
   let slider: any;

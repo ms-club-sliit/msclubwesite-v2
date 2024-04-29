@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
-import {translation} from '../../locales/en-US/translation.json';
+import ts from '../../locales/en-US/translation.json';
+
+let translation = ts.translation;
 
 const NavBar: React.FC = () => {
   const [isNavBarScroll, setNavbarScroll] = useState<boolean>(false);

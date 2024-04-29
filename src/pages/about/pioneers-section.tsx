@@ -2,7 +2,9 @@ import React from "react";
 import OwlCarousel from 'react-owl-carousel';
 import pioneers from '../../data/PioneersData.json';
 import { SLIDER_RESPONSIVE_BREAKPOINTS } from '../../constants';
-import {translation} from '../../locales/en-US/translation.json';
+import ts from '../../locales/en-US/translation.json';
+
+let translation = ts.translation;
 
 const PioneersSection: React.FC = () => (
   <div className="pioneers">

@@ -1,9 +1,11 @@
 import React from "react";
 import moment from "moment";
 import { ICard } from "../../interfaces/CardInterface";
-import { translation } from "../../locales/en-US/translation.json";
+import ts from "../../locales/en-US/translation.json";
 
 const HtmlToReactParser = require("html-to-react").Parser;
+
+let translation = ts.translation;
 
 const convertToPlain = (html: string) => {
   const htmlToParser = new HtmlToReactParser();
