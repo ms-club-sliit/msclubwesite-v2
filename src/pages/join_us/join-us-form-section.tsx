@@ -5,7 +5,9 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import * as Yup from "yup";
 import { ToastContainer, toast } from "react-toastify";
 import { submitApplication } from "../../api/ApplicationAction";
-import {translation} from '../../locales/en-US/translation.json';
+import ts from '../../locales/en-US/translation.json';
+
+let translation = ts.translation
 
 const options = [
   { value: "Public Speaking", label: "Public Speaking" },

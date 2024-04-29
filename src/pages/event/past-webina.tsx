@@ -5,9 +5,11 @@ import {
   SLIDER_RESPONSIVE_BREAKPOINTS,
 } from "../../constants";
 import Slider from "react-owl-carousel";
-import { translation } from "../../locales/en-US/translation.json";
+import ts from "../../locales/en-US/translation.json";
 import { IWebinar } from "../../interfaces/WebinarInterface";
 import { getWebinars } from "../../api/WebinarAction";
+
+let translation = ts.translation;
 
 const PastWebinars: React.FC = () => {
   let slider: any;

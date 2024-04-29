@@ -8,7 +8,9 @@ import {
   SLIDER_RESPONSIVE_BREAKPOINTS,
 } from "../../constants";
 import { Card, NoContent } from "../../components";
-import { translation } from "../../locales/en-US/translation.json";
+import ts from "../../locales/en-US/translation.json";
+
+let translation = ts.translation;
 
 const PastEventSection: React.FC = () => {
   let slider: any;

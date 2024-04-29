@@ -1,8 +1,10 @@
 import { ContactShadows, OrbitControls } from "@react-three/drei";
-import {translation} from '../../locales/en-US/translation.json';
+import ts from '../../locales/en-US/translation.json';
 import { Canvas } from "@react-three/fiber";
 import React, { Suspense } from "react";
 import { Logo3DModel } from "../../components";
+
+let translation = ts.translation;
 
 const HeroSection: React.FC = () => (
   <div className="container mb-5">

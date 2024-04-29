@@ -2,17 +2,23 @@ import React, { useState, useEffect } from "react";
 import { IBoard, IBoardMemberDetails } from "../../interfaces/BoardInterface";
 import boardData from "../../data/BoardSectionData.json";
 import BoardMemberCard from "./board-member-card";
-import {translation} from '../../locales/en-US/translation.json';
+import ts from "../../locales/en-US/translation.json";
+
+let translation = ts.translation;
 
 const BoardByYear: React.FC = () => {
   const [id, setid] = useState<number>(0);
-  const [year, setyear] = useState<string>("2021");
+  const [year, setyear] = useState<string>("");
   const [boardList, setboardList] = useState<IBoard[]>([]);
-  const [boardMemberList, setboardMemberList] = useState<IBoardMemberDetails[]>([]);
+  const [boardMemberList, setboardMemberList] = useState<IBoardMemberDetails[]>(
+    []
+  );
 
   useEffect(() => {
+    const dateInstance = new Date();
     setboardList(boardData);
     setboardMemberList(boardData[0].board);
+    setyear((dateInstance.getFullYear() - 1).toString());
   }, []);
 
   const incrementNumber = (number: string) => {
@@ -35,18 +41,23 @@ const BoardByYear: React.FC = () => {
       <div className="hero-section-bg" />
       <div className="row">
         <span className="title">
-          {translation.label["board-board-by-year-title"]} {nextBoard.year} - {incrementNumber(nextBoard.year)}
+          {translation.label["board-board-by-year-title"]} {nextBoard.year} -{" "}
+          {incrementNumber(nextBoard.year)}
           <span className="wave-hand-emoji" />
         </span>
         <div className="row">
           {boardList.map((board) => (
-            <div className="col-lg-2 col-md-3 col-sm-6 board-col" key={board.id}>
+            <div
+              className="col-lg-2 col-md-3 col-sm-6 board-col"
+              key={board.id}
+            >
               <button
                 type="button"
                 className="button btn text-center board-button"
                 onClick={() => handleClick(board.id, board.year)}
               >
-                <span className="calendar-emoji"></span>{board.year}/{incrementNumber(board.year.slice(-2))}
+                <span className="calendar-emoji"></span>
+                {board.year}/{incrementNumber(board.year.slice(-2))}
               </button>
               &nbsp;&nbsp;&nbsp;
             </div>
@@ -55,7 +66,10 @@ const BoardByYear: React.FC = () => {
         <div className="col-md-12">
           <div className="row">
             {boardMemberList.map((member) => (
-              <div className="col d-flex justify-content-center" key={member.id}>
+              <div
+                className="col d-flex justify-content-center"
+                key={member.id}
+              >
                 <BoardMemberCard
                   id={member.id}
                   image={member.image}

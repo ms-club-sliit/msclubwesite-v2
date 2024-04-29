@@ -6,10 +6,12 @@ import {
 } from "../../constants";
 import Slider from "react-owl-carousel";
 // import speakers from '../../data/TopSpeakersData.json';
-import { translation } from "../../locales/en-US/translation.json";
+import ts from "../../locales/en-US/translation.json";
 
 import { getTopSpeakers } from "../../api/TopSpeakerAction";
 import { ITopSpeaker } from "../../interfaces/TopSpeakerInterface";
+
+let translation = ts.translation;
 
 const TopSpeakers: React.FC = () => {
   let slider: any;
