@@ -18,6 +18,7 @@
     "@types/react-router-dom": "^5.3.2",
     "@types/three": "^0.134.0",
     "axios": "^0.24.0",
+    "bootstrap-icons": "^1.11.3",
     "emailjs-com": "^3.2.0",
     "html-to-react": "^1.4.8",
     "moment": "^2.29.1",
@@ -61,5 +62,10 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "webpack": "^5.92.0",
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^5.0.4"
   }
 }
