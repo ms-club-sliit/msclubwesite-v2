@@ -1,5 +1,6 @@
 import React from 'react';
 import ts from '../../locales/en-US/translation.json';
+import 'bootstrap-icons/font/bootstrap-icons.css'; 
 
 let translation = ts.translation;
 
@@ -20,7 +21,7 @@ const Footer: React.FC = () => (
               </div>
               <div className="footer-text">
                 <p>{translation.label["footer-description"]}</p>
-                <div className="row social-media-row mb-3">
+                <div className="row social-media-row mb-2">
                   <div className="col-lg-1 col-md-1 col-sm-1 social-media-col">
                     <a href="https://www.facebook.com/msclubsliit" rel="noreferrer" target="_blank">
                       <i className="bi bi-facebook social-media-icons text-white" />
@@ -34,6 +35,11 @@ const Footer: React.FC = () => (
                   <div className="col-lg-1 col-md-1 col-sm-1 social-media-col">
                     <a href="https://www.instagram.com/msclub.sliit" rel="noreferrer" target="_blank">
                       <i className="bi bi-instagram social-media-icons text-white" />
+                    </a>
+                  </div>
+                  <div className="col-lg-1 col-md-1 col-sm-1 social-media-col">
+                    <a href="mailto:msclub.foc@sliit.lk" rel="noreferrer">
+                      <i className="bi bi-envelope-fill social-media-icons text-white" />
                     </a>
                   </div>
                 </div>
