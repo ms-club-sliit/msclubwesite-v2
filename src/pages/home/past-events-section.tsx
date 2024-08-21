@@ -52,7 +52,7 @@ const PastEventSection: React.FC = () => {
       .catch((error) => {
         toastNotification("Something went wrong", "error");
       });
-  });
+  },[]);
 
   const toastNotification = (message: string, status: string) => {
     if (status === "success") {
