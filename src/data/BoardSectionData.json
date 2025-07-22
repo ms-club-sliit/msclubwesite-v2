@@ -1,6 +1,122 @@
 [
   {
     "id": 1,
+    "year": "2024",
+    "board": [
+      {
+        "id": 1,
+        "name": "Irushi Gunawardana",
+        "position": "President",
+        "image": "/assets/boards/2024/Irushi Gunawardana.jpg",
+        "socialmedia": {
+          "linkedin": "https://lk.linkedin.com/in/irushi-gunawardana-941893250",
+          "instagram": "https://www.instagram.com/irushiii.g/",
+          "twitter": "https://twitter.com/irushiiig"
+        }
+      },
+      {
+        "id": 2,
+        "name": "Dileepa Praveen",
+        "position": "Vice President",
+        "image": "/assets/boards/2024/Dileepa Praveen.jpg",
+        "socialmedia": {
+          "facebook": "https://www.facebook.com/share/1AfvHKh6RF/?mibextid=wwXIf",
+          "linkedin": "https://www.linkedin.com/in/dileepa-praveen/"
+        }
+      },
+      {
+        "id": 3,
+        "name": "Hinesha Perera",
+        "position": "Secretary",
+        "image": "/assets/boards/2024/Hinesha Perera.jpg",
+        "socialmedia": {
+          "linkedin": "https://www.linkedin.com/in/hinesha-perera-839a2526a/",
+          "instagram": "https://www.instagram.com/hinesha.perera/"
+        }
+      },
+      {
+        "id": 4,
+        "name": "Poornima Weerasekara",
+        "position": "Assistant Secretary",
+        "image": "/assets/boards/2024/Poornima Weerasekara.jpg",
+        "socialmedia": {
+          "facebook": "https://www.facebook.com/share/1B2v5zMsCP/",
+          "linkedin": "https://www.linkedin.com/in/poornima-weerasekara-815729266/"
+        }
+      },
+      {
+        "id": 5,
+        "name": "Nipun Jayasinghe",
+        "position": "Treasurer",
+        "image": "/assets/boards/2024/Nipun Jayasinghe.jpg",
+        "socialmedia": {
+          "facebook": "https://www.facebook.com/share/16zHxa5Kfp/",
+          "linkedin": "https://www.linkedin.com/in/nipunjayasinghe/",
+          "instagram": "https://www.instagram.com/nipun_pj?igsh=ZGo1MWt0b2NybnF3"
+        }
+      },
+      {
+        "id": 6,
+        "name": "Tharindu Abenayaka",
+        "position": "Head of Development",
+        "image": "/assets/boards/2024/Tharindu Abenayaka.jpg",
+        "socialmedia": {
+          "facebook": "https://www.facebook.com/share/1Gmj4rMx4u/",
+          "linkedin": "https://www.linkedin.com/in/dananjaya-abenayaka-3069b0232/",
+          "instagram": "https://www.instagram.com/dananjayaabey/#"
+        }
+      },
+      {
+        "id": 7,
+        "name": "Nisal Gunawardhana",
+        "position": "Main Organizer",
+        "image": "/assets/boards/2024/Nisal Gunawardhana.jpg",
+        "socialmedia": {
+          "facebook": "https://www.facebook.com/share/19Mwr7UrBa/",
+          "linkedin": "https://www.linkedin.com/in/nisalgunawardhana/",
+          "instagram": "https://www.instagram.com/thenisals?igsh=MTJwb29lcnRxZ2Y2eg==",
+          "mlsa": "https://mvp.microsoft.com/en-US/studentambassadors/profile/942d62e2-afa0-4913-8d0d-a8e34e0c8970"
+        }
+      },
+      {
+        "id": 8,
+        "name": "Ishara Kumarage",
+        "position": "Editor",
+        "image": "/assets/boards/2024/Ishara Kumarage.jpg",
+        "socialmedia": {
+          "facebook": "https://www.facebook.com/share/1CEQ7mRi2E/",
+          "linkedin": "https://www.linkedin.com/in/ishara-kumarage-391592212/",
+          "instagram": "https://www.instagram.com/ishu_kumarage?igsh=ZDYwYWg1NzRpMzJ3"
+        }
+      },
+      {
+        "id": 9,
+        "name": "Navindu Sooriyaarachchi",
+        "position": "Marketing Sub Lead",
+        "image": "/assets/boards/2024/Navindu Sooriyaarachchi.jpg",
+        "socialmedia": {
+          "facebook": "https://www.facebook.com/share/173EXKD4Jr/",
+          "linkedin": "https://www.linkedin.com/in/navindus/",
+          "instagram": "https://www.instagram.com/navindu_ds?igsh=MXh3ZW9jZXBjdTRxaA==",
+          "twitter": "https://x.com/TheNavindu?t=qtdzGNY0lenP9qDw07qAWg&s=09"
+        }
+      },
+      {
+        "id": 10,
+        "name": "Oshada Ganewaththa",
+        "position": "Committee Member",
+        "image": "/assets/boards/2024/Oshada Ganewaththa.jpg",
+        "socialmedia": {
+          "facebook": "https://www.facebook.com/madhuwantha.osadha?mibextid=wwXIfr&mibextid=wwXIfr",
+          "linkedin": "https://www.linkedin.com/in/osadha-madhuwantha/",
+          "instagram": "https://www.instagram.com/osadha_madhuwantha_ganewaththa?igsh=cGxpZ2FhM3Q4bmhn&utm_source=qr",
+          "mlsa": "https://studentambassadors.microsoft.com/en-US/profile/madhuwanthagko-8693"
+        }
+      }
+    ]
+  },
+  {
+    "id": 2,
     "year": "2023",
     "board": [
       {
@@ -142,7 +258,7 @@
     ]
   },
   {
-    "id": 2,
+    "id": 3,
     "year": "2022",
     "board": [
       {
@@ -334,7 +450,7 @@
     ]
   },
   {
-    "id": 3,
+    "id": 4,
     "year": "2021",
     "board": [
       {
@@ -461,7 +577,7 @@
     ]
   },
   {
-    "id": 4,
+    "id": 5,
     "year": "2020",
     "board": [
       {
@@ -568,7 +684,7 @@
     ]
   },
   {
-    "id": 5,
+    "id": 6,
     "year": "2019",
     "board": [
       {

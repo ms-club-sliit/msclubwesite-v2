@@ -304,3 +304,79 @@
 .transition-opacity-smooth {
   transition: opacity .5s ease-out;
 }
+
+
+// dropdown menu
+.board-dropdown {
+  background: $primary-color-active;
+  color: $color-white;
+  border-radius: 7px;
+  font-family: "Product Sans Regular";
+  font-size: 16px;
+  padding: 8px 12px;
+  margin-bottom: 15px;
+  border: 1px solid $primary-color-active;
+
+  &:focus {
+    border-color: $primary-color-active;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  }
+
+  @include media("<=phone") {
+    width: 100%;
+    padding: 6px 10px; 
+    font-size: 14px; 
+  }
+
+  @include media(">=phone", "<tablet") {
+    width: 50%;
+    padding: 8px 12px;
+    font-size: 16px;
+  }
+
+  @include media(">=tablet", "<smalldesktop") {
+    width: 30%;
+    padding: 8px 14px;
+    font-size: 16px;
+  }
+
+  @include media(">=smalldesktop", "<desktop") {
+    width: 30%;
+    padding: 8px 14px;
+    font-size: 16px;
+  }
+
+  @include media(">=desktop", "<largedesktop") {
+    width: 30%;
+    padding: 10px 16px;
+    font-size: 16px;
+  }
+
+  @include media(">=largedesktop") {
+    width: 30%;
+    padding: 10px 18px;
+    font-size: 16px;
+  }
+
+  option {
+    background-color: $primary-color-active;
+    color: $color-white;
+  }
+
+  &:hover {
+    background-color: $primary-color-hover;
+  }
+}
+
+// Centering the dropdown across all screen sizes
+.board-dropdown-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+
+
